@@ -53,7 +53,7 @@
         <a class="nav-link" href="pedidos.php">Pedidos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contactos.php">Contacto</a>
+        <a class="nav-link" href="../public/contactanos.php">Contacto</a>
       </li>
     </ul>
   </div>
