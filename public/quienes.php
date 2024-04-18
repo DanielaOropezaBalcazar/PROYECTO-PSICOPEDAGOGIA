@@ -293,7 +293,7 @@ construir sociedades más equitativas, inclusivas y  educativamente exitosas.</p
   <div class="row">
     <div class="col-md-12 text-center">
       <div class="mission-container">
-        <h2>Obras Sociales con la Iglesia</h2>
+        <h2>Obras Sociales con la Iglesia </h2>
       </div>
     </div>
   </div>
