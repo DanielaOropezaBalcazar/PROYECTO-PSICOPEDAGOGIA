@@ -160,7 +160,31 @@
         background-color: #37a853; /* Color para el tercer conjunto */
     }
 
+    .mission-container {
+  background-color: #f5844c;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px; /* Aumentar el ancho máximo */
+  margin: 0 auto; /* Centrar horizontalmente */
+  text-align: center; /* Centrar el texto horizontalmente */
+}
 
+.mission-container {
+  background-color: #f5844c;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px; /* Aumentar el ancho máximo */
+  margin: 0 auto; /* Centrar horizontalmente */
+  text-align: center; /* Centrar el texto horizontalmente */
+}
+
+.mission-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
   </style>
 </head>
@@ -220,17 +244,11 @@
                 <img src="../images/Quienes somos/cerebro.jpeg" alt="Imagen">
             </div>
             <div class="col-md-6 mission-container" style="background-color: #F97260;">
-                <h2>Misión</h2>
-                <p class="mission-text">Formar profesionales en educación, altamente capacitados, comprometidos con el desarrollo integral de las personas y con un enfoque interdisciplinario que promueva la educación inclusiva y la equidad educativa. Nuestra misión es contribuir al bienestar y al éxito académico de los individuos, identificando y abordando las necesidades específicas de cada uno, a través de la investigación, la evaluación y la intervención psicopedagógica.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 mission-container" style="background-color:#F960A0;">
-                <h2>Misión</h2>
-                <p class="mission-text">Formar profesionales en educación, altamente capacitados, comprometidos con el desarrollo integral de las personas y con un enfoque interdisciplinario que promueva la educación inclusiva y la equidad educativa. Nuestra misión es contribuir al bienestar y al éxito académico de los individuos, identificando y abordando las necesidades específicas de cada uno, a través de la investigación, la evaluación y la intervención psicopedagógica.</p>
+                <h2>Impacto</h2>
+                <p class="mission-text">La psicopedagogía impacta el mundo 
+al promover una educación inclusiva, detectar y prevenir dificultades de aprendizaje, apoyar la diversidad, mejorar el rendimiento académico y ofrecer asesoramiento a docentes y 
+familias. Los psicopedagogos trabajan para garantizar que todos tengan acceso a una educación de calidad, adaptada a sus necesidades individuales, contribuyendo así a 
+construir sociedades más equitativas, inclusivas y  educativamente exitosas.</p>
             </div>
             <div class="col-md-6 image-container">
                 <img src="../images/Quienes somos/dibujos.jpeg" alt="Imagen">
@@ -249,38 +267,37 @@
 
     <div class="container">
         <div class="row">
-        <div class="col-md-6 mission-container" style="background-color:#F96071;">
-                <h2>Misión</h2>
-                <p class="mission-text">Formar profesionales en educación, altamente capacitados, comprometidos con el desarrollo integral de las personas y con un enfoque interdisciplinario que promueva la educación inclusiva y la equidad educativa. Nuestra misión es contribuir al bienestar y al éxito académico de los individuos, identificando y abordando las necesidades específicas de cada uno, a través de la investigación, la evaluación y la intervención psicopedagógica.</p>
-            </div>
-            <div class="col-md-6 image-container">
-                <img src="imagen.jpg" alt="Imagen">
-            </div>
+        <div class="col-md-6 image-container">
+                    <img src="../images/Quienes somos/capilla.png" alt="Imagen">
+                </div>
+                <div class="col-md-6 mission-container">
+            <h2>Obras Sociales con la Iglesia</h2>
+            
+        </div>
         </div>
     </div>
     <div class="container">
       <div class="row">
 
           <div class="col-md-6 image-container">
-              <img src="imagen.jpg" alt="Imagen">
+              <img src="../images/Quienes somos/image57.png" alt="Imagen">
           </div>
-          <div class="col-md-6 mission-container">
-            <h2>Misión</h2>
-            <p class="mission-text">Formar profesionales en educación, altamente capacitados, comprometidos con el desarrollo integral de las personas y con un enfoque interdisciplinario que promueva la educación inclusiva y la equidad educativa. Nuestra misión es contribuir al bienestar y al éxito académico de los individuos, identificando y abordando las necesidades específicas de cada uno, a través de la investigación, la evaluación y la intervención psicopedagógica.</p>
-        </div>
+          <div class="col-md-6 image-container">
+          <img src="../images/Quienes somos/image 56.png" alt="Imagen">>
+          </div>
       </div>
 
   </div>
+
   <div class="container">
-    <div class="row">
-        <div class="col-md-6 mission-container">
-            <h2>Misión</h2>
-            <p class="mission-text">Formar profesionales en educación, altamente capacitados, comprometidos con el desarrollo integral de las personas y con un enfoque interdisciplinario que promueva la educación inclusiva y la equidad educativa. Nuestra misión es contribuir al bienestar y al éxito académico de los individuos, identificando y abordando las necesidades específicas de cada uno, a través de la investigación, la evaluación y la intervención psicopedagógica.</p>
-        </div>
-        <div class="col-md-6 image-container">
-            <img src="imagen.jpg" alt="Imagen">
-        </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <div class="mission-container">
+        <h2>Obras Sociales con la Iglesia</h2>
+      </div>
     </div>
+  </div>
+</div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
