@@ -1,6 +1,6 @@
-const express = require('express');
-const mysql = require('mysql');
-const cors = require('cors');
+const express = require('express'); //npm install express
+const mysql = require('mysql'); //npm install mysql
+const cors = require('cors'); //npm install cors
 const app = express();
 
 // Aplicar middleware CORS para permitir solicitudes de tu aplicación Vue
