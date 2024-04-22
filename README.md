@@ -1,4 +1,4 @@
-# psicopedagogia
+# mi-proyecto-vue
 
 ## Project setup
 ```
