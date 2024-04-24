@@ -1,31 +1,48 @@
-const express = require('express'); //npm install express
-const mysql = require('mysql'); //npm install mysql
-const cors = require('cors'); //npm install cors
+const express = require('express');
+const mysql = require('mysql');
+const cors = require('cors');
+const bodyParser = require('body-parser');
 const app = express();
 
-// Aplicar middleware CORS para permitir solicitudes de tu aplicación Vue
-app.use(cors({
-  origin: 'http://localhost:8080'  // Permitir sólo solicitudes de esta URL
-}));
+app.use(cors());
+app.use(bodyParser.json());
 
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'dron_ucb'
+  database: 'psicopedagogia'
 });
 
 connection.connect(error => {
   if (error) throw error;
-  console.log('Conexión exitosa a la base de datos MySQL');
+  console.log('Conexión exitosa a la base de datos');
 });
 
-app.get('/api/tables', (req, res) => {
-  connection.query('SHOW TABLES', (error, results) => {
-    if (error) throw error;
-    res.json(results);
+
+app.post('/api/persona-graduado', (req, res) => {
+  const { nombre, apellido, telefono, graduado } = req.body; 
+  const sqlPersona = 'INSERT INTO persona (nombre, apellido, telefono) VALUES (?, ?, ?)';
+  
+  connection.query(sqlPersona, [nombre, apellido, telefono], (error, results) => {
+    if (error) {
+      res.status(500).send(error);
+      return;
+    }
+    
+    const personaId = results.insertId;
+    const sqlGraduado = 'INSERT INTO graduados (anio, trabajo_grado, testimonio, persona_id_persona) VALUES (?, ?, ?, ?)';
+    
+    connection.query(sqlGraduado, [graduado.anio, graduado.trabajo_grado, graduado.testimonio, personaId], (error, results) => {
+      if (error) {
+        res.status(500).send(error);
+        return;
+      }
+      res.send({ message: 'Persona y graduado insertados correctamente', personaId });
+    });
   });
 });
+
 
 const PORT = 3000;
 app.listen(PORT, () => {

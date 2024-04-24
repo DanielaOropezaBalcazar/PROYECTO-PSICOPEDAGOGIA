@@ -1,38 +1,51 @@
 <template>
-    <div>
-      <h1>Tablas en la Base de Datos</h1>
-      <ul>
-        <li v-for="table in tables" :key="table.name">{{ table.name }}</li>
-      </ul>
-    </div>
-  </template>
-  
-  <script>
-  import axios from 'axios';
-  
-  export default {
-    data() {
-      return {
-        tables: []
-      };
-    },
-    created() {
-      this.fetchTables();
-    },
-    methods: {
-      fetchTables() {
-        axios.get('http://localhost:3000/api/tables')
-          .then(response => {
-            this.tables = response.data.map(table => {
-              const tableNameKey = Object.keys(table)[0]; 
-              return { name: table[tableNameKey] };
-            });
-          })
-          .catch(error => {
-            console.error('Error fetching tables:', error);
-          });
+  <div>
+    <h1>perfil Estudiante</h1>
+    <form @submit.prevent="submitData">
+      <h2>Persona</h2>
+      <input v-model="persona.nombre" placeholder="Nombre">
+      <input v-model="persona.apellido" placeholder="Apellido">
+      <input v-model="persona.telefono" placeholder="Teléfono">
+      <h2>Graduado</h2>
+      <input v-model="graduado.anio" placeholder="Año">
+      <input v-model="graduado.trabajo_grado" placeholder="Trabajo de Grado">
+      <textarea v-model="graduado.testimonio" placeholder="Testimonio"></textarea>
+      <button type="submit">Enviar Datos</button>
+    </form>
+  </div>
+</template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      persona: {
+        nombre: '',
+        apellido: '',
+        telefono: ''
+      },
+      graduado: {
+        anio: '',
+        trabajo_grado: '',
+        testimonio: ''
       }
+    };
+  },
+  methods: {
+    submitData() {
+      axios.post('http://localhost:3000/api/persona-graduado', {
+        ...this.persona,
+        graduado: this.graduado
+      })
+      .then(() => {
+        alert('Datos insertados correctamente');
+      })
+      .catch(error => {
+        console.error('Error al insertar datos:', error);
+      });
     }
   }
-  </script>
-  
+}
+</script>
