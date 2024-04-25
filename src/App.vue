@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <DatabaseView/>
+    <LogIn />
   </div>
 </template>
 
 <script>
-import DatabaseView from './components/DataBaseView.vue';
+
+import LogIn from "./components/LogIn.vue";
 
 export default {
   name: 'App',
   components: {
-    DatabaseView
+    LogIn
   }
 }
 </script>
