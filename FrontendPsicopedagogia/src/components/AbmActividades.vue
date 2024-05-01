@@ -1,39 +1,41 @@
 <template>
-  <div class="container">
-    <div class="header">
-      <h1 class="title">Actividades Universitarias</h1>
-    </div>
-    <button class="create-button" @click="abrirModalCrear">Crear actividad</button>
+  <div class="app">
+    <div class="container">
+      <div class="header">
+        <h1 class="main-title">Actividades Curriculares</h1>
+      </div>
+      <button class="create-button" @click="abrirModalCrear">Crear actividad</button>
 
-    <div class="row">
-      <div class="col-md-6" v-for="(actividad, index) in actividades" :key="actividad.id_actividad">
-        <div class="card card-width" :style="{ backgroundColor: colores[index % colores.length] }">
-          <div class="card-content">
-            <div class="card-image">
-              <img class="card-img" :src="actividad.columna_foto" alt="Imagen de la actividad">
-            </div>
-            <div class="card-body">
-              <div class="card-details">
-                <div>
-                  <h5 class="card-title">{{ actividad.nombre_actividad }}</h5>
-                  <p class="card-text">{{ actividad.descripcion }}</p>
-                  <p class="card-text">
-                    <small class="text-muted">Fecha: {{ actividad.fecha }}</small>
-                  </p>
-                </div>
-                <div class="button-container">
-                  <button class="edit-button" @click="abrirModal(actividad)">Editar</button>
-                  <button class="delete-button" @click="eliminarActividad(actividad.id_actividad)">Borrar</button>
+      <div class="row">
+        <div class="col-md-12" v-for="(actividad, index) in actividades" :key="actividad.id_actividad">
+          <div class="card card-width" :style="{ backgroundColor: colores[index % colores.length] }">
+            <div class="card-content">
+              <div class="card-image">
+                <img class="card-img" :src="actividad.columna_foto" alt="Imagen de la actividad">
+              </div>
+              <div class="card-body">
+                <div class="card-details">
+                  <div>
+                    <h5 class="card-title">{{ actividad.nombre_actividad }}</h5>
+                    <p class="card-text">{{ actividad.descripcion }}</p>
+                    <p class="card-text">
+                      <small class="text-muted">Fecha: {{ actividad.fecha }}</small>
+                    </p>
+                  </div>
+                  <div class="button-container">
+                    <button class="edit-button" @click="abrirModal(actividad)">Editar</button>
+                    <button class="delete-button" @click="eliminarActividad(actividad.id_actividad)">Borrar</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <CrearActividad :show="showCrearModal" @close="showCrearModal = false" @update="cargarActividades" />
-    <EditarActividad :show="showModal" :actividad="actividadSeleccionada" @close="showModal = false" @update="cargarActividades" />
+      <CrearActividad :show="showCrearModal" @close="showCrearModal = false" @update="cargarActividades" />
+      <EditarActividad :show="showModal" :actividad="actividadSeleccionada" @close="showModal = false" @update="cargarActividades" />
 
+    </div>
   </div>
 </template>
 
@@ -100,10 +102,10 @@ export default {
 };
 </script>
 <style>
-.container {
-  margin-top: 20px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
 
+.container {
+  margin-top: 0px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .header {
@@ -164,9 +166,6 @@ export default {
   font-size: 14px;
   color: #333;
 }
-.title {
-  text-align: center;
-}
 .card-details {
   display: flex;
   justify-content: space-between;
@@ -226,7 +225,15 @@ export default {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-.col-md-6 {
+.col-md-12 {
   margin: 15px; /* Agrega margen alrededor de cada panel */
+}
+
+.main-title {
+  text-align: center;
+  font-size: 3rem; /* Tamaño de fuente más grande */
+  color: #2944f8; /* Color de fuente diferente */
+  font-family: 'Arial', sans-serif; /* Fuente diferente */
+  margin: 1rem;
 }
 </style>

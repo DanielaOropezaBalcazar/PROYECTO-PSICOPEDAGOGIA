@@ -1,0 +1,62 @@
+body {
+  font-family: Allerta;
+  font-size: 24px;
+}
+
+h1 {
+  font-family: Inria Serif;
+  color: #8438FF;
+  font-size: 40px;
+}
+
+.navbar {
+  background-color: #D6ADFF;
+  /* Morado en hexadecimal */
+}
+
+.navbar-nav {
+  width: 100%;
+}
+
+.nav-item {
+  width: calc(100% / 6);
+  /* Dividir en 6 para 6 elementos */
+  text-align: center;
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  /* Espacio alrededor del enlace */
+}
+
+/* Estilo para eliminar el borde de las celdas de la tabla */
+.list-group-item {
+  border: none !important;
+}
+
+/* Estilo para cambiar el color de los correos electrónicos */
+.correo {
+  color: #7862FF;
+  /* Color naranja */
+  text-align: center;
+  /* Alinea el texto al centro */
+}
+
+/* Estilo para centrar los nombres */
+.nombre {
+  text-align: center;
+  /* Alinea el texto al centro */
+}
+
+/* Estilo para la sección morada */
+.seccion-morada {
+  color: #9671FF;
+  /* Color morado */
+  font-size: 24px;
+  /* Tamaño de la fuente */
+}
+
+footer {
+  background-color: #8438FF;
+  color: #333;
+}

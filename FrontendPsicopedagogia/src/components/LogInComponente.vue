@@ -1,3 +1,4 @@
+
 <template>
   <div class="app">
     <div class="background-image">
@@ -22,6 +23,7 @@
 
 <script>
 export default {
+  name: "LogInComponente",
   data() {
     return {
       correo: '',
@@ -32,7 +34,7 @@ export default {
   methods: {
     async login() {
       try {
-        const response = await fetch('http://localhost:3000/login', {
+        const response = await fetch('http://localhost:3000/usuarios/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

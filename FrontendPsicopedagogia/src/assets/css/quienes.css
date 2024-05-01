@@ -1,0 +1,168 @@
+body {
+  font-family: Allerta;
+  font-size: 24px;
+}
+
+h1 {
+  font-family: Inria Serif;
+  color: #8438FF;
+  font-size: 40px;
+
+}
+
+
+/* Estilo para cambiar el color de los correos electrónicos */
+.correo {
+  color: #7862FF;
+  /* Color naranja */
+  text-align: center;
+  /* Alinea el texto al centro */
+}
+
+/* Estilo para centrar los nombres */
+.nombre {
+  text-align: center;
+  /* Alinea el texto al centro */
+}
+
+/* Estilo para la sección morada */
+.seccion-morada {
+  color: #ffffff;
+  /* Color morado */
+  font-size: 24px;
+  /* Tamaño de la fuente */
+}
+
+footer {
+  background-color: #000000;
+  color: #333;
+}
+
+.mission-container {
+  background-color: #ff6347;
+  color: white;
+  padding: 20px;
+}
+
+.mission-text {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.image-container {
+  padding: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mission-container {
+  background-color: #ff6347;
+  color: white;
+  padding: 20px;
+}
+
+.mission-text {
+  font-size: 25px;
+  line-height: 1.5;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.image-container {
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.image-container img {
+  width: 100%;
+  /* Ajustamos el ancho de la imagen para ocupar todo el espacio disponible */
+  height: auto;
+  display: block;
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.0);
+  color: white;
+  padding: 10px;
+  font-size: 52px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main-content {
+  padding-bottom: 80px;
+}
+
+.custom-mission-container {
+  background-color: #ff6347;
+  width: 500px;
+  /* Ancho fijo de 500 píxeles */
+  height: 300px;
+  color: white;
+  padding: 20px;
+}
+
+.custom-image {
+  width: 612px;
+  /* Ancho deseado */
+  height: 720px;
+  /* Alto deseado */
+}
+
+/* Estilos para el primer conjunto de recuadros */
+.mission-container:nth-of-type(1) {
+  background-color: #F96071;
+  /* Color para el primer conjunto */
+}
+
+/* Estilos para el segundo conjunto de recuadros */
+.mission-container:nth-of-type(2) {
+  background-color: #F97260;
+  /* Color para el segundo conjunto */
+}
+
+/* Estilos para el tercer conjunto de recuadros */
+.mission-container:nth-of-type(3) {
+  background-color: #37a853;
+  /* Color para el tercer conjunto */
+}
+
+.mission-container {
+  background-color: #f5844c;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  /* Aumentar el ancho máximo */
+  margin: 0 auto;
+  /* Centrar horizontalmente */
+  text-align: center;
+  /* Centrar el texto horizontalmente */
+}
+
+.mission-container {
+  background-color: #f5844c;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  /* Aumentar el ancho máximo */
+  margin: 0 auto;
+  /* Centrar horizontalmente */
+  text-align: center;
+  /* Centrar el texto horizontalmente */
+}
+
+.mission-container h2 {
+  font-size: 90px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}

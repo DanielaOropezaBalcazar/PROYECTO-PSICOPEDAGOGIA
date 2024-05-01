@@ -34,7 +34,7 @@
         <div class="button-container">
 
           <button type="button" @click="closeModal">Cancelar</button> <!-- Botón de cancelar -->
-          <button type="submit">Guardar cambios</button>
+          <button type="submit">Crear</button>
         </div>
       </form>
     </div>
@@ -164,7 +164,7 @@ input, textarea, select{
 }
 
 button {
-  background-color: #007BFF;
+  background-color: #209c2f;
   color: white;
   padding: 0.5em 1em;
   border: none;
@@ -174,7 +174,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #267812;
 }
 img {
   max-width: 100%;
