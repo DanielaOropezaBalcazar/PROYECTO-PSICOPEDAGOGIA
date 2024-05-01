@@ -48,7 +48,7 @@ export default {
   name: "HeaderComponente",
   data() {
     return {
-      navbarColor: '#e6094b'  // Color inicial del navbar
+      navbarColor: '#ffcfac'  // Color inicial del navbar
     };
   },
   methods: {
