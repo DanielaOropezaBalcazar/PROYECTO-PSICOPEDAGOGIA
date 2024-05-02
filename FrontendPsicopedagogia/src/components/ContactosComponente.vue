@@ -98,7 +98,7 @@ export default {
   methods: {
     setRandomInterval() {
       const minSeconds = 10; 
-      const maxSeconds = 30; 
+      const maxSeconds = 200; 
       const randomInterval = Math.random() * (maxSeconds - minSeconds) + minSeconds;
 
       setTimeout(() => {
