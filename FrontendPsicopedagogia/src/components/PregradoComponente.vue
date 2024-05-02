@@ -1,5 +1,5 @@
 <template>
-    
+
         <section class="learning-zone">
             <h1>Zona de Aprendizaje</h1>
             <div class="content-wrapper">
@@ -43,7 +43,7 @@
                 <p>Descripción breve de la publicación. Descripción breve de la publicación. Descripción breve de la publicación.</p>
             </div>
         </section>
-        
+
 
 
         <section class="previous-publications">
@@ -60,32 +60,32 @@
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvq9E2_uTAmLxmE6s5Xj3eE9nnyJr7PClne-Jvj8-Z3g&s" alt="Publicación Anterior 1">
                 </a>
                 </div>
-                
-                <div class="photo">
-                    <a href="">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvq9E2_uTAmLxmE6s5Xj3eE9nnyJr7PClne-Jvj8-Z3g&s" alt="Publicación Anterior 1">
-                </a>
-                </div>
-                
-                <div class="photo">
-                    <a href="">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvq9E2_uTAmLxmE6s5Xj3eE9nnyJr7PClne-Jvj8-Z3g&s" alt="Publicación Anterior 1">
-                </a>
-                </div>
-                
-                <div class="photo">
-                    <a href="">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvq9E2_uTAmLxmE6s5Xj3eE9nnyJr7PClne-Jvj8-Z3g&s" alt="Publicación Anterior 1">
-                </a>
-                </div>
-                
 
-                
+                <div class="photo">
+                    <a href="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvq9E2_uTAmLxmE6s5Xj3eE9nnyJr7PClne-Jvj8-Z3g&s" alt="Publicación Anterior 1">
+                </a>
+                </div>
+
+                <div class="photo">
+                    <a href="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvq9E2_uTAmLxmE6s5Xj3eE9nnyJr7PClne-Jvj8-Z3g&s" alt="Publicación Anterior 1">
+                </a>
+                </div>
+
+                <div class="photo">
+                    <a href="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvq9E2_uTAmLxmE6s5Xj3eE9nnyJr7PClne-Jvj8-Z3g&s" alt="Publicación Anterior 1">
+                </a>
+                </div>
+
+
+
             </div>
         </section>
-        
-        
-    
+
+
+
     <section class="contact">
         <h2>Contactos</h2>
         <table>
@@ -97,17 +97,17 @@
                 </tr>
             </thead>
             <tbody>
-                
+
                 <tr>
                     <td>Nombre</td>
                     <td>Cargo</td>
                     <td>Correo</td>
                 </tr>
-                
+
             </tbody>
         </table>
     </section>
-    
+
 
 </template>
 

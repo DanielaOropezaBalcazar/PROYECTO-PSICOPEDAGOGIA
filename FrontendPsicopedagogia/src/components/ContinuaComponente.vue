@@ -1,9 +1,9 @@
 <template>
-    <h1>ContinuaComponente</h1>
+  <h1>ContinuaComponente</h1>
 </template>
 
 <script>
 export default {
-    name: "ContinuaComponente",
+  name: "ContinuaComponente",
 };
 </script>

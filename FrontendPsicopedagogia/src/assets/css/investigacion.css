@@ -18,16 +18,16 @@ h1, h2 {
 }
 
 .recent-publication img {
-    width: 100%; 
-    max-width: 600px; 
-    height: auto; 
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     margin: auto;
 }
 
 .recent-publication p {
-    font-size: 16px; 
-    color: #333; 
-    margin-top: 10px; 
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
 }
 
 
@@ -39,45 +39,45 @@ h1, h2 {
 
 .photo {
     background-color: #00BFFF;
-    height: auto; 
-    overflow: hidden; 
+    height: auto;
+    overflow: hidden;
 }
 
 .photo img {
     width: 100%;
-    height: 100%; 
-    object-fit: cover; 
+    height: 100%;
+    object-fit: cover;
 }
 
 
 .gallery a, .recent-publication a {
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .gallery a:hover, .recent-publication a:hover {
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 
 .learning-zone {
     padding: 20px;
-    background-color: #f0f8ff; 
+    background-color: #f0f8ff;
 }
 
 .content-wrapper {
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: space-around;
-    gap: 20px; 
+    gap: 20px;
 }
 
 
 
 .member-list {
-    flex: 1; 
+    flex: 1;
     padding: 10px;
-    background-color: #e6f7ff; 
-    border-radius: 10px; 
+    background-color: #e6f7ff;
+    border-radius: 10px;
 }
 
 .member-list h2 {
@@ -85,24 +85,24 @@ h1, h2 {
 }
 
 .member-list ul {
-    list-style-type: none; 
+    list-style-type: none;
     padding: 0;
 }
 
 .member-list li {
-    padding: 8px 0; 
-    border-bottom: 1px solid #ccc; 
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
 }
 
 .member-list li:last-child {
-    border-bottom: none; 
+    border-bottom: none;
 }
 
 
 .join h2 {
-    text-align: right; 
-    padding-left: 20px; 
-    color: #0056b3; 
+    text-align: right;
+    padding-left: 20px;
+    color: #0056b3;
 }
 
 .join {
@@ -113,16 +113,16 @@ h1, h2 {
 
 
 .join li {
-    padding: 10px 0; 
-    
+    padding: 10px 0;
+
 }
 
 
 .contact {
     padding: 20px;
-    background-color: #f0f8ff; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
 }
 
@@ -132,15 +132,15 @@ h1, h2 {
 }
 
 table {
-    width: 100%; 
-    border-collapse: collapse; 
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 20px;
 }
 
 th, td {
     text-align: left;
-    padding: 12px 15px; 
-    border-bottom: 1px solid #ccc; 
+    padding: 12px 15px;
+    border-bottom: 1px solid #ccc;
 }
 
 th {
@@ -150,9 +150,9 @@ th {
 }
 
 tbody tr:hover {
-    background-color: #e0f7ff; 
+    background-color: #e0f7ff;
 }
 
 td {
-    color: #333; 
+    color: #333;
 }

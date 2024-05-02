@@ -3,7 +3,7 @@
   <div class="app">
     <div class="background-image">
       <div class="login-panel">
-        <h3>Iniciar Sesión</h3>
+        <h3 class="h3">Iniciar Sesión</h3>
         <form @submit.prevent="login">
           <div>
             <label for="correo">Correo Electrónico:</label>
@@ -13,7 +13,7 @@
             <label for="contrasenia">Contraseña:</label>
             <input type="password" id="contrasenia" v-model="contrasenia" required>
           </div>
-          <button type="submit">Iniciar Sesión</button>
+          <button class="create-button" type="submit">Iniciar Sesión</button>
           <p v-if="error" class="error">{{ error }}</p>
         </form>
       </div>
@@ -50,6 +50,8 @@ export default {
         }
         // Iniciar sesión exitoso, puedes redirigir a otra página o realizar alguna acción adicional
         console.log('Inicio de sesión exitoso:', data);
+        // Redireccionar al Dashboard
+        this.$router.push('/pesta&ntildea-editar');
       } catch (error) {
         console.error('Error al iniciar sesión:', error.message);
         this.error = error.message;
@@ -61,13 +63,14 @@ export default {
 
 <style>
 .app{
-  padding: 0;
-  margin: 0;
+
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 .background-image {
   position: relative;
   height: 100vh;
-  background-image: url('../assets/login.jpeg');
+  background-image: url('../assets/images/Login/login.png');
   background-size: cover;
   background-position: center;
 }
@@ -123,5 +126,40 @@ export default {
 .login-panel input[type="button"].btn-primary:active {
   background-color: #000000;
   border-color: #fff;
+}
+
+.h3 {
+  font-family: Inria Serif;
+  color: #ffffff;
+  font-size: 40px;
+}
+
+.create-button {
+  margin-top: 20px; /* Espacio entre el título y el botón */
+  margin-bottom: 20px; /* Espacio entre el botón y los paneles */
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 9px #999;
+  margin-left: 10%;
+}
+
+.create-button:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+.create-button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 </style>

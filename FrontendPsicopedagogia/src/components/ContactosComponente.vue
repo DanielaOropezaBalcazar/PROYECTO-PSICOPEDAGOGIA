@@ -4,9 +4,10 @@
       <div class="col-md-6">
         <div class="d-flex flex-column align-items-center mb-4">
           <img
-            src="../assets/images/Contactos/icono_morado 2.png"
+            src="../assets/images/Contactos/draAlejandra.png"
             alt="Usuario 1"
             class="img-fluid mb-2"
+            style="height: 500px; border-radius: 500px"
           />
           <span class="text-center">Dra. Alejandra Martínez Barrientos</span>
           <span class="seccion-morada">Directora de Carrera</span>
@@ -16,9 +17,10 @@
       <div class="col-md-6">
         <div class="d-flex flex-column align-items-center mb-4">
           <img
-            src="../assets/images/Contactos/icono_morado 2.png"
+            src="../assets/images/Contactos/mscKarina.png"
             alt="Usuario 2"
             class="img-fluid mb-2"
+            style="height: 500px; border-radius: 500px"
           />
           <span class="text-center">MSc. Karina García Riveros</span>
           <span class="seccion-morada">Docente Tiempo Completo</span>
@@ -26,7 +28,7 @@
         </div>
       </div>
     </div>
-    <h1 class="text-center">Plantel Docente</h1>
+    <h3 class="text-center">Plantel Docente</h3>
     <div class="container mt-4">
       <div class="row">
         <div class="col-md-6">
@@ -66,7 +68,7 @@
       </div>
 
       <div class="text-center">
-        <h1>Dirección</h1>
+        <h3>Dirección</h3>
         <p>
           Av. 14 de Septiembre y Calle 2 de Obrajes Bloque N – Jardín posterior
           <br />
@@ -74,7 +76,7 @@
         </p>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.068280227043!2d-68.11456612398523!3d-16.52265018422452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f20ee187a3103%3A0x2f2bb2b7df32a24d!2sUniversidad%20Cat%C3%B3lica%20Boliviana%20%22San%20Pablo%22!5e0!3m2!1ses-419!2sbo!4v1713403932709!5m2!1ses-419!2sbo"
-          width="600"
+          width=80%
           height="450"
           style="border: 0"
           allowfullscreen=""
@@ -84,7 +86,7 @@
       </div>
 
       <div class="text-center">
-        <h1>Horarios de consulta</h1>
+        <h3>Horarios de consulta</h3>
         <p>
           De lunes a viernes de 08:30 a 16:30
           <br />
@@ -103,3 +105,6 @@ export default {
   name: "ContactosComponente",
 };
 </script>
+
+<style src="../assets/css/contactanos.css">
+</style>

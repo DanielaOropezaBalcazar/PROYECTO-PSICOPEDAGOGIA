@@ -1,0 +1,296 @@
+.contenedor{
+    margin-left: auto; /* Mueve el contenedor hacia la derecha */
+    margin-right: auto; /* Mueve el contenedor hacia la izquierda */
+    margin-top: 2rem; /* Espacio superior */
+    margin-bottom: 2rem; /* Espacio inferior */
+    padding: 1rem; /* Relleno interno */
+    background-color: #ffffff; /* Color de fondo blanco */
+}
+
+.titulo1{
+    font-family: "Roboto Condensed", "sans-serif";
+    font-size: 60px;
+    color: #87DA35;
+    font-weight: 668;
+    text-align: left;
+    margin-left: 100px;
+  }
+
+
+.ins{
+    margin-top: 40px;
+    background-color: #87DA35; /* Cambia el color de fondo a verde */
+    color: #ffffff; /* Cambia el color del texto a blanco */
+    font-weight: bold; /* Establece la negrita */
+    padding-top: 0.5rem; /* Agrega relleno vertical */
+    padding-bottom: 0.5rem; /* Agrega relleno vertical */
+    padding-left: 1rem; /* Agrega relleno a la izquierda */
+    padding-right: 1rem; /* Agrega relleno a la derecha */
+    border-radius: 15px; /* Establece la redondez de las esquinas */
+    margin-bottom: 0.5rem;
+    height: 60px;
+    width: 250px;
+    font-size: 25px;
+}
+
+.asig{
+    margin-top: 40px;
+    margin-left: -260px;
+    background-color: #87DA35; /* Cambia el color de fondo a verde */
+    color: #ffffff; /* Cambia el color del texto a blanco */
+    font-weight: bold; /* Establece la negrita */
+    padding-top: 0.5rem; /* Agrega relleno vertical */
+    padding-bottom: 0.5rem; /* Agrega relleno vertical */
+    padding-left: 1rem; /* Agrega relleno a la izquierda */
+    padding-right: 1rem; /* Agrega relleno a la derecha */
+    border-radius: 15px; /* Establece la redondez de las esquinas */
+    margin-bottom: 0.5rem;
+    height: 60px;
+    width: 350px;
+    font-size: 25px;
+}
+
+.malla{
+    margin-top: 40px;
+    background-color: #87DA35; /* Cambia el color de fondo a verde */
+    color: #ffffff; /* Cambia el color del texto a blanco */
+    font-weight: bold; /* Establece la negrita */
+    padding-top: 0.5rem; /* Agrega relleno vertical */
+    padding-bottom: 0.5rem; /* Agrega relleno vertical */
+    padding-left: 1rem; /* Agrega relleno a la izquierda */
+    padding-right: 1rem; /* Agrega relleno a la derecha */
+    border-radius: 15px; /* Establece la redondez de las esquinas */
+    margin-bottom: 0.5rem;
+    height: 60px;
+    width: 250px;
+    font-size: 25px;
+}
+
+.prog{
+    margin-top: 40px;
+    
+    background-color: #87DA35; /* Cambia el color de fondo a verde */
+    color: #ffffff; /* Cambia el color del texto a blanco */
+    font-weight: bold; /* Establece la negrita */
+    padding-top: 0.5rem; /* Agrega relleno vertical */
+    padding-bottom: 0.5rem; /* Agrega relleno vertical */
+    padding-left: 1rem; /* Agrega relleno a la izquierda */
+    padding-right: 1rem; /* Agrega relleno a la derecha */
+    border-radius: 15px; /* Establece la redondez de las esquinas */
+    margin-bottom: 0.5rem;
+    height: 60px;
+    width: 250px;
+    font-size: 25px;
+}
+
+.opor{
+    margin-top: 40px;
+    margin-left: -30px;
+    background-color: #87DA35; /* Cambia el color de fondo a verde */
+    color: #ffffff; /* Cambia el color del texto a blanco */
+    font-weight: bold; /* Establece la negrita */
+    padding-top: 0.5rem; /* Agrega relleno vertical */
+    padding-bottom: 0.5rem; /* Agrega relleno vertical */
+    padding-left: 1rem; /* Agrega relleno a la izquierda */
+    padding-right: 1rem; /* Agrega relleno a la derecha */
+    border-radius: 15px; /* Establece la redondez de las esquinas */
+    margin-bottom: 0.5rem;
+    height: 60px;
+    width: 350px;
+    font-size: 25px;
+}
+
+.tari{
+    margin-top: 40px;
+    background-color: #87DA35; /* Cambia el color de fondo a verde */
+    color: #ffffff; /* Cambia el color del texto a blanco */
+    font-weight: bold; /* Establece la negrita */
+    padding-top: 0.5rem; /* Agrega relleno vertical */
+    padding-bottom: 0.5rem; /* Agrega relleno vertical */
+    padding-left: 1rem; /* Agrega relleno a la izquierda */
+    padding-right: 1rem; /* Agrega relleno a la derecha */
+    border-radius: 15px; /* Establece la redondez de las esquinas */
+    margin-bottom: 0.5rem;
+    height: 60px;
+    width: 250px;
+    font-size: 25px;
+}
+.botones1{
+    width: 100%; /* Opcional dependiendo del contexto */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: -20px;
+}
+
+.titulo2{
+    margin-left: 100px;
+    width: 100%; /* Ancho completo en dispositivos pequeños */
+    padding: 1rem; /* Añade relleno alrededor del elemento */
+}
+
+.titulo3{
+    font-family: "Roboto Condensed", "sans-serif";
+    font-size: 60px;
+    color: #87DA35;
+    font-weight: 668;
+    text-align: left;
+
+}
+
+ul{
+    font-size: 22px;
+    margin-left: 100px;
+    font-family: "Roboto Condensed", sans-serif;
+
+}
+
+.imgGrupo{
+    border-radius: 10px;
+    margin-left: 900px;
+    margin-top: -570px;
+    height: 70%;
+}
+
+.areas{
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    font-size: 70px;
+    text-align: center;
+}
+
+.areasDiv{
+    background-color: #C0EA97;
+    width: 45%;
+    height: 40%;
+    margin-left: 100px;
+}
+
+.ramas{
+    font-size: 35px;
+    margin-left: 100px;
+    font-family: "Roboto Condensed", sans-serif;
+
+}
+
+.contenedor1{
+    display: flex;
+    align-items: center;
+}
+
+.inter-texto{
+    color: #A2DE7D;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.descr-inter{
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.perfiles{
+    font-size: 60px;
+    font-family: "Roboto Condensed", "sans-serif";
+    font-weight: 700;
+    color: #53D900;
+    text-align: right;
+}
+
+.boton1{
+    position: absolute; /* Posición absoluta */
+    top: 40%; /* Coloca el elemento en la mitad superior del contenedor */
+    left: 0; /* Alinea el elemento a la izquierda del contenedor */
+    transform: translateY(-50%); /* Centra verticalmente el elemento */
+    background-color: #87DA35; /* Color de fondo verde (equivalente a bg-green-500 en Tailwind) */
+    color: #FFFFFF; /* Color del texto blanco (equivalente a text-white en Tailwind) */
+    padding: 0.5rem 1rem; /* Relleno interno de 0.5 rem superior e inferior, 1 rem a la izquierda y derecha (equivalente a p-2 en Tailwind) */
+    border-radius: 9999px; /* Establece un radio de borde redondeado para hacer un círculo (equivalente a rounded-full en Tailwind) */
+    outline: none; 
+}
+
+.boton2{
+    position: absolute; /* Posición absoluta */
+    top: 40%; /* Coloca el elemento en la mitad superior del contenedor */
+    right: 0; /* Alinea el elemento a la derecha del contenedor */
+    transform: translateY(-50%); /* Centra verticalmente el elemento */
+    background-color: #87DA35; /* Color de fondo verde */
+    color: #FFFFFF; /* Color del texto blanco */
+    padding: 0.5rem 1rem; /* Relleno interno */
+    border-radius: 9999px; /* Establece un radio de borde redondeado para hacer un círculo */
+    outline: none; /* Elimina el contorno de enfoque */
+}
+
+.testi-tit{
+    color: #87DA35;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+}
+.testi{
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.tit-alianzas{
+    color: #87DA35;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 60px; /* Equivalente aproximado a text-2xl en Tailwind */
+    font-weight: 700; /* Equivalente a font-bold en Tailwind */
+    margin-bottom: 1rem; /* Equivalente a mb-4 en Tailwind */
+    text-align: left;
+}
+
+.boton3{
+    position: absolute; /* Posición absoluta */
+    top: 50%; /* Coloca el elemento en la mitad superior del contenedor */
+    left: 0; /* Alinea el elemento a la izquierda del contenedor */
+    transform: translateY(-50%); /* Centra verticalmente el elemento */
+    background-color: #87DA35; /* Color de fondo verde (equivalente a bg-green-500 en Tailwind) */
+    color: #FFFFFF; /* Color del texto blanco (equivalente a text-white en Tailwind) */
+    padding: 0.5rem 1rem; /* Relleno interno de 0.5 rem superior e inferior, 1 rem a la izquierda y derecha (equivalente a p-2 en Tailwind) */
+    border-radius: 9999px; /* Establece un radio de borde redondeado para hacer un círculo (equivalente a rounded-full en Tailwind) */
+    outline: none; 
+}
+
+.boton4{
+    position: absolute; /* Posición absoluta */
+    top: 50%; /* Coloca el elemento en la mitad superior del contenedor */
+    right: 0; /* Alinea el elemento a la derecha del contenedor */
+    transform: translateY(-50%); /* Centra verticalmente el elemento */
+    background-color: #87DA35; /* Color de fondo verde */
+    color: #FFFFFF; /* Color del texto blanco */
+    padding: 0.5rem 1rem; /* Relleno interno */
+    border-radius: 9999px; /* Establece un radio de borde redondeado para hacer un círculo */
+    outline: none; /* Elimina el contorno de enfoque */
+}
+
+.cont-act{
+    padding-top: 2rem; /* Equivalente a py-8 en Tailwind */
+    padding-bottom: 2rem; /* Equivalente a py-8 en Tailwind */
+    background-color: #DFFFC0; /* Equivalente a bg-green-100 en Tailwind */
+}
+
+.act1{
+    font-size: 40px; /* Equivalente a text-xl en Tailwind (16px base) */
+    font-weight: bold; /* Equivalente a font-bold en Tailwind */
+    color: #70bc24; /* Color verde (800) */
+    margin-bottom: 0.75rem;
+}
+
+.act2{
+    font-size: 40px; /* Equivalente a text-xl en Tailwind (16px base) */
+    font-weight: bold; /* Equivalente a font-bold en Tailwind */
+    color: #70bc24; /* Color verde (800) */
+    margin-bottom: 0.75rem;
+}
+
+.act3{
+    font-size: 40px; /* Equivalente a text-xl en Tailwind (16px base) */
+    font-weight: bold; /* Equivalente a font-bold en Tailwind */
+    color: #70bc24; /* Color verde (800) */
+    margin-bottom: 0.75rem;
+}

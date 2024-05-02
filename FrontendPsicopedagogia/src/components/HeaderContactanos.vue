@@ -1,61 +1,88 @@
 <template>
-  <section>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light" :style="{ backgroundColor: navbarColor }">
-        <a class="navbar-brand" href="#" style="padding-left: 20px">
-          <img src="../assets/images/Logos/logo_morado.png" height="60" alt="Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item" @click="changeColor('#ffcfac')">
-              <router-link class="nav-link" to="/pesta&ntildea-home">Home</router-link>
-            </li>
-            <li class="nav-item" @click="changeColor('#8bc34a')">
-              <router-link class="nav-link" to="/pesta&ntildea-formacion-continua">Formación</router-link>
-            </li>
-            <li class="nav-item" @click="changeColor('#2196f3')">
-              <router-link class="nav-link" to="/pesta&ntildea-pregrado">Investigación</router-link>
-            </li>
-            <li class="nav-item" @click="changeColor('#ff9800')">
-              <router-link class="nav-link" to="/pesta&ntildea-quienes-somos">¿Quiénes Somos?</router-link>
-            </li>
-            <li class="nav-item" @click="changeColor('#9c27b0')">
-              <router-link class="nav-link" to="/pesta&ntildea-contactos">Contáctanos</router-link>
-            </li>
-            <li class="nav-item" @click="changeColor('#9c27b0')">
-              <router-link class="nav-link" to="/pesta&ntildea-login">Login</router-link>
-            </li>
-            <li class="nav-item" @click="changeColor('#9c27b0')">
-              <router-link class="nav-link" to="/pesta&ntildea-editar">Dashboard</router-link>
-            </li>
-            <li class="nav-item">
-              <img src="../assets/images/Contactos/icono_morado 2.png" height="70" alt="Usuario" class="nav-link">
-            </li>
-          </ul>
+  <div class="cuerpo">
+    <nav class="nav">
+      <ul class="ul">
+        <div class="logo">
+          <router-link to="/pesta&ntildea-home">
+            <img src="../assets/images/Logos/logo_blanco.png" alt="Logo Universidad">
+          </router-link>
         </div>
-      </nav>
-    </header>
-  </section>
+        <li v-for="(link, index) in navLinks" :key="index" :style="{ flexGrow: '1' }" class="li">
+          <router-link :to="link.route">{{ link.text }}</router-link>
+        </li>
+        <div class="login">
+          <router-link to="/pesta&ntildea-login">
+            <img src="../assets/images/icono_blanco.png" alt="Login">
+          </router-link>
+        </div>
+      </ul>
+    </nav>
+  </div>
 </template>
-
 
 <script>
 export default {
   name: "HeaderComponente",
   data() {
     return {
-      navbarColor: '#e6094b'  // Color inicial del navbar
-    };
-  },
-  methods: {
-    changeColor(color) {
-      this.navbarColor = color;  // Cambia el color del navbar
+      navLinks: [
+        {route: "/pesta&ntildea-home", text: "Home"},
+        {route: "/pesta&ntildea-formacion-continua", text: "Formación"},
+        {route: "/pesta&ntildea-pregrado", text: "Investigación"},
+        {route: "/pesta&ntildea-quienes-somos", text: "Quiénes Somos"},
+        {route: "/pesta&ntildea-contactos", text: "Contáctanos"}
+      ]
     }
   }
-};
+}
 </script>
 
+<style>
+.cuerpo {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.nav {
+  background-image: url('../assets/images/fondo_header.png'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Para ajustar la imagen de fondo al tamaño del navbar */
+  background-position: center; /* Para centrar la imagen de fondo */
+}
+
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between; /* Distribuye las opciones de manera uniforme */
+  width: 100%;
+}
+
+.li {
+  flex-grow: 1; /* Permite que los elementos llenen el espacio disponible */
+}
+
+.li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.li a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.logo img {
+  max-height: 65px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.login img {
+  max-height: 65px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+</style>
