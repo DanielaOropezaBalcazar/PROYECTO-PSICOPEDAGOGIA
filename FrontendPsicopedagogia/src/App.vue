@@ -33,6 +33,7 @@ export default {
 } */
 @import "./assets/css/quienes.css";
 @import "./assets/css/contactanos.css";
+@import "./assets/css/stylespre.css";
 @import url("./assets/css/investigacion.css");
 @import url("./assets/css/styleshome.css");
 </style>

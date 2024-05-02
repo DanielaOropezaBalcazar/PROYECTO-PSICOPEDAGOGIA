@@ -44,7 +44,7 @@ table {
 
 .int{
     font-family: "Roboto Condensed", "sans-serif";
-    font-size: 50px;
+    font-size: 70px;
     text-align: center;
     color: #FC9221;
 }
@@ -80,7 +80,9 @@ table {
 }
 
 #caridad{
-    margin-top: -50px;
+    padding-left: 7px;
+    width: 98%;
+    border-radius: 0;
 }
 
 .imados1{

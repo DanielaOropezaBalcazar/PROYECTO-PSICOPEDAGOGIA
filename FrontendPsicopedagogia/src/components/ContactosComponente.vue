@@ -1,4 +1,7 @@
 <template>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allerta&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <div class="container mt-4">
     <div class="row">
       <div class="col-md-6">
@@ -6,7 +9,7 @@
           <img
             src="../assets/images/Contactos/draAlejandra.png"
             alt="Usuario 1"
-            class="img-fluid mb-2"
+            class="img-fluid mb-6 imgA1"
             style="height: 500px; border-radius: 500px"
           />
           <span class="text-center">Dra. Alejandra Martínez Barrientos</span>
@@ -19,7 +22,8 @@
           <img
             src="../assets/images/Contactos/mscKarina.png"
             alt="Usuario 2"
-            class="img-fluid mb-2"
+            class="img-fluid mb-6 imgA1"
+
             style="height: 500px; border-radius: 500px"
           />
           <span class="text-center">MSc. Karina García Riveros</span>
@@ -28,7 +32,11 @@
         </div>
       </div>
     </div>
-    <h3 class="text-center">Plantel Docente</h3>
+    <center>
+      <h3 class="h3_1">Plantel Docente</h3>
+
+    </center>
+
     <div class="container mt-4">
       <div class="row">
         <div class="col-md-6">
@@ -68,7 +76,7 @@
       </div>
 
       <div class="text-center">
-        <h3>Dirección</h3>
+        <h3 class="h3_1">Dirección</h3>
         <p>
           Av. 14 de Septiembre y Calle 2 de Obrajes Bloque N – Jardín posterior
           <br />
@@ -86,7 +94,7 @@
       </div>
 
       <div class="text-center">
-        <h3>Horarios de consulta</h3>
+        <h3 class="h3_1">Horarios de consulta</h3>
         <p>
           De lunes a viernes de 08:30 a 16:30
           <br />

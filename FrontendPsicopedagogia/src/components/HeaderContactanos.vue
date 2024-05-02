@@ -60,6 +60,7 @@ export default {
 
 .li {
   flex-grow: 1; /* Permite que los elementos llenen el espacio disponible */
+  font-size: 34px;
 }
 
 .li a {
@@ -75,13 +76,13 @@ export default {
 }
 
 .logo img {
-  max-height: 65px;
+  max-height: 100px;
   margin-left: 20px;
   margin-right: 20px;
 }
 
 .login img {
-  max-height: 65px;
+  max-height: 100px;
   margin-right: 20px;
   margin-left: 20px;
 }
