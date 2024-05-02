@@ -1,168 +1,185 @@
-body {
-  font-family: Allerta;
-  font-size: 24px;
+/* Contenedor Principal */
+.container {
+  padding: 0 15px;
 }
 
-h1 {
-  font-family: Inria Serif;
-  color: #8438FF;
-  font-size: 40px;
-
-}
-
-
-/* Estilo para cambiar el color de los correos electrónicos */
-.correo {
-  color: #7862FF;
-  /* Color naranja */
-  text-align: center;
-  /* Alinea el texto al centro */
-}
-
-/* Estilo para centrar los nombres */
-.nombre {
-  text-align: center;
-  /* Alinea el texto al centro */
-}
-
-/* Estilo para la sección morada */
-.seccion-morada {
-  color: #ffffff;
-  /* Color morado */
-  font-size: 24px;
-  /* Tamaño de la fuente */
-}
-
-footer {
-  background-color: #000000;
-  color: #333;
-}
 
 .mission-container {
-  background-color: #ff6347;
+  background-color: #f96071; /* Ejemplo de color para misión */
   color: white;
   padding: 20px;
+  border-radius: 10px;
+  max-width: 400px; /* Ancho máximo ajustado para una lectura más enfocada */
+  margin: 20px auto; /* Centrado y espaciado */
+  text-align: center;
 }
+
 
 .mission-text {
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-.image-container {
-  padding: 20px;
-}
-
-.image-container img {
-  max-width: 100%;
-  height: auto;
-}
-
-.mission-container {
-  background-color: #ff6347;
-  color: white;
-  padding: 20px;
-}
-
-.mission-text {
-  font-size: 25px;
-  line-height: 1.5;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
+/* Estilos para contenedores de imágenes */
 .image-container {
   padding: 20px;
   position: relative;
   text-align: center;
 }
 
+/* Estilos para todas las imágenes dentro de los contenedores de imágenes */
 .image-container img {
-  width: 100%;
-  /* Ajustamos el ancho de la imagen para ocupar todo el espacio disponible */
+  width: 100%; /* Asegura que la imagen se ajuste al contenedor */
   height: auto;
-  display: block;
+  border-radius: 10px; /* Bordes redondeados para las imágenes */
 }
 
+/* Estilos para los textos superpuestos sobre imágenes */
 .caption {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 10px;
-  font-size: 52px;
+  font-size: 20px;
   font-weight: bold;
-  text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.main-content {
-  padding-bottom: 80px;
-}
-
-.custom-mission-container {
-  background-color: #ff6347;
-  width: 500px;
-  /* Ancho fijo de 500 píxeles */
-  height: 300px;
-  color: white;
+.section {
+  background-color: #fff; 
   padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px; 
 }
 
+
+.d-flex {
+  border: 1px solid #eee; 
+  border-radius: 8px; 
+  background-color: #fafafa; 
+  padding: 20px; 
+  margin-bottom: 20px; 
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06); 
+  width: 90%; 
+  margin: auto; 
+}
+
+
+.text-center {
+  font-size: 16px;
+  color: #333; 
+}
+
+
+
+.text-secondary {
+  font-size: 14px; 
+  color: #6c757d; 
+}
+
+.img-fluid {
+  border-radius: 50%; 
+  width: 100px; 
+  height: auto; 
+  margin-bottom: 10px; 
+}
+
+
+h1, h2 {
+  font-family: 'Inria Serif', serif;
+  color: #8438FF; 
+  margin-bottom: 15px;
+}
+
+/* Personalización para h1 en particular */
+h1.text-left {
+  color: orange; /* Estilo específico para encabezados h1 con clase 'text-left' */
+}
+
+/* Ajustes de columnas para responsividad y presentación */
+.col-md-6 {
+  padding: 10px;
+}
+
+/* Personalización adicional para distintas secciones */
 .custom-image {
-  width: 612px;
-  /* Ancho deseado */
-  height: 720px;
-  /* Alto deseado */
+  max-width: 100%;
+  height: auto;
 }
 
-/* Estilos para el primer conjunto de recuadros */
-.mission-container:nth-of-type(1) {
-  background-color: #F96071;
-  /* Color para el primer conjunto */
+/* Opciones de color para contenedores con diferentes temas o propósitos */
+.mission-container[style*="background-color: #f97260"] {
+  background-color: #f97260; /* Especifica un color personalizado si es necesario */
 }
 
-/* Estilos para el segundo conjunto de recuadros */
-.mission-container:nth-of-type(2) {
-  background-color: #F97260;
-  /* Color para el segundo conjunto */
+.mission-container[style*="background-color: #ff9559"] {
+  background-color: #ff9559;
 }
 
-/* Estilos para el tercer conjunto de recuadros */
-.mission-container:nth-of-type(3) {
-  background-color: #37a853;
-  /* Color para el tercer conjunto */
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
 }
 
-.mission-container {
-  background-color: #f5844c;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 800px;
-  /* Aumentar el ancho máximo */
-  margin: 0 auto;
-  /* Centrar horizontalmente */
-  text-align: center;
-  /* Centrar el texto horizontalmente */
+
+.container > .row {
+  margin-top: 50px; /* Espacio adicional para separar filas dentro del contenedor */
 }
 
-.mission-container {
-  background-color: #f5844c;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 800px;
-  /* Aumentar el ancho máximo */
-  margin: 0 auto;
-  /* Centrar horizontalmente */
-  text-align: center;
-  /* Centrar el texto horizontalmente */
+/* Contenedor general para el pulpo */
+.pulpo-container {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+  pointer-events: none;
+  width: 100%;
 }
 
-.mission-container h2 {
-  font-size: 90px;
-  font-weight: bold;
-  margin-bottom: 10px;
+/* Estilos base para el pulpo */
+.pulpo {
+  position: absolute;
+  left: -100%; /* Inicia fuera de la pantalla a la izquierda */
+  transition: transform 1s ease-in-out, left 1s ease-in-out; /* Transiciones suavizadas para movimiento y rotación */
+  will-change: transform, left; /* Optimiza las propiedades que cambiarán */
 }
+
+/* Animación que alterna el pulpo desde ambos lados */
+@keyframes peekaboo {
+  0%, 100% {
+    left: -100%; /* Oculto a la izquierda */
+    transform: rotateY(0deg); /* Orientado normalmente */
+  }
+  25%, 75% {
+    left: 50%; /* Centro de la ventana */
+    transform: rotateY(180deg); /* Rotar para asomar desde el derecho */
+  }
+  50% {
+    left: 100%; 
+    transform: rotateY(0deg); 
+  }
+}
+
+/* Aplica la animación basada en una clase activa */
+.pulpo-animate {
+  animation: peekaboo 10s infinite; /* Ciclo continuo cada 10 segundos */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

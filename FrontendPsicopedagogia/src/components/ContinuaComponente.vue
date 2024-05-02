@@ -152,55 +152,57 @@
     
     
     <!-- Sección de Actividades -->
-    <section class="cont-act">
-        <div class="container mx-auto px-4">
-            <!-- Actividad 1 -->
-            <div class="flex flex-wrap items-center mb-8">
-                <div class="w-full md:w-1/2 p-4">
-                    <h3 class="act1">Actividad 1</h3>
-                    <p class="text-gray-700">
-                        En esta actividad, los niños participarán en una serie de juegos y ejercicios diseñados para explorar y<br> 
-                        expresar sus emociones. A través de actividades creativas como dibujar, actuar, o jugar roles, los<br>
-                        niños tendrán la oportunidad de hablar sobre cómo se sienten, qué les hace sentir así, y cómo<br>
-                        pueden manejar esas emociones de manera saludable. El objetivo es crear un ambiente seguro y de<br>
-                        apoyo donde los niños se sientan cómodos compartiendo sus sentimientos y aprendiendo<br> estrategias para gestionarlos.
-                    </p>
-                </div>
-                <div class="w-full md:w-1/2 p-4">
-                    <img src="../assets/images/Pregrado/act1.jpeg" alt="Actividad 1" class="rounded shadow-lg">
-                </div>
+    <section class="actividades">
+        <div class="Fondo">
+        <!-- Actividad 1 - Imagen a la izquierda, Texto a la derecha -->
+        <div class="actividad">
+            <div class="imagen-actividad izquierda">
+                <img src="../assets/images/Pregrado/act1.jpeg" alt="Actividad 1" class="rounded shadow-lg">
             </div>
-    
-            <!-- Actividad 2 -->
-            <div class="flex flex-wrap items-center mb-8">
-                <div class="w-full md:w-1/2 p-4">
-                    <img src="../assets/images/Pregrado/cocina.jpeg" alt="Actividad 2" class="rounded shadow-lg">
-                </div>
-                <div class="w-full md:w-1/2 p-4">
-                    <h3 class="act2">Actividad 2</h3>
-                    <p class="text-gray-700">
-                        En esta actividad de cocina, los niños tendrán la oportunidad de explorar el mundo de la cocina de una manera divertida y educativa. Cocinar no solo implica la preparación de alimentos, sino que también proporciona una valiosa oportunidad para el desarrollo de habilidades psicomotoras, cognitivas y sociales.
-    
-    Durante la actividad, los niños trabajarán en equipo bajo la supervisión de un adulto. Se les animará a participar activamente en todas las etapas del proceso de cocina, desde la selección de ingredientes hasta la preparación y presentación final de los platos.
-                    </p>
-                </div>
-    
-            </div>
-    
-            <!-- Actividad 3 -->
-            <div class="flex flex-wrap items-center">
-                <div class="w-full md:w-1/2 p-4">
-                    <h3 class="act3">Actividad 3</h3>
-                    <p class="text-gray-700">
-                        Únete a nuestra conferencia de psicopedagogía, donde exploraremos las intersecciones entre la psicología y la pedagogía para comprender mejor el proceso de aprendizaje humano. Descubre cómo los enfoques psicológicos pueden informar y mejorar las prácticas educativas, desde la identificación temprana de necesidades de aprendizaje hasta la creación de entornos de enseñanza inclusivos. Acompáñanos mientras exploramos estrategias efectivas para apoyar el desarrollo cognitivo, emocional y social de los estudiantes, así como para fomentar el éxito académico y el bienestar integral en entornos educativos diversos.
-                    </p>
-                </div>
-                <div class="w-full md:w-1/2 p-4">
-                    <img src="../assets/images/Pregrado/conferencia.jpeg" alt="Actividad 3" class="rounded shadow-lg">
-                </div>
+            <div class="texto-actividad derecha">
+                <h3>Actividad 1</h3>
+                <p>
+                    En esta actividad, los niños participarán en una serie de juegos y ejercicios diseñados para explorar y
+                    expresar sus emociones. A través de actividades creativas como dibujar, actuar, o jugar roles, los
+                    niños tendrán la oportunidad de hablar sobre cómo se sienten, qué les hace sentir así, y cómo
+                    pueden manejar esas emociones de manera saludable.
+                </p>
             </div>
         </div>
+    
+        <!-- Actividad 2 - Imagen a la derecha, Texto a la izquierda -->
+        <div class="actividad">
+            <div class="texto-actividad izquierda">
+                <h3>Actividad 2</h3>
+                <p>
+                    En esta actividad de cocina, los niños tendrán la oportunidad de explorar el mundo de la cocina de una manera divertida y educativa. Cocinar no solo implica la preparación de alimentos, sino que también proporciona una valiosa oportunidad para el desarrollo de habilidades psicomotoras, cognitivas y sociales.
+
+                    Durante la actividad, los niños trabajarán en equipo bajo la supervisión de un adulto. Se les animará a participar activamente en todas las etapas del proceso de cocina, desde la selección de ingredientes hasta la preparación y presentación final de los platos.
+                                  
+                </p>
+            </div>
+            <div class="imagen-actividad derecha">
+                <img src="../assets/images/Pregrado/cocina.jpeg" alt="Actividad 2" class="rounded shadow-lg">
+            </div>
+        </div>
+    
+        <!-- Actividad 3 - Imagen a la izquierda, Texto a la derecha -->
+        <div class="actividad">
+            <div class="imagen-actividad izquierda">
+                <img src="../assets/images/Pregrado/conferencia.jpeg" alt="Actividad 3" class="rounded shadow-lg">
+            </div>
+            <div class="texto-actividad derecha">
+                <h3>Actividad 3</h3>
+                <p>
+                    Únete a nuestra conferencia de psicopedagogía, donde exploraremos las intersecciones entre la psicología y la pedagogía para comprender mejor el proceso de aprendizaje humano. Descubre cómo los enfoques psicológicos pueden informar y mejorar las prácticas educativas, desde la identificación temprana de necesidades de aprendizaje hasta la creación de entornos de enseñanza inclusivos. Acompáñanos mientras exploramos estrategias efectivas para apoyar el desarrollo cognitivo, emocional y social de los estudiantes, así como para fomentar el éxito académico y el bienestar integral en entornos educativos diversos.
+              
+                </p>
+            </div>
+        </div>
+    </div>
     </section>
+    
+    
     
 
     </main>

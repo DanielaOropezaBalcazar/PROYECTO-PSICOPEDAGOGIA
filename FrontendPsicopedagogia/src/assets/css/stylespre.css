@@ -157,6 +157,105 @@ li {
 }
 
 
+.Fondo {
+    background-color: #ffffff; /* Establece el color de fondo a blanco */
+    padding: 20px; /* Añade algo de espacio alrededor de los contenidos internos */
+    margin: auto; /* Centra el div si es necesario */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Opcional: Añade una sombra para resaltar el área */
+    width: 100%; /* Ajusta esto según la necesidad de tu diseño, podría ser menos del 100% */
+    border-radius: 10px; /* Bordes redondeados para un diseño más suave */
+}
+
+.actividades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.actividad {
+    display: flex;
+    width: 90%; /* Ajusta al tamaño deseado */
+    margin: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imagen-actividad, .texto-actividad {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.imagen-actividad.izquierda, .texto-actividad.derecha {
+    order: 1;
+}
+
+.imagen-actividad.derecha, .texto-actividad.izquierda {
+    order: 2;
+}
+
+.rounded {
+    width: 100%; /* Asegura que la imagen use todo el espacio disponible */
+    height: auto;
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25); /* Sombra para la imagen */
+}
+
+.texto-actividad {
+    background-color: #87DA35; /* Fondo verde */
+    color: white;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.imgGrupo, .imagen-actividad img {
+    animation: float 6s infinite ease-in-out;
+}
+
+@keyframes colorShift {
+    0% {
+        color: #87DA35;
+    }
+    50% {
+        color: #76be18;
+    }
+    100% {
+        color: #87DA35;
+    }
+}
+
+.titulo1, .titulo-trabajo {
+    animation: colorShift 8s infinite ease-in-out;
+}
+
+@keyframes sway {
+    0%, 100% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+.areasDiv {
+    animation: sway 6s ease-in-out infinite;
+}
+
+
+
 
 
 
