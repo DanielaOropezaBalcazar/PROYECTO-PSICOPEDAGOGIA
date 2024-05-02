@@ -1,158 +1,240 @@
-
-main {
-    padding: 20px;
-    color: #333;
+.zona-tit {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    color: #2977F8;
+    margin-left: 50px;
+    animation: slideFromLeft 1s ease-out;
 }
 
-.learning-zone, .join, .recent-publication, .previous-publications {
-    margin-bottom: 20px;
-}
-
-h1, h2 {
-    color: #0056b3;
-}
-
-.recent-publication {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.recent-publication img {
-    width: 100%; 
-    max-width: 600px; 
-    height: auto; 
-    margin: auto;
-}
-
-.recent-publication p {
-    font-size: 16px; 
-    color: #333; 
-    margin-top: 10px; 
-}
-
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-.photo {
-    background-color: #00BFFF;
-    height: auto; 
-    overflow: hidden; 
-}
-
-.photo img {
-    width: 100%;
-    height: 100%; 
-    object-fit: cover; 
-}
-
-
-.gallery a, .recent-publication a {
-    text-decoration: none; 
-}
-
-.gallery a:hover, .recent-publication a:hover {
-    opacity: 0.8; 
-}
-
-
-.learning-zone {
-    padding: 20px;
-    background-color: #f0f8ff; 
+@keyframes slideFromLeft {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
 .content-wrapper {
     display: flex;
     align-items: center; 
     justify-content: space-around;
-    gap: 20px; 
+    gap: 20px;
+    width: 85%;
+    animation: fadeIn 1s ease-in-out;
 }
 
-
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
 .member-list {
     flex: 1; 
     padding: 10px;
-    background-color: #e6f7ff; 
-    border-radius: 10px; 
+    background-color: #b3d0ff; 
+    border-radius: 10px;
+    animation: slideFromRight 1s ease-out;
 }
 
-.member-list h2 {
-    color: #0056b3;
+@keyframes slideFromRight {
+    from { opacity: 0; transform: translateX(100px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
-.member-list ul {
-    list-style-type: none; 
-    padding: 0;
+.int {
+    font-size: 25px;
+    font-family: "Inria Serif", serif;
+    font-weight: 500;
+    list-style: none;
 }
 
-.member-list li {
-    padding: 8px 0; 
-    border-bottom: 1px solid #ccc; 
+.int-tit {
+    font-size: 45px;
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
 }
 
-.member-list li:last-child {
-    border-bottom: none; 
+.foto1 {
+    border-radius: 10px;
+    animation: scaleUp 0.8s ease-in-out;
 }
 
-
-.join h2 {
-    text-align: right; 
-    padding-left: 20px; 
-    color: #0056b3; 
+@keyframes scaleUp {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
 }
 
-.join {
-    padding: 20px;
-    background-color: #eef6ff;
+.req-uni {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #A2C5FF;
+    font-size: 60px;
+    text-align: right;
+    margin-right: 50px;
 }
 
-
-
-.join li {
-    padding: 10px 0; 
-    
+.req {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #2977F8;
+    font-size: 40px;
+    text-align: left;
+    margin-left: 50px;
+    margin-top: -30px;
 }
 
+.req-p {
+    font-family: "Inria Serif", serif;
+    color: #000000;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 50px;
+    margin-top: -20px;
+}
+
+.recent-publication {
+    background-color: #ffffff; /* Establece el fondo a blanco */
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px; /* Agrega algo de espacio alrededor del contenido */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Opcional: añade una sombra suave para resaltar la sección */
+}
+
+.pub-rec {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #528eed;
+    font-size: 60px;
+}
+
+.desc-pub-rec {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.pub-ant-tit {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #A2C5FF;
+    text-align: left;
+    margin-left: 50px;
+    font-size: 60px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    animation: popIn 0.6s ease-in-out;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
+.previous-publications {
+    margin-bottom: 5px;
+}
+
+.cont-tit {
+    font-size: 60px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    color: #2977F8;
+}
 
 .contact {
-    padding: 20px;
-    background-color: #f0f8ff; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    border-radius: 10px;
     margin: 20px;
-}
-
-.contact h2 {
-    text-align: center;
-    color: #0056b3;
 }
 
 table {
     width: 100%; 
     border-collapse: collapse; 
     margin-top: 20px;
+    font-size: 25px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
 }
 
 th, td {
     text-align: left;
     padding: 12px 15px; 
-    border-bottom: 1px solid #ccc; 
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    font-size: 25px;
 }
 
 th {
     background-color: #71b2f7;
     color: white;
-    font-size: 16px;
+    font-size: 25px;
 }
 
-tbody tr:hover {
-    background-color: #e0f7ff; 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
+    gap: 20px; /* Espacio entre las cartas */
+    margin: 0 auto; 
+    padding: 20px; /* Espacio alrededor de los elementos de la galería */
 }
 
-td {
-    color: #333; 
+.flip-card {
+    background-color: transparent;
+    width: 100%; 
+    height: 300px;
+    perspective: 1000px; /* Profundidad de perspectiva para el efecto 3D */
 }
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer; /* Indicativo visual de que es interactivo */
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Volteo al pasar el mouse */
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta la cara de atrás durante el volteo */
+}
+
+.flip-card-front {
+    background-color: #ffffff; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.flip-card-back {
+    background-color: #2980b9; 
+    color: white;
+    transform: rotateY(180deg); 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.flip-card img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: cover; /* Cubre el espacio disponible sin perder las proporciones */
+}
+

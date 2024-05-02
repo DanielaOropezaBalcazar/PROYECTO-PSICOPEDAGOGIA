@@ -3,7 +3,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light" :style="{ backgroundColor: navbarColor }">
         <a class="navbar-brand" href="#" style="padding-left: 20px">
-          <img src="../assets/images/Logos/logo_morado.png" height="60" alt="Logo">
+          <img src="../assets/images/Logos/logo_negro.png" height="60" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -11,7 +11,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item" @click="changeColor('#ffcfac')">
+            <li class="nav-item" @click="changeColor('#F7D064')">
               <router-link class="nav-link" to="/pesta&ntildea-home">Home</router-link>
             </li>
             <li class="nav-item" @click="changeColor('#8bc34a')">
@@ -48,7 +48,7 @@ export default {
   name: "HeaderComponente",
   data() {
     return {
-      navbarColor: '#ffcfac'  // Color inicial del navbar
+      navbarColor: '#F7D064'  // Color inicial del navbar
     };
   },
   methods: {
@@ -58,4 +58,6 @@ export default {
   }
 };
 </script>
+
+
 

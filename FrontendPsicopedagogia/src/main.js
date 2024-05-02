@@ -39,7 +39,7 @@ const routes = [
     { path: '/pesta&ntilde;a-red-psicopedagogia', component: redPsicopedagogiaComponent },
     { path: '/pesta&ntildea-pregrado', component: PregradoComponente },
     { path: '/pesta&ntilde;a-postgrado', component: postgradoComponente },
-
+    
     { path: '/pesta&ntildea-formacion-continua', component: ContinuaComponente },
     { path: '/pesta&ntilde;a-zona-de-aprendizaje', component: ZonaComponente },
     { path: '/pesta&ntilde;a-sociedad-cient&iacute;fica-Inpsicopedia', component: InpsicopediaComponente },
