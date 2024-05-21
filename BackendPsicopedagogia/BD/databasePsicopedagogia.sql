@@ -5,7 +5,6 @@
 create database psicopedagogia;
 use psicopedagogia;
 
-
 -- tables
 -- Table: Programas
 CREATE TABLE Programas (
@@ -48,7 +47,7 @@ CREATE TABLE alianzas (
     direccion varchar(255)  NOT NULL,
     descripcion varchar(255)  NULL,
     ciudad_id_ciudad int  NOT NULL,
-    column_6 int  NOT NULL,
+    columna_foto Longtext  NOT NULL,
     CONSTRAINT alianzas_pk PRIMARY KEY (id_alianza)
 );
 
