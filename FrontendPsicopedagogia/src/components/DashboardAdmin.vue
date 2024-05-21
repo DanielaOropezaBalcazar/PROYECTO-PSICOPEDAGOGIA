@@ -52,7 +52,7 @@
         <div class="overlay-text">Perfiles de Estudiantes</div>
       </div>
     </router-link>
-    <router-link to="/otra-pagina" class="animated-link">
+    <router-link to="/alianza" class="animated-link">
       <div class="image-overlay">
         <img src="../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
         <div class="overlay-text">Alianzas</div>

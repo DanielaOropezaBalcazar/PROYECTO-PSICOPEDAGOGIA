@@ -2,29 +2,28 @@
   <div class="modal" v-if="show">
     <div class="modal-content">
       <span class="close-button" @click="closeModal">&times;</span>
-      <h2 style="text-align: center;">Registrar Nueva Autoridad</h2>
+      <h2 style="text-align: center;">Registrar Nueva Alianza</h2>
 
       <form @submit.prevent="submitForm">
-        <label>Nombre de Autoridad:</label>
-        <input v-model="formData.nombre" type="text" required>
+        <label>Universidad:</label>
+        <input v-model="formData.Universidad" type="text" required>
 
-        <label>Apellido de Autoridad:</label>
-        <input v-model="formData.apellido" type="text" required>
-
+        <label>Descripción:</label>
+        <textarea v-model="formData.descripcion" required></textarea>
 
         <label>Foto:</label>
         <input type="file" @change="previewImage" accept="image/*" required> <!-- Solo permite imágenes -->
         <img :src="imagePreview" alt="Vista previa de la imagen" v-if="imagePreview" class="image-preview">
 
+        <label>Direccion:</label>
+        <input v-model="formData.direccion" type="text" required>
 
-        <label>Telefono:</label>
-        <input v-model="formData.telefono" required>
-
-        <label>Autoridad:</label>
-        <input v-model="formData.autoridad" required>
-
-        <label>Rol:</label>
-        <input v-model="formData.rol" required>
+        <label>Ciudad:</label>
+        <select v-model="formData.ciudad_id_ciudad" required>
+          <option v-for="ciud in ciudades" :key="ciud.id_ciudad" :value="ciud.id_ciudad">
+            {{ ciud.ciudad }}
+          </option>
+        </select>
 
         <div class="button-container">
           <button type="button" @click="closeModal">Cancelar</button> <!-- Botón de cancelar -->
@@ -40,19 +39,31 @@ export default {
   data() {
     return {
       formData: {
-        nombre: '',
-        apellido: '',
-        telefono: '',
-        autoridad: '',
-        rol: '',
+        Universidad: '',
+        direccion: '',
+        descripcion: '',
+        ciudad_id_ciudad: '',
+        ciudad: '',
+        pais: '',
         columna_foto: '',
-        Persona_id_persona: '',
 
       },
+      ciudades: [],
       imagePreview: null,
     };
   },
   async created() {
+    try {
+      const response = await fetch('http://localhost:3000/alianza/ciudades/1');
+      if (!response.ok) {
+        throw new Error('Error al recuperar los datos de la tabla ciudades.');
+      }
+      console.log(response)
+      this.ciudades = await response.json();
+
+    } catch (error) {
+      console.error(error);
+    }
 
   },
   methods: {
@@ -80,8 +91,10 @@ export default {
         data.columna_foto = base64data;
       }
       const json = JSON.stringify(data);
+      console.log("Id ciudad");
+      console.log(data.ciudad_id_ciudad);
       try {
-        const response = await fetch('http://localhost:3000/autoridad/create', {
+        const response = await fetch('http://localhost:3000/alianza/create', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -89,7 +102,7 @@ export default {
           body: json,
         });
         if (!response.ok) {
-          throw new Error('Error al crear la actividad');
+          throw new Error('Error al crear la alianza');
         }
         this.$emit('update');
         this.closeModal();

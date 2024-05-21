@@ -2,28 +2,28 @@
   <div class="modal" v-if="show">
     <div class="modal-content">
       <span class="close-button" @click="closeModal">&times;</span>
-      <h2 style="text-align: center;">Editar Autoridad</h2>
+      <h2 style="text-align: center;">Editar Alianza</h2>
+
       <form @submit.prevent="submitForm">
-        <label>Nombre de Autoridad:</label>
-        <input v-model="formData.nombre" type="text" required>
+        <label>Universidad:</label>
+        <input v-model="formData.Universidad" type="text" required>
 
-        <label>Apellido de Autoridad:</label>
-        <input v-model="formData.apellido" type="text" required>
-
+        <label>Descripción:</label>
+        <textarea v-model="formData.descripcion" required></textarea>
 
         <label>Foto:</label>
         <input type="file" @change="previewImage" accept="image/*" required> <!-- Solo permite imágenes -->
         <img :src="imagePreview" alt="Vista previa de la imagen" v-if="imagePreview" class="image-preview">
 
+        <label>Direccion:</label>
+        <input v-model="formData.direccion" type="text" required>
 
-        <label>Telefono:</label>
-        <input v-model="formData.telefono" required>
-
-        <label>Autoridad:</label>
-        <input v-model="formData.autoridad" required>
-
-        <label>Rol:</label>
-        <input v-model="formData.rol" required>
+        <label>Ciudad:</label>
+        <select v-model="formData.ciudad_id_ciudad" required>
+          <option v-for="ciud in ciudades" :key="ciud.id_ciudad" :value="ciud.id_ciudad">
+            {{ ciud.ciudad }}
+          </option>
+        </select>
 
         <div class="button-container">
 
@@ -37,17 +37,29 @@
 
 <script>
 export default {
-  props: ['show', 'autoridad'],
+  props: ['show', 'alianza'],
   data() {
     return {
-      formData: { ...this.autoridad },
+      formData: { ...this.alianza },
+      ciudades: [],
       imagePreview: null,
     };
   },
   async created() {
+    try {
+      const response = await fetch('http://localhost:3000/alianza/ciudades/1');
+      if (!response.ok) {
+        throw new Error('Error al recuperar los datos de la tabla ciudades.');
+      }
+      console.log(response)
+      this.ciudades = await response.json();
+
+    } catch (error) {
+      console.error(error);
+    }
   },
   watch: {
-    autoridad(newVal) {
+    alianza(newVal) {
       this.formData = { ...newVal };
     },
   },
@@ -84,9 +96,9 @@ export default {
       // Convertir el objeto a JSON
       const json = JSON.stringify(data);
 
-      console.log(this.autoridad.id_autoridad);
+      console.log(this.alianza.id_alianza);
       try {
-        const response = await fetch(`http://localhost:3000/autoridad/update/${this.autoridad.id_autoridad}`, {
+        const response = await fetch(`http://localhost:3000/alianza/update/${this.alianza.id_alianza}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

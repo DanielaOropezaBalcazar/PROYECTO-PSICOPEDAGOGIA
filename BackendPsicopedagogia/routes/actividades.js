@@ -23,7 +23,22 @@ router.get('/', (req, res) => {
     });
 });
 
-router.put('/:id', (req, res) => {
+router.get('/curriculares/', (req, res) => {
+
+    const sql = 'SELECT * FROM actividades_universidad where tipo_actividad_id_tipo_actividad = 1';
+
+    connection.query(sql, (error, results) => {
+        if (error) {
+            console.log(error);
+            res.status(500).json({ error: 'Hubo un error al recuperar los datos de actividades curriculares.' });
+            throw error;
+        }
+
+        res.json(results);
+    });
+});
+
+router.put('/update/:id', (req, res) => {
     const { nombre_actividad, columna_foto, descripcion, fecha, Usuario_id_usuario, tipo_actividad_id_tipo_actividad } = req.body;
     const { id } = req.params;
 
@@ -41,7 +56,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/delete/:id', (req, res) => {
     const { id } = req.params;
     const sql = 'DELETE FROM actividades_universidad WHERE id_actividad = ?';
     connection.query(sql, [id], (error, results) => {
