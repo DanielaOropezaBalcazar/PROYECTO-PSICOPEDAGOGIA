@@ -33,8 +33,8 @@
           </div>
         </div>
       </div>
-      <CreateAutoridad :show="showCrearModal" @close="showCrearModal = false" @update="cargarDocente"/>
-      <EditAutoridad :show="showModal" :autoridad="autoridadSeleccionada" @close="showModal = false" @update="cargarDocente"/>
+      <CreateAutoridad :show="showCrearModal" @close="showCrearModal = false" @update="cargarAutoridad"/>
+      <EditAutoridad :show="showModal" :autoridad="autoridadSeleccionada" @close="showModal = false" @update="cargarAutoridad"/>
 
     </div>
   </div>

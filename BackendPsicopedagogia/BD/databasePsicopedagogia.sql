@@ -5,6 +5,7 @@
 create database psicopedagogia;
 use psicopedagogia;
 
+
 -- tables
 -- Table: Programas
 CREATE TABLE Programas (
@@ -40,6 +41,17 @@ CREATE TABLE actividades_universidad (
     CONSTRAINT actividades_universidad_pk PRIMARY KEY (id_actividad)
 );
 
+-- Table: alianzas
+CREATE TABLE alianzas (
+    id_alianza int  NOT NULL AUTO_INCREMENT,
+    Universidad varchar(75)  NOT NULL,
+    direccion varchar(255)  NOT NULL,
+    descripcion varchar(255)  NULL,
+    ciudad_id_ciudad int  NOT NULL,
+    column_6 int  NOT NULL,
+    CONSTRAINT alianzas_pk PRIMARY KEY (id_alianza)
+);
+
 -- Table: autoridades
 CREATE TABLE autoridades (
     id_autoridad int  NOT NULL AUTO_INCREMENT,
@@ -50,13 +62,21 @@ CREATE TABLE autoridades (
     CONSTRAINT autoridades_pk PRIMARY KEY (id_autoridad)
 );
 
+-- Table: ciudad
+CREATE TABLE ciudad (
+    id_ciudad int  NOT NULL AUTO_INCREMENT,
+    ciudad varchar(75)  NOT NULL,
+    pais_id_pais int  NOT NULL,
+    CONSTRAINT ciudad_pk PRIMARY KEY (id_ciudad)
+);
+
 -- Table: graduados
 CREATE TABLE graduados (
     id_graduado int  NOT NULL AUTO_INCREMENT,
     anio int  NOT NULL,
     trabajo_grado varchar(255)  NOT NULL,
-    testimonio Longtext  NOT NULL,
-    columna_foto varchar(255)  NOT NULL,
+    testimonio varchar(255)  NOT NULL,
+    columna_foto Longtext  NOT NULL,
     persona_id_persona int  NOT NULL,
     CONSTRAINT graduados_pk PRIMARY KEY (id_graduado)
 );
@@ -77,6 +97,25 @@ CREATE TABLE integrantes_zona_aprendizaje (
     persona_id_persona int  NOT NULL,
     columna_foto Longtext  NOT NULL,
     CONSTRAINT integrantes_zona_aprendizaje_pk PRIMARY KEY (id_integrante)
+);
+
+-- Table: pais
+CREATE TABLE pais (
+    id_pais int  NOT NULL AUTO_INCREMENT,
+    pais varchar(45)  NOT NULL,
+    CONSTRAINT pais_pk PRIMARY KEY (id_pais)
+);
+
+-- Table: perfil_estudiante
+CREATE TABLE perfil_estudiante (
+    id_perfilEst int  NOT NULL AUTO_INCREMENT,
+    fecha_inscripcion date  NOT NULL,
+    matricula varchar(45)  NOT NULL,
+    semestre varchar(45)  NOT NULL,
+    testimonio varchar(255)  NOT NULL,
+    persona_id_persona int  NOT NULL,
+    columna_foto Longtext  NOT NULL,
+    CONSTRAINT tipo_actividad_pk PRIMARY KEY (id_perfilEst)
 );
 
 -- Table: persona
@@ -147,6 +186,7 @@ CREATE TABLE trabajo_realizado (
     publicacion date  NOT NULL,
     columna_foto Longtext  NOT NULL,
     persona_id_persona int  NOT NULL,
+    documento blob  NOT NULL,
     CONSTRAINT trabajo_realizado_pk PRIMARY KEY (id_trabajo)
 );
 
@@ -191,12 +231,24 @@ ALTER TABLE actividades_universidad ADD CONSTRAINT actividades_universidad_Usuar
 ALTER TABLE actividades_universidad ADD CONSTRAINT actividades_universidad_tipo_actividad FOREIGN KEY actividades_universidad_tipo_actividad (tipo_actividad_id_tipo_actividad)
     REFERENCES tipo_actividad (id_tipo_actividad);
 
+-- Reference: alianzas_ciudad (table: alianzas)
+ALTER TABLE alianzas ADD CONSTRAINT alianzas_ciudad FOREIGN KEY alianzas_ciudad (ciudad_id_ciudad)
+    REFERENCES ciudad (id_ciudad);
+
+-- Reference: ciudad_pais (table: ciudad)
+ALTER TABLE ciudad ADD CONSTRAINT ciudad_pais FOREIGN KEY ciudad_pais (pais_id_pais)
+    REFERENCES pais (id_pais);
+
 -- Reference: integrantes_inpsicopedia_persona (table: integrantes_inpsicopedia)
 ALTER TABLE integrantes_inpsicopedia ADD CONSTRAINT integrantes_inpsicopedia_persona FOREIGN KEY integrantes_inpsicopedia_persona (persona_id_persona)
     REFERENCES persona (id_persona);
 
 -- Reference: integrantes_zona_aprendizaje_persona (table: integrantes_zona_aprendizaje)
 ALTER TABLE integrantes_zona_aprendizaje ADD CONSTRAINT integrantes_zona_aprendizaje_persona FOREIGN KEY integrantes_zona_aprendizaje_persona (persona_id_persona)
+    REFERENCES persona (id_persona);
+
+-- Reference: perfil_estudiante_persona (table: perfil_estudiante)
+ALTER TABLE perfil_estudiante ADD CONSTRAINT perfil_estudiante_persona FOREIGN KEY perfil_estudiante_persona (persona_id_persona)
     REFERENCES persona (id_persona);
 
 -- Reference: plantel_docente_persona (table: plantel_docente)
