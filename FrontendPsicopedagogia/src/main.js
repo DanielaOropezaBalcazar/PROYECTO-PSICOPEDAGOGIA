@@ -31,6 +31,7 @@ import ZonaComponente from './components/ZonaComponente.vue';
 import PruebaComponente from './components/PruebaComponente.vue';
 import ReadDocente from "./components/ABM_PlantelDocente/ReadDocente.vue";
 import ReadAutoridad from "./components/ABM_Autoridades/ReadAutoridad.vue";
+import ReadAlianza from "./components/ABM_Alianzas/ReadAlianza.vue";
 
 
 const routes = [
@@ -58,6 +59,7 @@ const routes = [
     { path: '/actividades', component: ReadActividad },
     { path: '/plantelDocente', component: ReadDocente },
     { path: '/autoridad', component: ReadAutoridad },
+    { path: '/alianza', component: ReadAlianza },
 
     { path: '/Prueba-Componente', component: PruebaComponente }
 ];
