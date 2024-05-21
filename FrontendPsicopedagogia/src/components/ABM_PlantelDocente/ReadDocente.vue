@@ -2,29 +2,30 @@
   <div class="app">
     <div class="container">
       <div class="header">
-        <h1 class="main-title">Actividades Curriculares</h1>
+        <h1 class="main-title">Plantel Docente</h1>
       </div>
-      <button class="create-button" @click="abrirModalCrear">Crear actividad</button>
+      <button class="create-button" @click="abrirModalCrear">Registrar Docente</button>
 
       <div class="row">
-        <div class="col-md-12" v-for="(actividad, index) in actividades" :key="actividad.id_actividad">
+        <div class="col-md-12" v-for="(docente, index) in docentes" :key="docente.id_docente">
           <div class="card card-width" :style="{ backgroundColor: colores[index % colores.length] }">
             <div class="card-content">
               <div class="card-image">
-                <img class="card-img" :src="actividad.columna_foto" alt="Imagen de la actividad">
+                <img class="card-img" :src="docente.columna_foto" alt="Imagen de la actividad">
               </div>
               <div class="card-body">
                 <div class="card-details">
                   <div>
-                    <h5 class="card-title">{{ actividad.nombre_actividad }}</h5>
-                    <p class="card-text">{{ actividad.descripcion }}</p>
+                    <h5 class="card-title">{{ docente.nombre }} {{ docente.apellido }}</h5>
+                    <p class="card-text">Area: {{ docente.area }}</p>
+                    <p class="card-text">Profesion: {{ docente.profesion }}</p>
                     <p class="card-text">
-                      <small class="text-muted">Fecha: {{ actividad.fecha }}</small>
+                      <small class="text-muted">Telefono: {{ docente.telefono }}</small>
                     </p>
                   </div>
                   <div class="button-container">
-                    <button class="edit-button" @click="abrirModal(actividad)">Editar</button>
-                    <button class="delete-button" @click="eliminarActividad(actividad.id_actividad)">Borrar</button>
+                    <button class="edit-button" @click="abrirModal(docente)">Editar</button>
+                    <button class="delete-button" @click="eliminarDocente(docente.id_docente)">Borrar</button>
                   </div>
                 </div>
               </div>
@@ -32,65 +33,65 @@
           </div>
         </div>
       </div>
-      <CrearActividad :show="showCrearModal" @close="showCrearModal = false" @update="cargarActividades" />
-      <EditarActividad :show="showModal" :actividad="actividadSeleccionada" @close="showModal = false" @update="cargarActividades" />
+      <CreateDocente :show="showCrearModal" @close="showCrearModal = false" @update="cargarDocente" />
+      <EditDocente :show="showModal" :docente="docenteSeleccionado" @close="showModal = false" @update="cargarDocente" />
 
     </div>
   </div>
 </template>
 
 <script>
-import EditarActividad from './EditarActividad.vue';
-import CrearActividad from "./CrearActividad.vue";
+import EditDocente from "./EditDocente.vue";
+import CreateDocente from "./CreateDocente.vue";
 
 export default {
   components: {
-    EditarActividad,
-    CrearActividad,
+    EditDocente,
+    CreateDocente,
   },
   data() {
     return {
-      actividades: [],
+      docentes: [],
       colores: ['#fb7986', '#cce5ff', '#d4edda', '#fff3cd', '#d1ecf1', '#f9e2f6', '#fce4d6', '#d6d8db'],
       showModal: false,
-      actividadSeleccionada: null,
+      docenteSeleccionado: null,
       showCrearModal: false,
     };
   },
   mounted() {
-    this.cargarActividades();
+    this.cargarDocente();
   },
   methods: {
-    async cargarActividades() {
+    async cargarDocente() {
       try {
-        const response = await fetch('http://localhost:3000/actividades/');
+        const response = await fetch('http://localhost:3000/plantel-docente');
         if (!response.ok) {
           console.log(response)
           throw new Error('Error al obtener las actividades');
         }
-        this.actividades = await response.json();
+        this.docentes = await response.json();
       } catch (error) {
         console.error(error);
       }
     },
-    abrirModal(actividad) {
-      this.actividadSeleccionada = actividad;
-      this.$emit('editar', this.actividadSeleccionada);
+    abrirModal(docente) {
+      this.docenteSeleccionado = docente;
+      this.$emit('editar', this.docenteSeleccionado);
       this.showModal = true;
     },
-    async eliminarActividad(id) {
-      const confirmacion = confirm('¿Estás seguro de que quieres eliminar esta actividad?');
+    async eliminarDocente(id) {
+      const confirmacion = confirm('¿Estás seguro de que quieres eliminar este Docente?');
       if (!confirmacion) {
         return;
       }
       try {
-        const response = await fetch(`http://localhost:3000/actividades/${id}`, {
+        const response = await fetch(`http://localhost:3000/plantel-docente/delete/${id}`, {
           method: 'DELETE',
         });
         if (!response.ok) {
-          throw new Error('Error al eliminar la actividad');
+          throw new Error('Error al eliminar el docente');
         }
-        this.cargarActividades();
+        this.cargarDocente();
       } catch (error) {
         console.error(error);
       }

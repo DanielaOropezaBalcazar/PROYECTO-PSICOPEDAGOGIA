@@ -8,32 +8,40 @@ const createError = require('http-errors');
 const personaRouter = require('./routes/persona');
 const usuarioRouter = require('./routes/usuario');
 const actividadesRouter = require('./routes/actividades');
+const plantelDocenteRouter = require('./routes/plantel_docente');
+const autoridadRouter = require('./routes/autoridad');
 
 const app = express();
 
-app.use(express.json({limit: '50mb'}));
-app.use(express.urlencoded({limit: '50mb', extended: true}));
-
+// Seguridad CORS
 app.use(cors({
   origin: 'http://localhost:8080' // Solo permite solicitudes de este origen
 }));
 
+// Configuración para recibir datos en formato JSON
+app.use(express.json({limit: '50mb'}));
+app.use(express.urlencoded({limit: '50mb', extended: true}));
+
+// Configuración de las vistas
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+// Configuración de los middlewares
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+// Configuración de las rutas
 app.use('/api/persona-graduado', personaRouter);
 app.use('/usuarios', usuarioRouter);
 app.use('/actividades', actividadesRouter);
+app.use('/plantel-docente', plantelDocenteRouter);
+app.use('/autoridad', autoridadRouter);
 
 
-
+// Manejador de errores
 app.use(function(req, res, next) {
   next(createError(404));
 });
@@ -46,6 +54,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+// Iniciar el servidor en el puerto 3000
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en puerto ${PORT}`);
