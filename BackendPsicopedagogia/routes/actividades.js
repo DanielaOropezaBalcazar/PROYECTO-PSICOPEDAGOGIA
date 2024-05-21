@@ -1,12 +1,10 @@
 const express = require('express');
 const cors = require('cors');
-// ...otros imports...
 
 const app = express();
 
 app.use(cors()); // Añade el middleware CORS
 
-// ...resto de tu código...
 const router = express.Router();
 const connection = require('../db');
 
