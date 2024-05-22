@@ -4,12 +4,13 @@ import { createRouter, createWebHistory } from 'vue-router'; // Importa createRo
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import CentroEstComponente from './components/CentroEstComponente.vue';
+import CentroEstComponente from './components/screens/CentroEstComponente.vue';
 import ContactosComponente from './components/ContactosComponente.vue';
 import ContinuaComponente from './components/ContinuaComponente.vue';
 import EgresadosComponente from './components/EgresadosComponente.vue';
 import ReadActividad from "./components/ABM_Actividades/ReadActividad.vue";
 import HomeComponente from './components/HomeComponente.vue';
+import MallaCurricular from "./components/screens/malla_curricular.vue"
 
 import InpsicopediaComponente from './components/InpsicopediaComponente.vue';
 import integraComponente from './components/integraComponente.vue';
@@ -58,6 +59,8 @@ const routes = [
     { path: '/actividades', component: ReadActividad },
     { path: '/plantelDocente', component: ReadDocente },
     { path: '/autoridad', component: ReadAutoridad },
+
+    { path: '/mallacomponente_screen', component: MallaCurricular},
 
     { path: '/Prueba-Componente', component: PruebaComponente }
 ];

@@ -3,7 +3,7 @@
     <nav class="nav">
       <ul class="ul">
         <div class="logo">
-          <router-link to="/pesta&ntildea-home">
+          <router-link to="/mallacomponente_screen">
             <img src="../assets/images/Logos/logo_blanco.png" alt="Logo Universidad">
           </router-link>
         </div>
@@ -15,6 +15,9 @@
             <img src="../assets/images/icono_blanco.png" alt="Login">
           </router-link>
         </div>
+        <!--div class="login">
+          <router-link to="/mallacomponente_screen"></router-link>
+        </div-->
       </ul>
     </nav>
   </div>

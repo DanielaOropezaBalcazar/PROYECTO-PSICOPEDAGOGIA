@@ -11,7 +11,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<div class="collapse navbar-collapse" id="navbarSupportedContent"> 
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <router-link class="nav-link" to="/pesta&ntildea-home">Home</router-link>
@@ -35,7 +35,9 @@
           <img src="../assets/images/Contactos/icono_morado 2.png" height="70" alt="Usuario" class="nav-link">
         </li>
       </ul>
+    </div>
   </nav>
+  
 </header>
   </section>
 
