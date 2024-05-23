@@ -2,30 +2,26 @@
   <div class="modal" v-if="show">
     <div class="modal-content">
       <span class="close-button" @click="closeModal">&times;</span>
-      <h2 style="text-align: center;">Editar actividad</h2>
-      <form @submit.prevent="submitForm">
-        <label>Nombre de la actividad:</label>
-        <input v-model="formData.nombre_actividad" type="text" required>
+      <h2 style="text-align: center;">Editar Alianza</h2>
 
+      <form @submit.prevent="submitForm">
+        <label>Universidad:</label>
+        <input v-model="formData.Universidad" type="text" required>
+
+        <label>Descripción:</label>
+        <textarea v-model="formData.descripcion" required></textarea>
 
         <label>Foto:</label>
         <input type="file" @change="previewImage" accept="image/*" required> <!-- Solo permite imágenes -->
         <img :src="imagePreview" alt="Vista previa de la imagen" v-if="imagePreview" class="image-preview">
 
+        <label>Direccion:</label>
+        <input v-model="formData.direccion" type="text" required>
 
-        <label>Descripción:</label>
-        <textarea v-model="formData.descripcion" required></textarea>
-
-        <label>Fecha:</label>
-        <input v-model="formData.fecha" type="date" required>
-
-        <label>ID del usuario:</label>
-        <input v-model="formData.Usuario_id_usuario" type="number" required>
-
-        <label>Tipo de actividad:</label>
-        <select v-model="formData.tipo_actividad_id_tipo_actividad" required>
-          <option v-for="tipo in tiposActividad" :key="tipo.id_tipo_actividad" :value="tipo.id_tipo_actividad">
-            {{ tipo.clasificacion }}
+        <label>Ciudad:</label>
+        <select v-model="formData.ciudad_id_ciudad" required>
+          <option v-for="ciud in ciudades" :key="ciud.id_ciudad" :value="ciud.id_ciudad">
+            {{ ciud.ciudad }}
           </option>
         </select>
 
@@ -41,33 +37,30 @@
 
 <script>
 export default {
-  props: ['show', 'actividad'],
+  props: ['show', 'alianza'],
   data() {
     return {
-      formData: { ...this.actividad },
+      formData: { ...this.alianza },
+      ciudades: [],
       imagePreview: null,
-      tiposActividad: [],
     };
   },
   async created() {
     try {
-      const response = await fetch('http://localhost:3000/actividades/tipo-actividad');
+      const response = await fetch('http://localhost:3000/alianza/ciudades/1');
       if (!response.ok) {
-        throw new Error('Error al recuperar los datos de la tabla tipo_actividad.');
+        throw new Error('Error al recuperar los datos de la tabla ciudades.');
       }
       console.log(response)
-      this.tiposActividad = await response.json();
+      this.ciudades = await response.json();
+
     } catch (error) {
       console.error(error);
     }
   },
   watch: {
-    actividad(newVal) {
+    alianza(newVal) {
       this.formData = { ...newVal };
-      // Convertir la fecha a un formato compatible con el input de tipo 'date'
-      if (newVal.fecha) {
-        this.formData.fecha = new Date(newVal.fecha).toISOString().split('T')[0];
-      }
     },
   },
   methods: {
@@ -103,9 +96,9 @@ export default {
       // Convertir el objeto a JSON
       const json = JSON.stringify(data);
 
-      console.log(this.actividad.id_actividad);
+      console.log(this.alianza.id_alianza);
       try {
-        const response = await fetch(`http://localhost:3000/actividades/update/${this.actividad.id_actividad}`, {
+        const response = await fetch(`http://localhost:3000/alianza/update/${this.alianza.id_alianza}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -114,7 +107,7 @@ export default {
         });
         console.log(response);
         if (!response.ok) {
-          throw new Error('Error al modificar la actividad');
+          throw new Error('Error al modificar al Docente');
         }
         this.$emit('update');
         this.closeModal();

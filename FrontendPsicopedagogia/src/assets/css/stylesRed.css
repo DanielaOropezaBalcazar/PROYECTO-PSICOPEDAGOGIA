@@ -1,0 +1,43 @@
+.tituloRed{
+    text-align: center;
+    font-size: 70px;
+    color: #9837BC; 
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 600;
+  
+}
+
+.tituloConf{
+    text-align: center;
+    font-size: 60px;
+    color: #9671FF;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 600;
+}
+
+.Conf1{
+    text-align: left;
+    font-size: 35px;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    padding-left: 80px;
+}
+
+.Conf2{
+    text-align: right;
+    font-size: 35px;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    padding-right: 100px;
+}
+
+.pTexto1{
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    text-align: justify;
+    padding-left: 70px;
+}
+

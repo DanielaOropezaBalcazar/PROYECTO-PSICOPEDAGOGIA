@@ -2,7 +2,7 @@
   <div class="app">
     <div class="container">
       <div class="header">
-        <h1 class="main-title">Actividades</h1>
+        <h1 class="main-title">Actividades Curriculares</h1>
       </div>
       <button class="create-button" @click="abrirModalCrear">Crear actividad</button>
 
@@ -32,21 +32,21 @@
           </div>
         </div>
       </div>
-      <CreateActividad :show="showCrearModal" @close="showCrearModal = false" @update="cargarActividades" />
-      <EditActividad :show="showModal" :actividad="actividadSeleccionada" @close="showModal = false" @update="cargarActividades" />
+      <CreateActividadCur :show="showCrearModal" @close="showCrearModal = false" @update="cargarActividades" />
+      <EditActividadCur :show="showModal" :actividad="actividadSeleccionada" @close="showModal = false" @update="cargarActividades" />
 
     </div>
   </div>
 </template>
 
 <script>
-import EditActividad from "./EditActividad.vue";
-import CreateActividad from "./CreateActividad.vue";
+import EditActividadCur from "./EditActividadCur.vue";
+import CreateActividadCur from "./CreateActividadCur.vue";
 
 export default {
   components: {
-    EditActividad,
-    CreateActividad,
+    EditActividadCur,
+    CreateActividadCur,
   },
   data() {
     return {
@@ -63,7 +63,7 @@ export default {
   methods: {
     async cargarActividades() {
       try {
-        const response = await fetch('http://localhost:3000/actividades/');
+        const response = await fetch('http://localhost:3000/actividades/curriculares');
         if (!response.ok) {
           console.log(response)
           throw new Error('Error al obtener las actividades');

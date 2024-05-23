@@ -1,7 +1,6 @@
 <template>
   <!-- <HeaderQComponente></HeaderQComponente> -->
   <HeaderContactanos></HeaderContactanos>
-
   <router-view></router-view>
   <FooterComponente></FooterComponente>
 </template>

@@ -84,7 +84,7 @@ export default {
       // Convertir el objeto a JSON
       const json = JSON.stringify(data);
 
-      console.log(this.actividad.id_actividad);
+      console.log(this.autoridad.id_autoridad);
       try {
         const response = await fetch(`http://localhost:3000/autoridad/update/${this.autoridad.id_autoridad}`, {
           method: 'PUT',

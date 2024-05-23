@@ -37,17 +37,16 @@
             </div>
           </div>
         
-        <br>
-        
-        
           <div class="background-box ">
           <center><h1 class="programas-title">Programas:</h1></center>
           <br>
           <br>          
           <div class="center">
-                <img src="../assets/images/home/integra.jpeg" alt="Descripción de la imagen integra">
+              <router-link to="/pesta&ntilde;a-programa-integra-psicopedagogia">
+                <img src="../assets/images/home/integra.png" alt="Descripción de la imagen integra">
+              </router-link>
               </div>
-                <div class="textoI"><h1>Programa <br>Integra Psicopedagogía</h1></div>
+                
             <br>
             <br>
             <br>
@@ -55,9 +54,10 @@
 
               <a href="red.html">
                 <div class="center">
-                <img src="../assets/images/home/red.jpg" alt="Descripción de la imagen red">
+                <router-link to="/pesta&ntilde;a-red-psicopedagogia">
+                  <img src="../assets/images/home/red.png" alt="Descripción de la imagen red">
+                </router-link>
               </div>
-                <div class="textoR"><h1>Red Psicopedagogía</h1></div>
               </a>
             </div>
           </div>

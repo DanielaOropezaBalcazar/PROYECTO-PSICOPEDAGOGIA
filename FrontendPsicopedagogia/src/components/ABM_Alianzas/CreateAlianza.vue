@@ -2,75 +2,72 @@
   <div class="modal" v-if="show">
     <div class="modal-content">
       <span class="close-button" @click="closeModal">&times;</span>
-      <h2 style="text-align: center;">Editar actividad</h2>
-      <form @submit.prevent="submitForm">
-        <label>Nombre de la actividad:</label>
-        <input v-model="formData.nombre_actividad" type="text" required>
+      <h2 style="text-align: center;">Registrar Nueva Alianza</h2>
 
+      <form @submit.prevent="submitForm">
+        <label>Universidad:</label>
+        <input v-model="formData.Universidad" type="text" required>
+
+        <label>Descripción:</label>
+        <textarea v-model="formData.descripcion" required></textarea>
 
         <label>Foto:</label>
         <input type="file" @change="previewImage" accept="image/*" required> <!-- Solo permite imágenes -->
         <img :src="imagePreview" alt="Vista previa de la imagen" v-if="imagePreview" class="image-preview">
 
+        <label>Direccion:</label>
+        <input v-model="formData.direccion" type="text" required>
 
-        <label>Descripción:</label>
-        <textarea v-model="formData.descripcion" required></textarea>
-
-        <label>Fecha:</label>
-        <input v-model="formData.fecha" type="date" required>
-
-        <label>ID del usuario:</label>
-        <input v-model="formData.Usuario_id_usuario" type="number" required>
-
-        <label>Tipo de actividad:</label>
-        <select v-model="formData.tipo_actividad_id_tipo_actividad" required>
-          <option v-for="tipo in tiposActividad" :key="tipo.id_tipo_actividad" :value="tipo.id_tipo_actividad">
-            {{ tipo.clasificacion }}
+        <label>Ciudad:</label>
+        <select v-model="formData.ciudad_id_ciudad" required>
+          <option v-for="ciud in ciudades" :key="ciud.id_ciudad" :value="ciud.id_ciudad">
+            {{ ciud.ciudad }}
           </option>
         </select>
 
         <div class="button-container">
-
           <button type="button" @click="closeModal">Cancelar</button> <!-- Botón de cancelar -->
-          <button type="submit">Guardar cambios</button>
+          <button type="submit">Crear</button>
         </div>
       </form>
     </div>
   </div>
 </template>
-
 <script>
 export default {
-  props: ['show', 'actividad'],
+  props: ['show'],
   data() {
     return {
-      formData: { ...this.actividad },
+      formData: {
+        Universidad: '',
+        direccion: '',
+        descripcion: '',
+        ciudad_id_ciudad: '',
+        ciudad: '',
+        pais: '',
+        columna_foto: '',
+
+      },
+      ciudades: [],
       imagePreview: null,
-      tiposActividad: [],
     };
   },
   async created() {
     try {
-      const response = await fetch('http://localhost:3000/actividades/tipo-actividad');
+      const response = await fetch('http://localhost:3000/alianza/ciudades/1');
       if (!response.ok) {
-        throw new Error('Error al recuperar los datos de la tabla tipo_actividad.');
+        throw new Error('Error al recuperar los datos de la tabla ciudades.');
       }
       console.log(response)
-      this.tiposActividad = await response.json();
+      this.ciudades = await response.json();
+
     } catch (error) {
       console.error(error);
     }
-  },
-  watch: {
-    actividad(newVal) {
-      this.formData = { ...newVal };
-      // Convertir la fecha a un formato compatible con el input de tipo 'date'
-      if (newVal.fecha) {
-        this.formData.fecha = new Date(newVal.fecha).toISOString().split('T')[0];
-      }
-    },
+
   },
   methods: {
+
     closeModal() {
       this.$emit('close');
     },
@@ -80,12 +77,8 @@ export default {
         this.imagePreview = URL.createObjectURL(file);
       }
     },
-
     async submitForm() {
-      // Crear un objeto para almacenar los datos del formulario
       const data = { ...this.formData };
-
-      // Si hay una imagen seleccionada, convertirla a Base64 y agregarla al objeto
       if (this.imagePreview) {
         const response = await fetch(this.imagePreview);
         const blob = await response.blob();
@@ -97,24 +90,19 @@ export default {
         });
         data.columna_foto = base64data;
       }
-
-      console.log(data.columna_foto)
-
-      // Convertir el objeto a JSON
       const json = JSON.stringify(data);
-
-      console.log(this.actividad.id_actividad);
+      console.log("Id ciudad");
+      console.log(data.ciudad_id_ciudad);
       try {
-        const response = await fetch(`http://localhost:3000/actividades/update/${this.actividad.id_actividad}`, {
-          method: 'PUT',
+        const response = await fetch('http://localhost:3000/alianza/create', {
+          method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: json,
         });
-        console.log(response);
         if (!response.ok) {
-          throw new Error('Error al modificar la actividad');
+          throw new Error('Error al crear la alianza');
         }
         this.$emit('update');
         this.closeModal();
@@ -164,7 +152,7 @@ label {
   color: #333;
 }
 
-input, textarea, select {
+input, textarea, select{
   padding: 0.5em;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -174,7 +162,7 @@ input, textarea, select {
 }
 
 button {
-  background-color: #007BFF;
+  background-color: #209c2f;
   color: white;
   padding: 0.5em 1em;
   border: none;
@@ -184,7 +172,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #267812;
 }
 img {
   max-width: 100%;

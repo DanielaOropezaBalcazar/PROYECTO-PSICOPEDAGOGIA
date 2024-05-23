@@ -10,6 +10,7 @@ const usuarioRouter = require('./routes/usuario');
 const actividadesRouter = require('./routes/actividades');
 const plantelDocenteRouter = require('./routes/plantel_docente');
 const autoridadRouter = require('./routes/autoridad');
+const alianzaRouter = require('./routes/alianza');
 
 const app = express();
 
@@ -39,6 +40,7 @@ app.use('/usuarios', usuarioRouter);
 app.use('/actividades', actividadesRouter);
 app.use('/plantel-docente', plantelDocenteRouter);
 app.use('/autoridad', autoridadRouter);
+app.use('/alianza', alianzaRouter);
 
 
 // Manejador de errores
