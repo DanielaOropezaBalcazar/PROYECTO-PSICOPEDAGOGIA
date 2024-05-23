@@ -1,5 +1,5 @@
 <template>
-    <h1>Centro de Estudianteeees</h1>
+    <h1>Centro de Estudiantes</h1>
 </template>
 
 <script>
