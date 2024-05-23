@@ -30,6 +30,10 @@ import ZonaComponente from './components/ZonaComponente.vue';
 
 import PruebaComponente from './components/PruebaComponente.vue';
 
+import ReadDocente from "./components/ABM_PlantelDocente/ReadDocente.vue";
+import ReadAutoridad from "./components/ABM_Autoridades/ReadAutoridad.vue";
+import ReadAlianza from "./components/ABM_Alianzas/ReadAlianza.vue";
+import ReadActividadCur from "./components/ABM_ActividadesCurriculares/ReadActividadCur.vue";
 
 
 const routes = [
@@ -54,7 +58,13 @@ const routes = [
     { path: '/pesta&ntildea-login', component: LogInComponente },
     { path: '/pesta&ntildea-editar', component: DashboardAdmin },
     { path: '/pesta&a-editar-egresados', component: EgresadosComponente },
-    { path: '/dashboard-actividades', component: AbmActividades },
+
+    { path: '/actividades', component: ReadActividad },
+    { path: '/plantelDocente', component: ReadDocente },
+    { path: '/autoridad', component: ReadAutoridad },
+    { path: '/alianza', component: ReadAlianza },
+    { path: '/actividad-curricular', component: ReadActividadCur },
+
 
     { path: '/Prueba-Componente', component: PruebaComponente }
 ];

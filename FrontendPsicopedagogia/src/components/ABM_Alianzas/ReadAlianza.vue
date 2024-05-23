@@ -2,30 +2,31 @@
   <div class="app">
     <div class="container">
       <div class="header">
-        <h1 class="main-title">Autoridades</h1>
+        <h1 class="main-title">Alianzas con Universidades</h1>
       </div>
-      <button class="create-button" @click="abrirModalCrear">Registrar Autoridad</button>
+      <button class="create-button" @click="abrirModalCrear">Registrar Alianza</button>
 
       <div class="row">
-        <div class="col-md-12" v-for="(autoridad, index) in autoridades" :key="autoridad.id_autoridad">
+        <div class="col-md-12" v-for="(alianza, index) in alianzas" :key="alianza.id_alianza">
           <div class="card card-width" :style="{ backgroundColor: colores[index % colores.length] }">
             <div class="card-content">
               <div class="card-image">
-                <img class="card-img" :src="autoridad.columna_foto" alt="Imagen de la actividad">
+                <img class="card-img" :src="alianza.columna_foto" alt="Imagen de la actividad">
               </div>
               <div class="card-body">
                 <div class="card-details">
                   <div>
-                    <h5 class="card-title">{{ autoridad.nombre }} {{ autoridad.apellido }}</h5>
-                    <p class="card-text">Autoridad: {{ autoridad.autoridad }}</p>
-                    <p class="card-text">Rol: {{ autoridad.rol }}</p>
+                    <h5 class="card-title">{{ alianza.Universidad }}</h5>
+                    <p class="card-text">Descripcion: {{ alianza.descripcion }}</p>
+                    <p class="card-text">Ciudad: {{ alianza.ciudad }}</p>
+                    <p class="card-text">Pais: {{ alianza.pais }}</p>
                     <p class="card-text">
-                      <small class="text-muted">Telefono: {{ autoridad.telefono }}</small>
+                      <small class="text-muted">Direccion: {{ alianza.direccion }}</small>
                     </p>
                   </div>
                   <div class="button-container">
-                    <button class="edit-button" @click="abrirModal(autoridad)">Editar</button>
-                    <button class="delete-button" @click="eliminarAutoridad(autoridad.id_autoridad)">Borrar</button>
+                    <button class="edit-button" @click="abrirModal(alianza)">Editar</button>
+                    <button class="delete-button" @click="eliminarAutoridad(alianza.id_alianza)">Borrar</button>
                   </div>
                 </div>
               </div>
@@ -33,8 +34,8 @@
           </div>
         </div>
       </div>
-      <CreateAlianza :show="showCrearModal" @close="showCrearModal = false" @update="cargarAutoridad"/>
-      <EditAlianza :show="showModal" :autoridad="autoridadSeleccionada" @close="showModal = false" @update="cargarAutoridad"/>
+      <CreateAlianza :show="showCrearModal" @close="showCrearModal = false" @update="cargarAlianza"/>
+      <EditAlianza :show="showModal" :alianza="alianzaSeleccionada" @close="showModal = false" @update="cargarAlianza"/>
 
     </div>
   </div>
@@ -51,47 +52,47 @@ export default {
   },
   data() {
     return {
-      autoridades: [],
+      alianzas: [],
       colores: ['#fb7986', '#cce5ff', '#d4edda', '#fff3cd', '#d1ecf1', '#f9e2f6', '#fce4d6', '#d6d8db'],
       showModal: false,
-      autoridadSeleccionada: null,
+      alianzaSeleccionada: null,
       showCrearModal: false,
     };
   },
   mounted() {
-    this.cargarAutoridad();
+    this.cargarAlianza();
   },
   methods: {
-    async cargarAutoridad() {
+    async cargarAlianza() {
       try {
-        const response = await fetch('http://localhost:3000/autoridad');
+        const response = await fetch('http://localhost:3000/alianza/');
         if (!response.ok) {
           console.log(response)
           throw new Error('Error al obtener las actividades');
         }
-        this.autoridades = await response.json();
+        this.alianzas = await response.json();
       } catch (error) {
         console.error(error);
       }
     },
-    abrirModal(autoridad) {
-      this.autoridadSeleccionada = autoridad;
-      this.$emit('editar', this.autoridadSeleccionada);
+    abrirModal(alianza) {
+      this.alianzaSeleccionada = alianza;
+      this.$emit('editar', this.alianzaSeleccionada);
       this.showModal = true;
     },
     async eliminarAutoridad(id) {
-      const confirmacion = confirm('¿Estás seguro de que quieres eliminar esta Autoridad?');
+      const confirmacion = confirm('¿Estás seguro de que quieres eliminar esta alianza?');
       if (!confirmacion) {
         return;
       }
       try {
-        const response = await fetch(`http://localhost:3000/autoridad/delete/${id}`, {
+        const response = await fetch(`http://localhost:3000/alianza/delete/${id}`, {
           method: 'DELETE',
         });
         if (!response.ok) {
-          throw new Error('Error al eliminar la Autoridad');
+          throw new Error('Error al eliminar la alianza');
         }
-        this.cargarAutoridad();
+        this.cargarAlianza();
       } catch (error) {
         console.error(error);
       }
