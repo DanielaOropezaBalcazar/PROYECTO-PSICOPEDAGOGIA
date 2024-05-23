@@ -2,7 +2,7 @@
   <div class="app">
     <div class="container">
       <div class="header">
-        <h1 class="main-title">Actividades Curriculares</h1>
+        <h1 class="main-title">Actividades</h1>
       </div>
       <button class="create-button" @click="abrirModalCrear">Crear actividad</button>
 
@@ -84,7 +84,7 @@ export default {
         return;
       }
       try {
-        const response = await fetch(`http://localhost:3000/actividades/${id}`, {
+        const response = await fetch(`http://localhost:3000/actividades/delete/${id}`, {
           method: 'DELETE',
         });
         if (!response.ok) {

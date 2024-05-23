@@ -32,6 +32,7 @@ import PruebaComponente from './components/PruebaComponente.vue';
 import ReadDocente from "./components/ABM_PlantelDocente/ReadDocente.vue";
 import ReadAutoridad from "./components/ABM_Autoridades/ReadAutoridad.vue";
 import ReadAlianza from "./components/ABM_Alianzas/ReadAlianza.vue";
+import ReadActividadCur from "./components/ABM_ActividadesCurriculares/ReadActividadCur.vue";
 
 
 const routes = [
@@ -60,6 +61,7 @@ const routes = [
     { path: '/plantelDocente', component: ReadDocente },
     { path: '/autoridad', component: ReadAutoridad },
     { path: '/alianza', component: ReadAlianza },
+    { path: '/actividad-curricular', component: ReadActividadCur },
 
     { path: '/Prueba-Componente', component: PruebaComponente }
 ];

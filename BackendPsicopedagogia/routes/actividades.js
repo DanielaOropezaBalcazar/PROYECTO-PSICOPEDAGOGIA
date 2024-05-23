@@ -10,7 +10,7 @@ const connection = require('../db');
 
 router.get('/', (req, res) => {
 
-    const sql = 'SELECT * FROM actividades_universidad';
+    const sql = 'SELECT * FROM actividades_universidad WHERE tipo_actividad_id_tipo_actividad != 1';
 
     connection.query(sql, (error, results) => {
         if (error) {
@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
 
 router.get('/curriculares/', (req, res) => {
 
-    const sql = 'SELECT * FROM actividades_universidad where tipo_actividad_id_tipo_actividad = 1';
+    const sql = 'SELECT * FROM actividades_universidad WHERE tipo_actividad_id_tipo_actividad = 1';
 
     connection.query(sql, (error, results) => {
         if (error) {

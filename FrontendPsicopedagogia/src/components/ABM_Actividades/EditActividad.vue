@@ -105,7 +105,7 @@ export default {
 
       console.log(this.actividad.id_actividad);
       try {
-        const response = await fetch(`http://localhost:3000/actividades/${this.actividad.id_actividad}`, {
+        const response = await fetch(`http://localhost:3000/actividades/update/${this.actividad.id_actividad}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
