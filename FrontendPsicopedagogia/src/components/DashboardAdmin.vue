@@ -5,7 +5,7 @@
     <!-- Areas de Administracion -->
 
     <h2 class="sub-title">Actividades Curriculares</h2>
-    <router-link to="/actividades" class="animated-link">
+    <router-link to="/dashboard-actividades" class="animated-link">
       <div class="image-overlay">
         <img src="../assets/Actividades.png" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
         <div class="overlay-text">Actividades</div>
@@ -115,13 +115,13 @@
     <div class="spacer"></div>
 
     <h2 class="sub-title">Contactos</h2>
-    <router-link to="/plantelDocente" class="animated-link">
+    <router-link to="/otra-pagina" class="animated-link">
       <div class="image-overlay">
         <img src="../assets/ejemplo.jpg" alt="Plantel" @mouseenter="zoomIn" @mouseleave="zoomOut">
         <div class="overlay-text">Plantel Docente</div>
       </div>
     </router-link>
-    <router-link to="/autoridad" class="animated-link">
+    <router-link to="/otra-pagina" class="animated-link">
       <div class="image-overlay">
         <img src="../assets/ejemplo.jpg" alt="Autoridades" @mouseenter="zoomIn" @mouseleave="zoomOut">
         <div class="overlay-text">Autoridades </div>
