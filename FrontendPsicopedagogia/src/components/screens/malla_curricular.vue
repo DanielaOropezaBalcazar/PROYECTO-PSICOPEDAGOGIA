@@ -137,10 +137,6 @@ export default {
 </script>
 
 <style>
-#app {
-  padding: 20px;
-  background-color: #f9f9f9;
-}
 
 h1 {
   text-align: center;
