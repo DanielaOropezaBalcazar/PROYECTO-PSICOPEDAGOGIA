@@ -14,7 +14,7 @@
         <main>
             <section class="contenedor">
                 <div class="titulo1">
-                    <h1 style="font-size: 70px; font-family: 'Roboto Condensed, sans-serif'; font-weight: 700">Pregrado</h1>
+                    <h1 style="font-size: 70px; font-family: 'Roboto Condensed', 'sans-serif'; font-weight: 700">Pregrado     </h1>
                 </div>
                 <br>
                 <div class="flex-container">

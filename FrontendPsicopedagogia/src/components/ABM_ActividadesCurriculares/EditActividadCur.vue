@@ -22,12 +22,6 @@
         <label>ID del usuario:</label>
         <input v-model="formData.Usuario_id_usuario" type="number" required>
 
-        <label>Tipo de actividad:</label>
-        <select v-model="formData.tipo_actividad_id_tipo_actividad" required>
-          <option v-for="tipo in tiposActividad" :key="tipo.id_tipo_actividad" :value="tipo.id_tipo_actividad">
-            {{ tipo.clasificacion }}
-          </option>
-        </select>
 
         <div class="button-container">
 
@@ -60,6 +54,7 @@ export default {
     } catch (error) {
       console.error(error);
     }
+    this.formData.tipo_actividad_id_tipo_actividad = 1
   },
   watch: {
     actividad(newVal) {

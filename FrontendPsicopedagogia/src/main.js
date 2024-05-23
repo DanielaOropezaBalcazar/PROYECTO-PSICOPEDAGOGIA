@@ -8,7 +8,7 @@ import CentroEstComponente from './components/screens/CentroEstComponente.vue';
 import ContactosComponente from './components/ContactosComponente.vue';
 import ContinuaComponente from './components/ContinuaComponente.vue';
 import EgresadosComponente from './components/EgresadosComponente.vue';
-import ReadActividad from "./components/ABM_Actividades/ReadActividad.vue";
+import AbmActividades from "./components/AbmActividades.vue";
 import HomeComponente from './components/HomeComponente.vue';
 import MallaCurricular from "./components/screens/malla_curricular.vue"
 
@@ -30,9 +30,11 @@ import UCBGamesComponente from './components/UCBGamesComponente.vue';
 import ZonaComponente from './components/ZonaComponente.vue';
 
 import PruebaComponente from './components/PruebaComponente.vue';
+
 import ReadDocente from "./components/ABM_PlantelDocente/ReadDocente.vue";
 import ReadAutoridad from "./components/ABM_Autoridades/ReadAutoridad.vue";
 import ReadAlianza from "./components/ABM_Alianzas/ReadAlianza.vue";
+import ReadActividadCur from "./components/ABM_ActividadesCurriculares/ReadActividadCur.vue";
 
 
 const routes = [
@@ -57,16 +59,18 @@ const routes = [
     { path: '/pesta&ntildea-login', component: LogInComponente },
     { path: '/pesta&ntildea-editar', component: DashboardAdmin },
     { path: '/pesta&a-editar-egresados', component: EgresadosComponente },
+
     { path: '/actividades', component: ReadActividad },
     { path: '/plantelDocente', component: ReadDocente },
     { path: '/autoridad', component: ReadAutoridad },
     { path: '/alianza', component: ReadAlianza },
+    { path: '/actividad-curricular', component: ReadActividadCur },
+
 
     { path: '/mallacomponente_screen', component: MallaCurricular},
 
     { path: '/Prueba-Componente', component: PruebaComponente }
 ];
-
 
 
 const router = createRouter({
