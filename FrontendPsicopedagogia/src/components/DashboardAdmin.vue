@@ -22,7 +22,7 @@
         <div class="overlay-text">Graduados</div>
       </div>
     </router-link>
-    <router-link to="/otra-pagina" class="animated-link">
+    <router-link to="/autoridad" class="animated-link">
       <div class="image-overlay">
         <img src="../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
         <div class="overlay-text">Autoridades</div>
@@ -115,7 +115,7 @@
     <div class="spacer"></div>
 
     <h2 class="sub-title">Contactos</h2>
-    <router-link to="/otra-pagina" class="animated-link">
+    <router-link to="/plantelDocente" class="animated-link">
       <div class="image-overlay">
         <img src="../assets/ejemplo.jpg" alt="Plantel" @mouseenter="zoomIn" @mouseleave="zoomOut">
         <div class="overlay-text">Plantel Docente</div>
