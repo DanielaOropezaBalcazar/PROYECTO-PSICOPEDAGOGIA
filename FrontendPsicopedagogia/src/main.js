@@ -8,7 +8,7 @@ import CentroEstComponente from './components/screens/CentroEstComponente.vue';
 import ContactosComponente from './components/ContactosComponente.vue';
 import ContinuaComponente from './components/ContinuaComponente.vue';
 import EgresadosComponente from './components/EgresadosComponente.vue';
-import AbmActividades from "./components/AbmActividades.vue";
+//import AbmActividades from "./components/AbmActividades.vue";
 import HomeComponente from './components/HomeComponente.vue';
 import MallaCurricular from "./components/screens/malla_curricular.vue"
 
@@ -35,6 +35,7 @@ import ReadDocente from "./components/ABM_PlantelDocente/ReadDocente.vue";
 import ReadAutoridad from "./components/ABM_Autoridades/ReadAutoridad.vue";
 import ReadAlianza from "./components/ABM_Alianzas/ReadAlianza.vue";
 import ReadActividadCur from "./components/ABM_ActividadesCurriculares/ReadActividadCur.vue";
+import ReadActividad from './components/ABM_Actividades/ReadActividad.vue';
 
 
 const routes = [
