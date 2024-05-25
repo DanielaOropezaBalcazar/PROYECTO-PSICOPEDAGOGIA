@@ -218,3 +218,5 @@ export default {
 
 }
 </script>
+
+<style src="../assets/css/stylespre.css"></style>
