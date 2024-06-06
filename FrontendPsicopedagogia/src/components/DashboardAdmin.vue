@@ -1,6 +1,7 @@
 <template>
-  <div class="app">
-    <h1 class="main-title">Dashboard Admin</h1>
+  <div class="appDash">
+    <aside class="sidebar">
+      <h1 class="main-title">Dashboard Admin</h1>
 
     <!-- Areas de Administracion -->
 
@@ -80,13 +81,13 @@
     <div class="spacer"></div>
 
     <h2 class="sub-title">Zona de Aprendizaje</h2>
-    <router-link to="/otra-pagina" class="animated-link">
+    <router-link to="/publicacion-zona-aprendizaje" class="animated-link">
       <div class="image-overlay">
         <img src="../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
         <div class="overlay-text">Publicaciones Zona Aprendizaje</div>
       </div>
     </router-link>
-    <router-link to="/otra-pagina" class="animated-link">
+    <router-link to="/integrantes-zona-aprendizaje" class="animated-link">
       <div class="image-overlay">
         <img src="../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
         <div class="overlay-text">Integrantes Zona Aprendizaje</div>
@@ -98,13 +99,13 @@
     <div class="spacer"></div>
 
     <h2 class="sub-title">Sociedad Cientifica</h2>
-    <router-link to="/otra-pagina" class="animated-link">
+    <router-link to="/publicacion-inpsicopedia" class="animated-link">
       <div class="image-overlay">
         <img src="../assets/ejemplo.jpg" alt="PInpsicopedia" @mouseenter="zoomIn" @mouseleave="zoomOut">
         <div class="overlay-text">Publicaciones Inpsicopedia</div>
       </div>
     </router-link>
-    <router-link to="/otra-pagina" class="animated-link">
+    <router-link to="/integrantes-inpsicopedia" class="animated-link">
       <div class="image-overlay">
         <img src="../assets/ejemplo.jpg" alt="IInpsicopedia" @mouseenter="zoomIn" @mouseleave="zoomOut">
         <div class="overlay-text">Integrantes Inpsicopedia </div>
@@ -121,15 +122,29 @@
         <div class="overlay-text">Plantel Docente</div>
       </div>
     </router-link>
+    </aside>
 
-
+    <main class="content">
+      <router-view></router-view>
+    </main>
   </div>
 </template>
+
 
 <script>
 export default {
   name: 'DashboardAdmin',
   setup() {
+    const isZoomed = ref(false);
+
+    const zoomIn = () => {
+      isZoomed.value = true;
+    };
+
+    const zoomOut = () => {
+      isZoomed.value = false;
+    };
+
     return {
       isZoomed,
       zoomIn,
@@ -140,82 +155,73 @@ export default {
 
 import { ref } from 'vue';
 
-const isZoomed = ref(false);
-
-// Función para hacer zoom sobre la imagen
-const zoomIn = () => {
-  isZoomed.value = true;
-};
-
-// Función para deshacer el zoom sobre la imagen
-const zoomOut = () => {
-  isZoomed.value = false;
-};
 </script>
 
 <style scoped>
-.app {
-  padding: 0;
-  margin: 0;
-  width: 88%; /* Cambia el ancho a 80% del ancho de la ventana */
-  margin: 0 auto; /* Centra el contenido horizontalmente */
+.appDash {
+  display: flex;
+  height: 100vh;
+}
 
-  top: 0; /* Fija el borde superior al borde superior de la ventana */
-  left: 50%; /* Centra el contenido horizontalmente */
-  background-color: #ffffff; /* Fondo del 80% de la pantalla */
-  border-radius: 10px; /* Bordes redondeados */
+.sidebar {
+  width: 20%;
+  background-color: #f8f9fa;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.content {
+  width: 80%;
+  padding: 20px;
+  overflow-y: auto;
 }
 
 .main-title {
   text-align: center;
-  font-size: 3rem; /* Tamaño de fuente más grande */
-  color: #F416BB; /* Color de fuente diferente */
-  font-family: 'Arial', sans-serif; /* Fuente diferente */
-  margin: 1rem;
+  font-size: 2rem;
+  color: #F416BB;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 2rem;
 }
 
 .sub-title {
   text-align: left;
-  font-size: 2rem; /* Tamaño de fuente más grande */
-  color: #F96071; /* Color de fuente diferente */
-  font-family: 'Arial', sans-serif; /* Fuente diferente */
-  margin: 1rem;
+  font-size: 1.5rem;
+  color: #F96071;
+  font-family: 'Arial', sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-/* Estilos para la animación */
 .animated-link {
-  display: inline-block;
+  display: block;
   position: relative;
   overflow: hidden;
-  border-radius: 8px; /* Añade bordes redondeados */
-  border: 2px solid #ccc; /* Define el borde y su color */
-  cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
-  transition: border-color 0.3s ease; /* Transición para el color del borde */
-  margin-bottom: 20px; /* Añade espacio entre las imágenes */
-  margin-left: 20px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  margin-bottom: 1rem;
 }
 
 .animated-link img {
   transition: transform 0.3s ease;
-  width: 350px; /* Establece el ancho de la imagen */
-  height: 350px; /* Establece la altura de la imagen */
-  object-fit: cover; /* Escalar la imagen para que llene el contenedor manteniendo su proporción */
-  vertical-align: middle; /* Alinea la imagen verticalmente */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-/* Efecto de zoom */
 .animated-link:hover img {
   transform: scale(1.1);
 }
 
 .animated-link:hover {
-  border-color: #007bff; /* Cambia el color del borde al pasar sobre la imagen */
+  border-color: #007bff;
 }
 
-/* Estilos para superponer texto sobre la imagen */
 .image-overlay {
   position: relative;
-  display: inline-block;
 }
 
 .overlay-text {
@@ -223,10 +229,9 @@ const zoomOut = () => {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega sombra al texto */
-  z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .image-overlay::before {
@@ -236,17 +241,12 @@ const zoomOut = () => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-  z-index: 0; /* Coloca el fondo detrás de la imagen */
-  transition: opacity 0.3s ease; /* Añade transición para la opacidad */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  transition: opacity 0.3s ease;
 }
 
 .animated-link:hover .image-overlay::before {
-  opacity: 0.9; /* Reducir la opacidad al pasar el cursor sobre la imagen */
-}
-
-/* Espaciador entre las imágenes */
-.spacer {
-  height: 20px; /* Altura del espacio entre las imágenes */
+  opacity: 0.9;
 }
 </style>
