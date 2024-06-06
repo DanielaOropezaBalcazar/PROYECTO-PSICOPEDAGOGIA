@@ -127,29 +127,32 @@
 
       <div class="container">
         <div class="header">
-          <h1 class="main-title">Integrantes Zona de Aprendizaje</h1>
+          <h1 class="main-title">Trabajos Realizados</h1>
         </div>
-        <button class="create-button" @click="abrirModalCrear">Registrar Integrante</button>
+        <button class="create-button" @click="abrirModalCrear">Registrar Trabajo</button>
 
         <div class="row">
-          <div class="col-md-12" v-for="(integranteZA, index) in integrantesZA" :key="integranteZA.id_integrante">
+          <div class="col-md-12" v-for="(trabajo, index) in trabajos" :key="trabajo.id_trabajo">
             <div class="card card-width" :style="{ backgroundColor: colores[index % colores.length] }">
               <div class="card-content">
                 <div class="card-image">
-                  <img class="card-img" :src="integranteZA.columna_foto" alt="Imagen de la actividad">
+                  <img class="card-img" :src="trabajo.columna_foto" alt="Imagen de la actividad">
                 </div>
                 <div class="card-body">
                   <div class="card-details">
                     <div>
-                      <h5 class="card-title">{{ integranteZA.nombre }} {{ integranteZA.apellido }}</h5>
-                      <p class="card-text">Telefono: {{ integranteZA.telefono }}</p>
+                      <h5 class="card-title">{{ trabajo.titulo }}</h5>
+                      <p class="card-text">Nombre de documento: {{ trabajo.documento }} </p>
+                      <p class="card-text">Area: {{ trabajo.area }} </p>
+                      <p class="card-text">Realizado por: {{ trabajo.nombre }} {{ trabajo.apellido }}</p>
+                      <p class="card-text">Telefono: {{ trabajo.telefono }}</p>
                       <p class="card-text">
-                        <small class="text-muted">Fecha de ingreso: {{ integranteZA.fecha_ingreso }}</small>
+                        <small class="text-muted">Fecha de publicacion: {{ trabajo.publicacion }}</small>
                       </p>
                     </div>
                     <div class="button-container">
-                      <button class="edit-button" @click="abrirModal(integranteZA)">Editar</button>
-                      <button class="delete-button" @click="eliminarIntegrante(integranteZA.id_integrante)">Borrar</button>
+                      <button class="edit-button" @click="abrirModal(trabajo)">Editar</button>
+                      <button class="delete-button" @click="eliminarTrabajo(trabajo.id_trabajo)">Borrar</button>
                     </div>
                   </div>
                 </div>
@@ -157,8 +160,8 @@
             </div>
           </div>
         </div>
-        <CreateIntZA :show="showCrearModal" @close="showCrearModal = false" @update="cargarIntegrantes"/>
-        <EditIntZA :show="showModal" :integrante="integranteSeleccionado" @close="showModal = false" @update="cargarIntegrantes"/>
+        <CreateTrabajR :show="showCrearModal" @close="showCrearModal = false" @update="cargarTrabajos"/>
+        <EditTrabajR :show="showModal" :trabajo="trabajoSeleccionado" @close="showModal = false" @update="cargarTrabajos"/>
 
       </div>
     </main>
@@ -167,57 +170,57 @@
 </template>
 
 <script>
-import EditIntZA from "./EditIntZA.vue";
-import CreateIntZA from "./CreateIntZA.vue";
+import EditTrabajR from "./EditTrabajR.vue";
+import CreateTrabajR from "./CreateTrabajR.vue";
 
 export default {
   components: {
-    EditIntZA,
-    CreateIntZA,
+    EditTrabajR,
+    CreateTrabajR,
   },
   data() {
     return {
-      integrantesZA: [],
+      trabajos: [],
       colores: ['#fb7986', '#cce5ff', '#d4edda', '#fff3cd', '#d1ecf1', '#f9e2f6', '#fce4d6', '#d6d8db'],
       showModal: false,
-      integranteSeleccionado: null,
+      trabajoSeleccionado: null,
       showCrearModal: false,
     };
   },
   mounted() {
-    this.cargarIntegrantes();
+    this.cargarTrabajos();
   },
   methods: {
-    async cargarIntegrantes() {
+    async cargarTrabajos() {
       try {
-        const response = await fetch('http://localhost:3000/int-zona-aprendizaje');
+        const response = await fetch('http://localhost:3000/trabajos-realizados');
         if (!response.ok) {
           console.log(response)
-          throw new Error('Error al obtener los integrantes de zona de aprendizaje.');
+          throw new Error('Error al obtener los trabajos.');
         }
-        this.integrantesZA = await response.json();
+        this.trabajos = await response.json();
       } catch (error) {
         console.error(error);
       }
     },
-    abrirModal(integrante) {
-      this.integranteSeleccionado = integrante;
-      this.$emit('editar', this.integranteSeleccionado);
+    abrirModal(trabajo) {
+      this.trabajoSeleccionado = trabajo;
+      this.$emit('editar', this.trabajoSeleccionado);
       this.showModal = true;
     },
-    async eliminarIntegrante(id) {
-      const confirmacion = confirm('¿Estás seguro de que quieres eliminar este integrante de zona de aprendizaje?');
+    async eliminarTrabajo(id) {
+      const confirmacion = confirm('¿Estás seguro de que quieres eliminar este trabajo realizado?');
       if (!confirmacion) {
         return;
       }
       try {
-        const response = await fetch(`http://localhost:3000/int-zona-aprendizaje/delete/${id}`, {
+        const response = await fetch(`http://localhost:3000/trabajos-realizados/delete/${id}`, {
           method: 'DELETE',
         });
         if (!response.ok) {
-          throw new Error('Error al eliminar al integrante');
+          throw new Error('Error al eliminar el trabajo');
         }
-        this.cargarIntegrantes();
+        this.cargarTrabajos();
       } catch (error) {
         console.error(error);
       }
@@ -251,7 +254,7 @@ export default {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
   border-radius: 10px;
-  height: 200px;
+  height: 240px;
 }
 
 .card-width {
@@ -273,7 +276,7 @@ export default {
 
 .card-img {
   width: auto;
-  height: 200px; /* Cambia a auto para mantener la relación de aspecto de la imagen */
+  height: 240px; /* Cambia a auto para mantener la relación de aspecto de la imagen */
   max-height: 100%; /* Limita la altura máxima de la imagen al 100% del contenedor */
   object-fit: contain; /* Mantiene la relación de aspecto de la imagen */
   border-radius: 10px 0 0 10px;

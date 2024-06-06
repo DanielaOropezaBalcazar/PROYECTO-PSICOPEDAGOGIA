@@ -15,6 +15,7 @@ const intInpsicopediaRouter = require('./routes/intInpsicopedia');
 const intZonaAprendRouter = require('./routes/intZonaAprend');
 const publicacionInpsicopediaRouter = require('./routes/pubInpsicopedia');
 const publicacionZonaAprendRouter = require('./routes/pubZonaAprend');
+const trabajosRealizados = require('./routes/trabajo_realizado');
 
 const app = express();
 
@@ -49,6 +50,7 @@ app.use('/int-inpsicopedia', intInpsicopediaRouter);
 app.use('/int-zona-aprendizaje', intZonaAprendRouter);
 app.use('/pub-inpsicopedia', publicacionInpsicopediaRouter);
 app.use('/pub-zona-aprendizaje', publicacionZonaAprendRouter);
+app.use('/trabajos-realizados', trabajosRealizados);
 
 // Manejador de errores
 app.use(function(req, res, next) {

@@ -39,6 +39,7 @@ import ReadIntInps from "./components/ABM_IntegInpsi/ReadIntInps.vue";
 import ReadIntZA from "./components/ABM_integZonaAp/ReadIntZA.vue";
 import ReadPubInps from "./components/ABM_PubliInpsi/ReadPubInps.vue";
 import ReadPubZA from "./components/ABM_PubZonaAp/ReadPubZA.vue";
+import ReadTrabajR from "./components/ABM_TrabajosRealizados/ReadTrabajR.vue";
 
 
 const routes = [
@@ -73,6 +74,7 @@ const routes = [
     { path: '/integrantes-zona-aprendizaje', component: ReadIntZA },
     { path: '/publicacion-inpsicopedia', component: ReadPubInps },
     { path: '/publicacion-zona-aprendizaje', component: ReadPubZA },
+    { path: '/trabajos-realizados', component: ReadTrabajR },
 
 
     { path: '/mallacomponente_screen', component: MallaCurricular},
