@@ -133,7 +133,7 @@
 
         <div class="row">
           <div class="col-md-12" v-for="(publicacionIN, index) in publicacionesIN" :key="publicacionIN.id_publicacion">
-            <div class="card card-width" :style="{ backgroundColor: colores[index % colores.length] }">
+            <div class="cardB card-widthB" :style="{ backgroundColor: colores[index % colores.length] }">
               <div class="card-content">
                 <div class="card-image">
                   <img class="card-img" :src="publicacionIN.imagen" alt="Imagen de la actividad">
@@ -246,20 +246,20 @@ export default {
 }
 
 /* Estilos de los paneles */
-.card {
+.cardB {
   margin-bottom: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
   border-radius: 10px;
-  height: 200px;
+  height: 250px;
 }
 
-.card-width {
+.card-widthB {
   width: 80%; /* Ajusta este valor según tus necesidades */
   margin: 0 auto;
 }
 
-.card:hover {
+.cardB:hover {
   transform: translateY(-5px);
 }
 

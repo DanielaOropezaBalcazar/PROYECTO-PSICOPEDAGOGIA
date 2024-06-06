@@ -35,7 +35,7 @@
           <div class="overlay-text">Bolsa de Empleo</div>
         </div>
       </router-link>
-      <router-link to="/otra-pagina" class="animated-link">
+      <router-link to="/trabajos-realizados" class="animated-link">
         <div class="image-overlay">
           <img src="../../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
           <div class="overlay-text">Trabajos realizados</div>
@@ -69,7 +69,7 @@
       <div class="spacer"></div>
 
       <h2 class="sub-title">Formacion: Postgrado</h2>
-      <router-link to="/otra-pagina" class="animated-link">
+      <router-link to="/postgrado" class="animated-link">
         <div class="image-overlay">
           <img src="../../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
           <div class="overlay-text">PostGrado</div>
@@ -80,13 +80,13 @@
       <div class="spacer"></div>
 
       <h2 class="sub-title">Zona de Aprendizaje</h2>
-      <router-link to="/otra-pagina" class="animated-link">
+      <router-link to="/publicacion-zona-aprendizaje" class="animated-link">
         <div class="image-overlay">
           <img src="../../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
           <div class="overlay-text">Publicaciones Zona Aprendizaje</div>
         </div>
       </router-link>
-      <router-link to="/otra-pagina" class="animated-link">
+      <router-link to="/integrantes-zona-aprendizaje" class="animated-link">
         <div class="image-overlay">
           <img src="../../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
           <div class="overlay-text">Integrantes Zona Aprendizaje</div>
@@ -98,7 +98,7 @@
       <div class="spacer"></div>
 
       <h2 class="sub-title">Sociedad Cientifica</h2>
-      <router-link to="/otra-pagina" class="animated-link">
+      <router-link to="/publicacion-inpsicopedia" class="animated-link">
         <div class="image-overlay">
           <img src="../../assets/ejemplo.jpg" alt="PInpsicopedia" @mouseenter="zoomIn" @mouseleave="zoomOut">
           <div class="overlay-text">Publicaciones Inpsicopedia</div>
