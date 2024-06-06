@@ -185,7 +185,7 @@ CREATE TABLE trabajo_realizado (
     publicacion date  NOT NULL,
     columna_foto Longtext  NOT NULL,
     persona_id_persona int  NOT NULL,
-    documento blob  NOT NULL,
+    documento Longtext  NOT NULL,
     CONSTRAINT trabajo_realizado_pk PRIMARY KEY (id_trabajo)
 );
 

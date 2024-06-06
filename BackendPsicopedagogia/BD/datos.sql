@@ -25,3 +25,5 @@ INSERT INTO `psicopedagogia`.`alianzas` (`id_alianza`, `Universidad`, `direccion
 
 -- Tipo para actividades curriculares
 INSERT INTO `psicopedagogia`.`tipo_actividad` (`id_tipo_actividad`, `clasificacion`) VALUES ('1', 'Curricular');
+INSERT INTO `psicopedagogia`.`tipo_actividad` (`id_tipo_actividad`, `clasificacion`) VALUES ('2', 'UCB');
+INSERT INTO `psicopedagogia`.`tipo_actividad` (`id_tipo_actividad`, `clasificacion`) VALUES ('3', 'Departamentales');

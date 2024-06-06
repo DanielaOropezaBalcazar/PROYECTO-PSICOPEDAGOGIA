@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import ContactosComponente from './components/ContactosComponente.vue';
 import ContinuaComponente from './components/ContinuaComponente.vue';
 import EgresadosComponente from './components/EgresadosComponente.vue';
-//import AbmActividades from "./components/AbmActividades.vue";
+
 import HomeComponente from './components/HomeComponente.vue';
 import MallaCurricular from "./components/screens/malla_curricular.vue"
 
@@ -28,7 +28,13 @@ import ReadDocente from "./components/ABM_PlantelDocente/ReadDocente.vue";
 import ReadAutoridad from "./components/ABM_Autoridades/ReadAutoridad.vue";
 import ReadAlianza from "./components/ABM_Alianzas/ReadAlianza.vue";
 import ReadActividadCur from "./components/ABM_ActividadesCurriculares/ReadActividadCur.vue";
-import ReadActividad from './components/ABM_Actividades/ReadActividad.vue';
+import ReadActividad from "./components/ABM_Actividades/ReadActividad.vue";
+import ReadIntInps from "./components/ABM_IntegInpsi/ReadIntInps.vue";
+import ReadIntZA from "./components/ABM_integZonaAp/ReadIntZA.vue";
+import ReadPubInps from "./components/ABM_PubliInpsi/ReadPubInps.vue";
+import ReadPubZA from "./components/ABM_PubZonaAp/ReadPubZA.vue";
+import ReadTrabajR from "./components/ABM_TrabajosRealizados/ReadTrabajR.vue";
+
 
 
 const routes = [
@@ -64,6 +70,14 @@ const routes = [
     { path: '/autoridad', component: ReadAutoridad },
     { path: '/alianza', component: ReadAlianza },
     { path: '/actividad-curricular', component: ReadActividadCur },
+    { path: '/integrantes-inpsicopedia', component: ReadIntInps },
+    { path: '/integrantes-zona-aprendizaje', component: ReadIntZA },
+    { path: '/publicacion-inpsicopedia', component: ReadPubInps },
+    { path: '/publicacion-zona-aprendizaje', component: ReadPubZA },
+    { path: '/trabajos-realizados', component: ReadTrabajR },
+
+
+    { path: '/mallacomponente_screen', component: MallaCurricular}
 ];
 
 
