@@ -1,7 +1,6 @@
 <template>
   <div class="app">
     <h1 class="main-title">Dashboard Admin</h1>
-
     <!-- Areas de Administracion -->
 
     <h2 class="sub-title">Actividades Curriculares</h2>
