@@ -35,7 +35,7 @@
           <div class="overlay-text">Bolsa de Empleo</div>
         </div>
       </router-link>
-      <router-link to="/otra-pagina" class="animated-link">
+      <router-link to="/trabajos-realizados" class="animated-link">
         <div class="image-overlay">
           <img src="../../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
           <div class="overlay-text">Trabajos realizados</div>
@@ -69,7 +69,7 @@
       <div class="spacer"></div>
 
       <h2 class="sub-title">Formacion: Postgrado</h2>
-      <router-link to="/otra-pagina" class="animated-link">
+      <router-link to="/postgrado" class="animated-link">
         <div class="image-overlay">
           <img src="../../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
           <div class="overlay-text">PostGrado</div>
@@ -80,13 +80,13 @@
       <div class="spacer"></div>
 
       <h2 class="sub-title">Zona de Aprendizaje</h2>
-      <router-link to="/otra-pagina" class="animated-link">
+      <router-link to="/publicacion-zona-aprendizaje" class="animated-link">
         <div class="image-overlay">
           <img src="../../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
           <div class="overlay-text">Publicaciones Zona Aprendizaje</div>
         </div>
       </router-link>
-      <router-link to="/otra-pagina" class="animated-link">
+      <router-link to="/integrantes-zona-aprendizaje" class="animated-link">
         <div class="image-overlay">
           <img src="../../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
           <div class="overlay-text">Integrantes Zona Aprendizaje</div>
@@ -98,7 +98,7 @@
       <div class="spacer"></div>
 
       <h2 class="sub-title">Sociedad Cientifica</h2>
-      <router-link to="/otra-pagina" class="animated-link">
+      <router-link to="/publicacion-inpsicopedia" class="animated-link">
         <div class="image-overlay">
           <img src="../../assets/ejemplo.jpg" alt="PInpsicopedia" @mouseenter="zoomIn" @mouseleave="zoomOut">
           <div class="overlay-text">Publicaciones Inpsicopedia</div>
@@ -127,29 +127,32 @@
 
       <div class="container">
         <div class="header">
-          <h1 class="main-title">Integrantes Zona de Aprendizaje</h1>
+          <h1 class="main-title">Formacion Postgrado</h1>
         </div>
-        <button class="create-button" @click="abrirModalCrear">Registrar Integrante</button>
+        <button class="create-button" @click="abrirModalCrear">Registrar Postgrado</button>
 
         <div class="row">
-          <div class="col-md-12" v-for="(integranteZA, index) in integrantesZA" :key="integranteZA.id_integrante">
+          <div class="col-md-12" v-for="(postgrado, index) in postgrados" :key="postgrado.id_postgrado">
             <div class="cardB card-widthB" :style="{ backgroundColor: colores[index % colores.length] }">
               <div class="card-content">
                 <div class="card-image">
-                  <img class="card-img" :src="integranteZA.columna_foto" alt="Imagen de la actividad">
+                  <img class="card-img" :src="postgrado.columna_foto" alt="Imagen de la actividad">
                 </div>
                 <div class="card-body">
                   <div class="card-details">
                     <div>
-                      <h5 class="card-title">{{ integranteZA.nombre }} {{ integranteZA.apellido }}</h5>
-                      <p class="card-text">Telefono: {{ integranteZA.telefono }}</p>
+                      <h5 class="card-title">{{ postgrado.titulo }}</h5>
+                      <p class="card-text">Area: {{ postgrado.area }} </p>
+                      <p class="card-text">Descripcion: {{ postgrado.descripcion }} </p>
+                      <p class="card-text">Tipo: {{ postgrado.tipo }}</p>
+                      <p class="card-text">Requisitos: {{ postgrado.requisitos }}</p>
                       <p class="card-text">
-                        <small class="text-muted">Fecha de ingreso: {{ integranteZA.fecha_ingreso }}</small>
+                        <small class="text-muted">Fecha: {{ postgrado.fecha }}</small>
                       </p>
                     </div>
                     <div class="button-container">
-                      <button class="edit-button" @click="abrirModal(integranteZA)">Editar</button>
-                      <button class="delete-button" @click="eliminarIntegrante(integranteZA.id_integrante)">Borrar</button>
+                      <button class="edit-button" @click="abrirModal(postgrado)">Editar</button>
+                      <button class="delete-button" @click="eliminarPostgrado(postgrado.id_postgrado)">Borrar</button>
                     </div>
                   </div>
                 </div>
@@ -157,8 +160,8 @@
             </div>
           </div>
         </div>
-        <CreateIntZA :show="showCrearModal" @close="showCrearModal = false" @update="cargarIntegrantes"/>
-        <EditIntZA :show="showModal" :integrante="integranteSeleccionado" @close="showModal = false" @update="cargarIntegrantes"/>
+        <CreatePost :show="showCrearModal" @close="showCrearModal = false" @update="cargarPostgrados"/>
+        <EditPost :show="showModal" :postgrado="postgradoSeleccionado" @close="showModal = false" @update="cargarPostgrados"/>
 
       </div>
     </main>
@@ -167,57 +170,57 @@
 </template>
 
 <script>
-import EditIntZA from "./EditIntZA.vue";
-import CreateIntZA from "./CreateIntZA.vue";
+import EditPost from "./EditPost.vue";
+import CreatePost from "./CreatePost.vue";
 
 export default {
   components: {
-    EditIntZA,
-    CreateIntZA,
+    EditPost,
+    CreatePost,
   },
   data() {
     return {
-      integrantesZA: [],
+      postgrados: [],
       colores: ['#fb7986', '#cce5ff', '#d4edda', '#fff3cd', '#d1ecf1', '#f9e2f6', '#fce4d6', '#d6d8db'],
       showModal: false,
-      integranteSeleccionado: null,
+      postgradoSeleccionado: null,
       showCrearModal: false,
     };
   },
   mounted() {
-    this.cargarIntegrantes();
+    this.cargarPostgrados();
   },
   methods: {
-    async cargarIntegrantes() {
+    async cargarPostgrados() {
       try {
-        const response = await fetch('http://localhost:3000/int-zona-aprendizaje');
+        const response = await fetch('http://localhost:3000/postgrado');
         if (!response.ok) {
           console.log(response)
-          throw new Error('Error al obtener los integrantes de zona de aprendizaje.');
+          throw new Error('Error al obtener los trabajos.');
         }
-        this.integrantesZA = await response.json();
+        this.postgrados = await response.json();
       } catch (error) {
         console.error(error);
       }
     },
-    abrirModal(integrante) {
-      this.integranteSeleccionado = integrante;
-      this.$emit('editar', this.integranteSeleccionado);
+    abrirModal(postgrado) {
+      this.postgradoSeleccionado = postgrado;
+      this.$emit('editar', this.postgradoSeleccionado);
       this.showModal = true;
     },
-    async eliminarIntegrante(id) {
-      const confirmacion = confirm('¿Estás seguro de que quieres eliminar este integrante de zona de aprendizaje?');
+    async eliminarPostgrado(id) {
+      const confirmacion = confirm('¿Estás seguro de que quieres eliminar este trabajo realizado?');
       if (!confirmacion) {
         return;
       }
       try {
-        const response = await fetch(`http://localhost:3000/int-zona-aprendizaje/delete/${id}`, {
+        const response = await fetch(`http://localhost:3000/trabajos-realizados/delete/${id}`, {
           method: 'DELETE',
         });
         if (!response.ok) {
-          throw new Error('Error al eliminar al integrante');
+          throw new Error('Error al eliminar el trabajo');
         }
-        this.cargarIntegrantes();
+        this.cargarPostgrados();
       } catch (error) {
         console.error(error);
       }
@@ -265,6 +268,7 @@ export default {
 
 .card-content {
   display: flex;
+  text-align: left;
 }
 
 .card-image {
@@ -273,7 +277,7 @@ export default {
 
 .card-img {
   width: auto;
-  height: 200px; /* Cambia a auto para mantener la relación de aspecto de la imagen */
+  height: 250px; /* Cambia a auto para mantener la relación de aspecto de la imagen */
   max-height: 100%; /* Limita la altura máxima de la imagen al 100% del contenedor */
   object-fit: contain; /* Mantiene la relación de aspecto de la imagen */
   border-radius: 10px 0 0 10px;

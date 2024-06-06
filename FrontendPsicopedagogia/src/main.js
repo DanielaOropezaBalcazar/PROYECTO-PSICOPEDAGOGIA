@@ -35,49 +35,52 @@ import ReadPubInps from "./components/ABM_PubliInpsi/ReadPubInps.vue";
 import ReadPubZA from "./components/ABM_PubZonaAp/ReadPubZA.vue";
 import ReadTrabajR from "./components/ABM_TrabajosRealizados/ReadTrabajR.vue";
 
+import ReadPost from "./components/ABM_Postgrado/ReadPost.vue";
+
+
 const routes = [
-  //Sección Home
-  { path: "/home", component: HomeComponente },
-  { path: "/programa-integra-psicopedagogia", component: integraComponente },
-  { path: "/red-psicopedagogia", component: redPsicopedagogiaComponent },
+    //Sección Home
+    { path: '/home', component: HomeComponente },
+    { path: '/programa-integra-psicopedagogia', component: integraComponente },
+    { path: '/red-psicopedagogia', component: redPsicopedagogiaComponent },
 
-  //Sección Formación
-  { path: "/formacion-pregrado", component: PregradoComponente },
-  { path: "/mallacomponente_screen", component: MallaCurricular },
-  { path: "/formacion-postgrado", component: postgradoComponente },
-  { path: "/formacion-continua", component: ContinuaComponente },
+    //Sección Formación
+    { path: '/formacion-pregrado', component: PregradoComponente },
+    { path: '/mallacomponente_screen', component: MallaCurricular},
+    { path: '/formacion-postgrado', component: postgradoComponente },
+    { path: '/formacion-continua', component: ContinuaComponente },
+    
+    //Investigacion
+    { path: '/zona-de-aprendizaje', component: ZonaComponente },
+    { path: '/inpsicopedia', component: InpsicopediaComponente },
 
-  //Investigacion
-  { path: "/zona-de-aprendizaje", component: ZonaComponente },
-  { path: "/inpsicopedia", component: InpsicopediaComponente },
+    //Quienes somos
+    { path: '/quienes-somos', component: QuienesComponente },
+    { path: '/programa-sembrando-semillas-de-paz', component: SemillasComponente },
 
-  //Quienes somos
-  { path: "/quienes-somos", component: QuienesComponente },
-  {
-    path: "/programa-sembrando-semillas-de-paz",
-    component: SemillasComponente,
-  },
+    //Contactos
+    { path: '/contactos', component: ContactosComponente },
 
-  //Contactos
-  { path: "/contactos", component: ContactosComponente },
+    //Login
+    { path: '/login', component: LogInComponente },
+    { path: '/pesta&ntildea-editar', component: DashboardAdmin },
+    { path: '/pesta&a-editar-egresados', component: EgresadosComponente },
 
-  //Login
-  { path: "/login", component: LogInComponente },
-  { path: "/pesta&ntildea-editar", component: DashboardAdmin },
-  { path: "/pesta&a-editar-egresados", component: EgresadosComponente },
+    { path: '/actividades', component: ReadActividad },
+    { path: '/plantelDocente', component: ReadDocente },
+    { path: '/autoridad', component: ReadAutoridad },
+    { path: '/alianza', component: ReadAlianza },
+    { path: '/actividad-curricular', component: ReadActividadCur },
+    { path: '/integrantes-inpsicopedia', component: ReadIntInps },
+    { path: '/integrantes-zona-aprendizaje', component: ReadIntZA },
+    { path: '/publicacion-inpsicopedia', component: ReadPubInps },
+    { path: '/publicacion-zona-aprendizaje', component: ReadPubZA },
+    { path: '/trabajos-realizados', component: ReadTrabajR },
+    { path: '/postgrado', component: ReadPost },
 
-  { path: "/actividades", component: ReadActividad },
-  { path: "/plantelDocente", component: ReadDocente },
-  { path: "/autoridad", component: ReadAutoridad },
-  { path: "/alianza", component: ReadAlianza },
-  { path: "/actividad-curricular", component: ReadActividadCur },
-  { path: "/integrantes-inpsicopedia", component: ReadIntInps },
-  { path: "/integrantes-zona-aprendizaje", component: ReadIntZA },
-  { path: "/publicacion-inpsicopedia", component: ReadPubInps },
-  { path: "/publicacion-zona-aprendizaje", component: ReadPubZA },
-  { path: "/trabajos-realizados", component: ReadTrabajR },
 
-  { path: "/mallacomponente_screen", component: MallaCurricular },
+    { path: '/mallacomponente_screen', component: MallaCurricular}
+
 ];
 
 const router = createRouter({
