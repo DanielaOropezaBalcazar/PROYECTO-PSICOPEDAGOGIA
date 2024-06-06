@@ -70,7 +70,7 @@
     <div class="spacer"></div>
 
     <h2 class="sub-title">Formacion: Postgrado</h2>
-    <router-link to="/otra-pagina" class="animated-link">
+    <router-link to="/postgrado" class="animated-link">
       <div class="image-overlay">
         <img src="../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
         <div class="overlay-text">PostGrado</div>

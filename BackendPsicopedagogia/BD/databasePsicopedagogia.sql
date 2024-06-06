@@ -18,7 +18,7 @@ CREATE TABLE PostGrado (
     id_postgrado int  NOT NULL AUTO_INCREMENT,
     tipo varchar(75)  NOT NULL,
     titulo varchar(75)  NOT NULL,
-    fecha int  NOT NULL,
+    fecha date  NOT NULL,
     area varchar(75)  NOT NULL,
     requisitos varchar(255)  NOT NULL,
     descripcion varchar(255)  NOT NULL,
