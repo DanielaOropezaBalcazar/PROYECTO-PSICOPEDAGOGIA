@@ -14,23 +14,19 @@
         <section class="learning-zone">
             <h1 class="zona-tit">Zona de Aprendizaje</h1>
             <center>
+              <div>
                 <div class="content-wrapper">
                     <img src="../assets/images/Investigacion/zona1.jpg" alt="Foto 1" class="foto1">
                     <div class="member-list">
                         <h2 class="int-tit">Integrantes:</h2>
                         <ul class="intInv">
-                            <li>Mariana Casta&ntilde;eda Velasquez</li>
-                            <li>Francisco Torrez Santander</li>
-                            <li>Fernanda Manzaneda Quiroga</li>
-                            <li>Patricia Perez Gonzales</li>
-                            <li>Roberto Delgado Mellark</li>
-                            <li>Maria José Agudo Vivaldo</li>
-                            <li>Juan Pablo Oropeza Carrera</li>
-                            <li>Maria Viviana Murillo Fuentes</li>
-                            <!-- Repetir para todos los integrantes -->
+                          <li v-for="(integrante, index) in ultimosIntegrantes" :key="index">
+                            {{ integrante.nombre }} {{ integrante.apellido }}
+                          </li>
                         </ul>
                     </div>
                 </div>
+              </div>
             </center>
         </section>
         <section class="join">
@@ -47,81 +43,33 @@
         </section>
 
 
-        <section class="recent-publication">
-            <br>
-            <h2 class="pub-rec">Publicación más reciente</h2>
-            
-                <a href="">
-                <img src="../assets/images/Investigacion/manos.jpg" alt="Publicación Reciente">
-                </a>
-                <p class="desc-pub-rec">¡Descubre los distintos tipos de aprendizaje! Desde el visual, auditivo y kinestésico<br> 
-                    hasta el colaborativo y el autodidacta. 💡📚 ¿Cuál es tu estilo de aprendizaje favorito?<br> Comparte en los comentarios.</p>
-        </section>
-        
+      <!-- Publicación más reciente -->
+      <section class="recent-publication">
+        <h2 class="pub-rec">Publicación más reciente</h2>
+        <div v-if="publicacionReciente">
+          <a href="">
+            <img :src="publicacionReciente.imagen" :alt="publicacionReciente.nombre">
+          </a>
+          <p class="desc-pub-rec">{{ publicacionReciente.descripcion }}</p>
+        </div>
+      </section>
 
-
-        <section class="previous-publications">
-            <h2 class="pub-ant-tit">Publicaciones Anteriores</h2>
-            <div class="gallery">
-                
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="../assets/images/Investigacion/salud.jpg" alt="Publicación Anterior 1">
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Dia de la salud mental. ¿Porque debemos preocuparnos por nosotros mismos?</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="../assets/images/Investigacion/down.jpg" alt="Publicación Anterior 1">
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Descripción de la publicación sobre salud.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="../assets/images/Investigacion/dia.jpg" alt="Publicación Anterior 1">
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Descripción de la publicación sobre salud.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="../assets/images/Investigacion/maestro.jpg" alt="Publicación Anterior 1">
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Descripción de la publicación sobre salud.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="../assets/images/Investigacion/tdah.jpg" alt="Publicación Anterior 1">
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Descripción de la publicación sobre salud.</p>
-                        </div>
-                    </div>
-                </div>
-                
+      <!-- Publicaciones Anteriores -->
+      <section class="previous-publications">
+        <h2 class="pub-ant-tit">Publicaciones Anteriores</h2>
+        <div class="gallery">
+          <div class="flip-card" v-for="(publicacion, index) in publicacionesAnteriores" :key="index">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img :src="publicacion.imagen" :alt="publicacion.nombre">
+              </div>
+              <div class="flip-card-back">
+                <p>{{ publicacion.descripcion }}</p>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
     <center>
         <section class="contact">
@@ -194,5 +142,47 @@ document.querySelectorAll('.flip-card-inner').forEach(card => {
 
 export default {
     name: "zonaComponente",
+  data() {
+    return {
+      integrantes: [],
+      publicaciones: [],
+    };
+  },
+  async created() {
+    try {
+      const response = await fetch('http://localhost:3000/int-zona-aprendizaje');
+      if (!response.ok) {
+        throw new Error('Error al recuperar los datos de integrantes.');
+      }
+      console.log(response)
+      this.integrantes = await response.json();
+    } catch (error) {
+      console.error(error);
+    }
+
+    try {
+      const response = await fetch('http://localhost:3000/pub-zona-aprendizaje');
+      if (!response.ok) {
+        throw new Error('Error al recuperar los datos de publicaciones.');
+      }
+      console.log(response)
+      this.publicaciones = await response.json();
+    } catch (error) {
+      console.error(error);
+    }
+  },
+  computed: {
+    ultimosIntegrantes() {
+      return this.integrantes.slice(-5);
+    },
+    publicacionReciente() {
+      return this.publicaciones.length ? this.publicaciones[this.publicaciones.length - 1] : null;
+    },
+    publicacionesAnteriores() {
+      return this.publicaciones.slice(0, -1).slice(-5);
+    }
+  }
+
+
 };
 </script>

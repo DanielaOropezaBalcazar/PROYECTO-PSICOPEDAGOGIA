@@ -1,11 +1,30 @@
 -- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2024-04-30 13:38:26.94
-
--- Crear base de datos psicopedagogia
-create database psicopedagogia;
-use psicopedagogia;
+-- Last modification date: 2024-06-06 12:34:01.419
 
 -- tables
+-- Table: Bolsa_empleo
+CREATE TABLE Bolsa_empleo (
+    id_empleo int  NOT NULL AUTO_INCREMENT,
+    nivel_requerido varchar(75)  NOT NULL,
+    empresa varchar(75)  NOT NULL,
+    puesto varchar(75)  NOT NULL,
+    tiempo varchar(75)  NOT NULL,
+    fecha_postulacion date  NOT NULL,
+    CONSTRAINT Bolsa_empleo_pk PRIMARY KEY (id_empleo)
+);
+
+-- Table: PostGrado
+CREATE TABLE PostGrado (
+    id_postgrado int  NOT NULL AUTO_INCREMENT,
+    tipo varchar(75)  NOT NULL,
+    titulo varchar(75)  NOT NULL,
+    fecha int  NOT NULL,
+    area varchar(75)  NOT NULL,
+    requisitos varchar(255)  NOT NULL,
+    descripcion varchar(255)  NOT NULL,
+    CONSTRAINT PostGrado_pk PRIMARY KEY (id_postgrado)
+);
+
 -- Table: Programas
 CREATE TABLE Programas (
     id_programa int  NOT NULL AUTO_INCREMENT,
@@ -185,7 +204,7 @@ CREATE TABLE trabajo_realizado (
     publicacion date  NOT NULL,
     columna_foto Longtext  NOT NULL,
     persona_id_persona int  NOT NULL,
-    documento Longtext  NOT NULL,
+    documento varchar(75)  NOT NULL,
     CONSTRAINT trabajo_realizado_pk PRIMARY KEY (id_trabajo)
 );
 
@@ -275,3 +294,4 @@ ALTER TABLE trayectoria_informacion ADD CONSTRAINT trayectoria_informacion_entit
     REFERENCES tipo_trayectoria (id_tipo_trayectoria);
 
 -- End of file.
+
