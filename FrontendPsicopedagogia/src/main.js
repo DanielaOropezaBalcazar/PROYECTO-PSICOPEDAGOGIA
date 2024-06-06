@@ -1,28 +1,28 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import { createRouter, createWebHistory } from 'vue-router'; // Importa createRouter y createWebHistory
-import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { createApp } from "vue";
+import App from "./App.vue";
+import { createRouter, createWebHistory } from "vue-router"; // Importa createRouter y createWebHistory
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import ContactosComponente from './components/ContactosComponente.vue';
-import ContinuaComponente from './components/ContinuaComponente.vue';
-import EgresadosComponente from './components/EgresadosComponente.vue';
+import ContactosComponente from "./components/ContactosComponente.vue";
+import ContinuaComponente from "./components/ContinuaComponente.vue";
+import EgresadosComponente from "./components/EgresadosComponente.vue";
 
-import HomeComponente from './components/HomeComponente.vue';
-import MallaCurricular from "./components/screens/malla_curricular.vue"
+import HomeComponente from "./components/HomeComponente.vue";
+import MallaCurricular from "./components/screens/malla_curricular.vue";
 
-import InpsicopediaComponente from './components/InpsicopediaComponente.vue';
-import integraComponente from './components/integraComponente.vue';
-import LogInComponente from './components/LogInComponente.vue';
+import InpsicopediaComponente from "./components/InpsicopediaComponente.vue";
+import integraComponente from "./components/integraComponente.vue";
+import LogInComponente from "./components/LogInComponente.vue";
 import DashboardAdmin from "./components/DashboardAdmin.vue";
 
-import postgradoComponente from './components/postgradoComponente.vue';
-import PregradoComponente from './components/PregradoComponente.vue';
-import QuienesComponente from './components/QuienesComponente.vue';
-import redPsicopedagogiaComponent from './components/redPsicopedagogiaComponent.vue';
+import postgradoComponente from "./components/postgradoComponente.vue";
+import PregradoComponente from "./components/PregradoComponente.vue";
+import QuienesComponente from "./components/QuienesComponente.vue";
+import redPsicopedagogiaComponent from "./components/redPsicopedagogiaComponent.vue";
 
-import SemillasComponente from './components/SemillasComponente.vue';
-import ZonaComponente from './components/ZonaComponente.vue';
+import SemillasComponente from "./components/SemillasComponente.vue";
+import ZonaComponente from "./components/ZonaComponente.vue";
 
 import ReadDocente from "./components/ABM_PlantelDocente/ReadDocente.vue";
 import ReadAutoridad from "./components/ABM_Autoridades/ReadAutoridad.vue";
@@ -34,6 +34,7 @@ import ReadIntZA from "./components/ABM_integZonaAp/ReadIntZA.vue";
 import ReadPubInps from "./components/ABM_PubliInpsi/ReadPubInps.vue";
 import ReadPubZA from "./components/ABM_PubZonaAp/ReadPubZA.vue";
 import ReadTrabajR from "./components/ABM_TrabajosRealizados/ReadTrabajR.vue";
+
 import ReadPost from "./components/ABM_Postgrado/ReadPost.vue";
 
 
@@ -79,14 +80,14 @@ const routes = [
 
 
     { path: '/mallacomponente_screen', component: MallaCurricular}
+
 ];
 
-
 const router = createRouter({
-    history: createWebHistory(), // Usa createWebHistory para el modo de historial
-    routes
+  history: createWebHistory(), // Usa createWebHistory para el modo de historial
+  routes,
 });
 
 const app = createApp(App);
 app.use(router); // Usa el enrutador en la aplicación
-app.mount('#app');
+app.mount("#app");
