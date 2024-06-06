@@ -2,11 +2,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  
+
   <div id="app">
     <h1>Malla Curricular</h1>
     <div class="contenedor-grid">
@@ -40,86 +43,16 @@ export default {
           nombre: "Psicopedagogía",
           codigo: "PSP-101",
           requisito: "Ninguno",
+          descripcion:
+            "Descripción detallada de Psicopedagogía. Esta asignatura abarca los principios y prácticas de la psicopedagogía en diferentes contextos educativos.",
         },
         {
           seccion: "1",
           nombre: "Psicología del Desarrollo Infantil",
           codigo: "PSP-211",
           requisito: "PSP-101",
-        },
-        {
-          seccion: "1",
-          nombre: "Psicología del Desarrollo Infantil",
-          codigo: "PSP-211",
-          requisito: "PSP-101",
-        },
-        { seccion: "1", nombre: "", codigo: "", requisito: "" },
-        {
-          seccion: "1",
-          nombre: "Psicología del Desarrollo Infantil",
-          codigo: "PSP-211",
-          requisito: "PSP-101",
-        },
-        {
-          seccion: "1",
-          nombre: "Psicología del Desarrollo Infantil",
-          codigo: "PSP-211",
-          requisito: "PSP-101",
-        },
-        {
-          seccion: "1",
-          nombre: "Psicología del Desarrollo Infantil",
-          codigo: "PSP-211",
-          requisito: "PSP-101",
-        },
-        { seccion: "2", nombre: "", codigo: "", requisito: "" },
-        {
-          seccion: "2",
-          nombre: "Psicología del Desarrollo Infantil",
-          codigo: "PSP-211",
-          requisito: "PSP-101",
-        },
-        {
-          seccion: "2",
-          nombre: "Psicología del Desarrollo Infantil",
-          codigo: "PSP-211",
-          requisito: "PSP-101",
-        },
-        {
-          seccion: "3",
-          nombre: "Psicología del Desarrollo Infantil",
-          codigo: "PSP-211",
-          requisito: "PSP-101",
-        },
-        {
-          seccion: "3",
-          nombre: "Psicología del Desarrollo Infantil",
-          codigo: "PSP-211",
-          requisito: "PSP-101",
-        },
-        {
-          seccion: "3",
-          nombre: "Psicología del Desarrollo Infantil",
-          codigo: "PSP-211",
-          requisito: "PSP-101",
-        },
-        {
-          seccion: "3",
-          nombre: "Psicología del Desarrollo Infantil",
-          codigo: "PSP-211",
-          requisito: "PSP-101",
-        },
-        {
-          seccion: "4",
-          nombre: "Psicología del Desarrollo Infantil",
-          codigo: "PSP-211",
-          requisito: "PSP-101",
-        },
-        {
-          seccion: "4",
-          nombre: "Psicología del Desarrollo Infantil",
-          codigo: "PSP-211",
-          requisito: "PSP-101",
+          descripcion:
+            "Descripción detallada de Psicología del Desarrollo Infantil. Estudia los diferentes aspectos del desarrollo psicológico desde la infancia hasta la adolescencia.",
         },
         // Añadir más asignaturas según sea necesario
       ],
@@ -145,7 +78,6 @@ export default {
 </script>
 
 <style>
-
 h1 {
   text-align: center;
   margin-bottom: 20px;
