@@ -1,0 +1,25 @@
+.titFC{
+    color: #F416BB;
+    text-align: left;
+    font-size: 60px;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-left: 7%;
+    font-weight: 700;
+}
+
+.DivPrin{
+    align-items: center;
+}
+
+.titMinors{
+    color: #9114B0;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.pMinors{
+    color:black;
+    text-align: justify;
+    margin-left: 50px;
+}
