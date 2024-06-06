@@ -30,9 +30,8 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 } */
-@import "./assets/css/quienes.css";
 @import "./assets/css/contactanos.css";
-@import "./assets/css/stylespre.css";
-@import url("./assets/css/investigacion.css");
-@import url("./assets/css/styleshome.css");
+
+/*@import "./assets/css/investigacion.css";
+/*@import "./assets/css/styleshome.css";*/
 </style>
