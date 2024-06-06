@@ -1,76 +1,37 @@
 <template>
-  <div id="app">
-    <h1>Mi Carrusel de Paneles</h1>
-    <div class="carousel">
-      <div v-for="(panel, index) in panels" :key="index" class="panel">
-        <img :src="panel.image" alt="Panel Image" />
-        <h2>{{ panel.title }}</h2>
-        <p><strong>Área:</strong> {{ panel.area }}</p>
-        <p><strong>Nombre:</strong> {{ panel.name }}</p>
-        <p><strong>Fecha de Publicación:</strong> {{ panel.date }}</p>
-      </div>
-    </div>
-  </div>
+  <!-- <HeaderQComponente></HeaderQComponente> -->
+  <HeaderContactanos></HeaderContactanos>
+  <router-view></router-view>
+  <FooterComponente></FooterComponente>
 </template>
 
 <script>
+//import HelloWorld from './components/HelloWorld.vue'
+import HeaderContactanos from './components/HeaderContactanos.vue'
+import FooterComponente from './components/FooterComponente.vue'
+// import HeaderQComponente from './components/HeaderQComponente.vue'
 export default {
   name: 'App',
-  data() {
-    return {
-      panels: [
-        {
-          image: 'https://via.placeholder.com/300',
-          title: 'Título 1',
-          area: 'Área 1',
-          name: 'Nombre 1',
-          date: '2024-06-01'
-        },
-        {
-          image: 'https://via.placeholder.com/300',
-          title: 'Título 2',
-          area: 'Área 2',
-          name: 'Nombre 2',
-          date: '2024-06-02'
-        }
-        // Puedes agregar más paneles aquí según sea necesario
-      ]
-    };
+  components: {
+    //HelloWorld,
+    //HeaderQComponente,
+    HeaderContactanos,
+    FooterComponente
   }
-};
+}
 </script>
 
 <style>
-#app {
+/* #app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  padding: 20px;
-}
+  color: #2c3e50;
+  margin-top: 60px;
+} */
+@import "./assets/css/contactanos.css";
 
-.carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.panel {
-  text-align: left;
-  padding: 20px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  margin: 10px;
-}
-
-.panel img {
-  max-width: 100%;
-  height: auto;
-}
-
-.panel h2 {
-  margin: 10px 0;
-}
-
-.panel p {
-  margin: 5px 0;
-}
+/*@import "./assets/css/investigacion.css";
+/*@import "./assets/css/styleshome.css";*/
 </style>

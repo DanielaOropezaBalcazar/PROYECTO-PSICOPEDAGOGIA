@@ -42,7 +42,7 @@
           <br>
           <br>          
           <div class="center">
-              <router-link to="/pesta&ntilde;a-programa-integra-psicopedagogia">
+              <router-link to="/programa-integra-psicopedagogia">
                 <img src="../assets/images/home/integra.png" alt="Descripción de la imagen integra">
               </router-link>
               </div>
@@ -54,7 +54,7 @@
 
               <a href="red.html">
                 <div class="center">
-                <router-link to="/pesta&ntilde;a-red-psicopedagogia">
+                <router-link to="/red-psicopedagogia">
                   <img src="../assets/images/home/red.png" alt="Descripción de la imagen red">
                 </router-link>
               </div>
@@ -91,4 +91,6 @@ export default {
     }
 };
 </script>
+
+<style src="../assets/css/styleshome.css"></style>
 
