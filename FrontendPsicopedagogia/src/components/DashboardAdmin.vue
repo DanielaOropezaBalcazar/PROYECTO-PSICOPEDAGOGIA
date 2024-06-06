@@ -5,9 +5,14 @@
     <!-- Areas de Administracion -->
 
     <h2 class="sub-title">Actividades Curriculares</h2>
-    <router-link to="/dashboard-actividades" class="animated-link">
+    <router-link to="/actividades" class="animated-link">
       <div class="image-overlay">
-        <img src="../assets/Actividades.png" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
+        <img
+          src="../assets/Actividades.png"
+          alt="Actividades"
+          @mouseenter="zoomIn"
+          @mouseleave="zoomOut"
+        />
         <div class="overlay-text">Actividades</div>
       </div>
     </router-link>
@@ -18,29 +23,48 @@
     <h2 class="sub-title">Programa Integra Psicopedagogia</h2>
     <router-link to="/otra-pagina" class="animated-link">
       <div class="image-overlay">
-        <img src="../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
+        <img
+          src="../assets/ejemplo.jpg"
+          alt="Actividades"
+          @mouseenter="zoomIn"
+          @mouseleave="zoomOut"
+        />
         <div class="overlay-text">Graduados</div>
       </div>
     </router-link>
     <router-link to="/autoridad" class="animated-link">
       <div class="image-overlay">
-        <img src="../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
+        <img
+          src="../assets/ejemplo.jpg"
+          alt="Actividades"
+          @mouseenter="zoomIn"
+          @mouseleave="zoomOut"
+        />
         <div class="overlay-text">Autoridades</div>
       </div>
     </router-link>
     <router-link to="/otra-pagina" class="animated-link">
       <div class="image-overlay">
-        <img src="../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
+        <img
+          src="../assets/ejemplo.jpg"
+          alt="Actividades"
+          @mouseenter="zoomIn"
+          @mouseleave="zoomOut"
+        />
         <div class="overlay-text">Bolsa de Empleo</div>
       </div>
     </router-link>
     <router-link to="/otra-pagina" class="animated-link">
       <div class="image-overlay">
-        <img src="../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
+        <img
+          src="../assets/ejemplo.jpg"
+          alt="Actividades"
+          @mouseenter="zoomIn"
+          @mouseleave="zoomOut"
+        />
         <div class="overlay-text">Trabajos realizados</div>
       </div>
     </router-link>
-
 
     <!-- Formacion Pregrado -->
     <div class="spacer"></div>
@@ -48,20 +72,35 @@
     <h2 class="sub-title">Formacion: Pregrado</h2>
     <router-link to="/otra-pagina" class="animated-link">
       <div class="image-overlay">
-        <img src="../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
+        <img
+          src="../assets/ejemplo.jpg"
+          alt="Actividades"
+          @mouseenter="zoomIn"
+          @mouseleave="zoomOut"
+        />
         <div class="overlay-text">Perfiles de Estudiantes</div>
       </div>
     </router-link>
     <router-link to="/alianza" class="animated-link">
       <div class="image-overlay">
-        <img src="../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
+        <img
+          src="../assets/ejemplo.jpg"
+          alt="Actividades"
+          @mouseenter="zoomIn"
+          @mouseleave="zoomOut"
+        />
         <div class="overlay-text">Alianzas</div>
       </div>
     </router-link>
     <router-link to="/actividad-curricular" class="animated-link">
       <div class="image-overlay">
-        <img src="../assets/ejemplo.jpg" alt="actividad-curricular" @mouseenter="zoomIn" @mouseleave="zoomOut">
-        <div class="overlay-text">Actividades Curriculares </div>
+        <img
+          src="../assets/ejemplo.jpg"
+          alt="actividad-curricular"
+          @mouseenter="zoomIn"
+          @mouseleave="zoomOut"
+        />
+        <div class="overlay-text">Actividades Curriculares</div>
       </div>
     </router-link>
 
@@ -71,7 +110,12 @@
     <h2 class="sub-title">Formacion: Postgrado</h2>
     <router-link to="/otra-pagina" class="animated-link">
       <div class="image-overlay">
-        <img src="../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
+        <img
+          src="../assets/ejemplo.jpg"
+          alt="Actividades"
+          @mouseenter="zoomIn"
+          @mouseleave="zoomOut"
+        />
         <div class="overlay-text">PostGrado</div>
       </div>
     </router-link>
@@ -82,17 +126,26 @@
     <h2 class="sub-title">Zona de Aprendizaje</h2>
     <router-link to="/otra-pagina" class="animated-link">
       <div class="image-overlay">
-        <img src="../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
+        <img
+          src="../assets/ejemplo.jpg"
+          alt="Actividades"
+          @mouseenter="zoomIn"
+          @mouseleave="zoomOut"
+        />
         <div class="overlay-text">Publicaciones Zona Aprendizaje</div>
       </div>
     </router-link>
     <router-link to="/otra-pagina" class="animated-link">
       <div class="image-overlay">
-        <img src="../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
+        <img
+          src="../assets/ejemplo.jpg"
+          alt="Actividades"
+          @mouseenter="zoomIn"
+          @mouseleave="zoomOut"
+        />
         <div class="overlay-text">Integrantes Zona Aprendizaje</div>
       </div>
     </router-link>
-
 
     <!-- Sociedad Cientifica-->
     <div class="spacer"></div>
@@ -100,14 +153,24 @@
     <h2 class="sub-title">Sociedad Cientifica</h2>
     <router-link to="/otra-pagina" class="animated-link">
       <div class="image-overlay">
-        <img src="../assets/ejemplo.jpg" alt="PInpsicopedia" @mouseenter="zoomIn" @mouseleave="zoomOut">
+        <img
+          src="../assets/ejemplo.jpg"
+          alt="PInpsicopedia"
+          @mouseenter="zoomIn"
+          @mouseleave="zoomOut"
+        />
         <div class="overlay-text">Publicaciones Inpsicopedia</div>
       </div>
     </router-link>
     <router-link to="/otra-pagina" class="animated-link">
       <div class="image-overlay">
-        <img src="../assets/ejemplo.jpg" alt="IInpsicopedia" @mouseenter="zoomIn" @mouseleave="zoomOut">
-        <div class="overlay-text">Integrantes Inpsicopedia </div>
+        <img
+          src="../assets/ejemplo.jpg"
+          alt="IInpsicopedia"
+          @mouseenter="zoomIn"
+          @mouseleave="zoomOut"
+        />
+        <div class="overlay-text">Integrantes Inpsicopedia</div>
       </div>
     </router-link>
 
@@ -117,34 +180,42 @@
     <h2 class="sub-title">Contactos</h2>
     <router-link to="/plantelDocente" class="animated-link">
       <div class="image-overlay">
-        <img src="../assets/ejemplo.jpg" alt="Plantel" @mouseenter="zoomIn" @mouseleave="zoomOut">
+        <img
+          src="../assets/ejemplo.jpg"
+          alt="Plantel"
+          @mouseenter="zoomIn"
+          @mouseleave="zoomOut"
+        />
         <div class="overlay-text">Plantel Docente</div>
       </div>
     </router-link>
     <router-link to="/otra-pagina" class="animated-link">
       <div class="image-overlay">
-        <img src="../assets/ejemplo.jpg" alt="Autoridades" @mouseenter="zoomIn" @mouseleave="zoomOut">
-        <div class="overlay-text">Autoridades </div>
+        <img
+          src="../assets/ejemplo.jpg"
+          alt="Autoridades"
+          @mouseenter="zoomIn"
+          @mouseleave="zoomOut"
+        />
+        <div class="overlay-text">Autoridades</div>
       </div>
     </router-link>
-
-
   </div>
 </template>
 
 <script>
 export default {
-  name: 'DashboardAdmin',
+  name: "DashboardAdmin",
   setup() {
     return {
       isZoomed,
       zoomIn,
-      zoomOut
+      zoomOut,
     };
-  }
+  },
 };
 
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const isZoomed = ref(false);
 
@@ -175,16 +246,16 @@ const zoomOut = () => {
 .main-title {
   text-align: center;
   font-size: 3rem; /* Tamaño de fuente más grande */
-  color: #F416BB; /* Color de fuente diferente */
-  font-family: 'Arial', sans-serif; /* Fuente diferente */
+  color: #f416bb; /* Color de fuente diferente */
+  font-family: "Arial", sans-serif; /* Fuente diferente */
   margin: 1rem;
 }
 
 .sub-title {
   text-align: left;
   font-size: 2rem; /* Tamaño de fuente más grande */
-  color: #F96071; /* Color de fuente diferente */
-  font-family: 'Arial', sans-serif; /* Fuente diferente */
+  color: #f96071; /* Color de fuente diferente */
+  font-family: "Arial", sans-serif; /* Fuente diferente */
   margin: 1rem;
 }
 
@@ -236,7 +307,7 @@ const zoomOut = () => {
 }
 
 .image-overlay::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;

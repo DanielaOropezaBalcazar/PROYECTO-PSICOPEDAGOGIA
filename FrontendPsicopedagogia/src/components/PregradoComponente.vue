@@ -85,7 +85,7 @@
           </p>
         </section>
 
-        <section class="previous-publications">
+        <!--section class="previous-publications">
           <h2 class="pub-ant-tit">Publicaciones Anteriores</h2>
           <div class="gallery">
             <div class="flip-card">
@@ -161,7 +161,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section-->
 
         <section class="activity-section">
           <h2 class="activity-title">Actividades</h2>
@@ -313,16 +313,15 @@ export default {
 
 .flip-card {
   background-color: transparent;
-  width: 350px;
-  height: 250px;
-  perspective: 1000px;
+  width: 30%;
   margin: 15px;
+  perspective: 1000px;
 }
 
 .flip-card-inner {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 300px;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -348,7 +347,7 @@ export default {
 }
 
 .flip-card-back {
-  background-color: #abb7ff;
+  background-color: #9daaff;
   color: white;
   transform: rotateY(180deg);
   display: flex;
@@ -373,10 +372,16 @@ export default {
   font-weight: bold;
   margin-bottom: 10px;
   color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-text {
   font-size: 1rem;
   color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style>
