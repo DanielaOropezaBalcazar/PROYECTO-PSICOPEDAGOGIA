@@ -35,7 +35,7 @@
         <div class="overlay-text">Bolsa de Empleo</div>
       </div>
     </router-link>
-    <router-link to="/otra-pagina" class="animated-link">
+    <router-link to="/trabajos-realizados" class="animated-link">
       <div class="image-overlay">
         <img src="../assets/ejemplo.jpg" alt="Actividades" @mouseenter="zoomIn" @mouseleave="zoomOut">
         <div class="overlay-text">Trabajos realizados</div>
