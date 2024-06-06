@@ -150,8 +150,8 @@ export default {
 
 .main-title {
   font-size: 3rem;
-  color: #2944f8;
-  font-family: 'Arial', sans-serif;
+  color:#8438FF;
+  font-family: "Roboto Condensed", sans-serif;
   margin: 1rem;
 }
 

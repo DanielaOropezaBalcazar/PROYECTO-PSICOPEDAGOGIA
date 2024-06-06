@@ -16,7 +16,7 @@
           </ul>
         </li>
         <div class="login">
-          <router-link to="/pesta&ntildea-login">
+          <router-link to="/login">
             <img src="../assets/images/icono_blanco.png" alt="Login">
           </router-link>
         </div>
@@ -31,27 +31,27 @@ export default {
   data() {
     return {
       navLinks: [
-        { route: "/pesta&ntildea-home", text: "Home" },
+        { route: "home", text: "Home" },
         {
-          route: "/pesta&ntildea-formacion-continua",
+          route: "/formacion-pregrado",
           text: "Formación",
           submenu: [
-            { route: "mallacomponente_screen", text: "Malla Curicular" },
-            { route: "/formacion/curso2", text: "Curso 2" },
-            { route: "/formacion/curso3", text: "Curso 3" }
+          { route: "/formacion-pregrado", text: "Formación Pregrado" },
+            { route: "/mallacomponente_screen", text: "Malla Curicular" },
+            { route: "/formacion-postgrado", text: "Formación Postgrado" },
+            { route: "/formacion-continua", text: "Formación Continua" }
           ]
         },
         {
-          route: "/pesta&ntildea-pregrado",
+          route: "/zona-de-aprendizaje",
           text: "Investigación",
           submenu: [
-            { route: "/investigacion/proyecto1", text: "Proyecto 1" },
-            { route: "/investigacion/proyecto2", text: "Proyecto 2" },
-            { route: "/investigacion/proyecto3", text: "Proyecto 3" }
+            { route: "/zona-de-aprendizaje", text: "Zona de Aprendizaje" },  
+            { route: "/inpsicopedia", text: "S.C.E. Inpsicopedia" },
           ]
         },
-        { route: "/pesta&ntildea-quienes-somos", text: "Quiénes Somos" },
-        { route: "/pesta&ntildea-contactos", text: "Contáctanos" }
+        { route: "/quienes-somos", text: "Quiénes Somos" },
+        { route: "/contactos", text: "Contáctanos" }
       ]
     };
   }

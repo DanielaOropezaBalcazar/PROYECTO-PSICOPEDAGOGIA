@@ -67,7 +67,13 @@ button:hover {
 
 .ins, .asig, .malla, .prog, .opor, .tari {
     margin-right: 10px; 
-    margin-left: 10px; 
+    margin-left: 10px;
+    width: 350px;
+    font-family: "B612", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    border-radius: 15px;
 }
 
 

@@ -1,204 +1,231 @@
 <template>
-
-<html lang="es">
-<head>
     
-
-
-    <!--Fuentes-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Allerta&display=swap" rel="stylesheet">
-
-    <title>Psicopedagogia: Zona de Aprendizaje</title>
-</head>
-<body>
-    <main>
-        <section class="learning-zone">
-            <h1 class="zona-tit">Zona de Aprendizaje</h1>
-            <center>
-                <div class="content-wrapper">
-                    <img src="../assets/images/Investigacion/zona1.jpg" alt="Foto 1" class="foto1">
-                    <div class="member-list">
-                        <h2 class="int-tit">Integrantes:</h2>
-                        <ul class="intInv">
-                            <li>Mariana Casta&ntilde;eda Velasquez</li>
-                            <li>Francisco Torrez Santander</li>
-                            <li>Fernanda Manzaneda Quiroga</li>
-                            <li>Patricia Perez Gonzales</li>
-                            <li>Roberto Delgado Mellark</li>
-                            <li>Maria José Agudo Vivaldo</li>
-                            <li>Juan Pablo Oropeza Carrera</li>
-                            <li>Maria Viviana Murillo Fuentes</li>
-                            <!-- Repetir para todos los integrantes -->
+    <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Psicopedagogía - Pregrado</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+        </head>
+        <body>
+            <main>
+                <section class="contenedor">
+                    <div class="titulo1">
+                        <h1 style="font-size: 70px; font-family: 'Roboto Condensed', 'sans-serif'; font-weight: 700; color: #87DA35">Pregrado     </h1>
+                    </div>
+                    <br>
+                    <div class="flex-container">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/OUd-tTZWBNw" frameborder="0" allowfullscreen class="video-iframe"></iframe>
+                        </div>            
+                    </div>
+                </section>
+    
+        
+                <section class="Botones">
+                <center>
+                <div class="boton-container">
+                    <a href="https://lpz.ucb.edu.bo/">
+                        <button class="ins">¡Inscríbete Ahora!</button><br>
+                    </a>
+                    <a href="">
+                        <button class="asig">Asignaturas Particulares</button>
+                    </a>
+                    <router-link to="/mallacomponente_screen">
+                    <button class="malla">Malla Curricular</button>
+                    </router-link>
+                </div>
+        
+                <div class="boton-container">
+                    <a href="https://lpz.ucb.edu.bo/agora/">
+                        <button class="prog">Programa ÁGORA</button>
+                    </a>
+                    <a href="https://lpz.ucb.edu.bo/becas/">
+                        <button class="opor">Oportunidades de Becas</button>
+                    </a>
+                    <a href="https://lpz.ucb.edu.bo/estudiantes/tarifario-oficial/">
+                        <button class="tari">Tarifario</button>
+                    </a>
+                </div>
+                </center>
+                </section>
+    
+    
+                <section class="trabajo-section">
+                    <div class="contenido-texto">
+                        <h1 class="titulo-trabajo">¿Dónde puedes trabajar?</h1>
+                        <ul>
+                            <li>En sector educativo: educación inicial, primaria, secundaria,
+                                universitaria, técnica tecnológica que desarrollan procesos
+                                formativos en instituciones públicas, privadas y de convenio.</li>
+                            <li>En proyectos y programas educativos que mejoran la calidad de
+                                vida de diferentes poblaciones desde ministerios, municipios,
+                                fundaciones y ONGs.</li>
+                            <li>En empresas públicas y privadas que desarrollan gestión del
+                                conocimiento desde sus departamentos de Recursos Humanos y sus
+                                unidades de capacitación.</li>
+                            <li>Desarrollando su propio emprendimiento Centros psicopedagógicos
+                                y Centros de Educación integral que trabajan con niñez, adolescencia,
+                                juventud y adultos que presenten dificultades del aprendizaje y
+                                necesidades educativas especiales.</li>
+                            <li>Consultoría en áreas de investigación en necesidades de
+                                formación, desarrollo de programas educativos presenciales y virtuales,
+                                educación off line y on line, entre otras.</li>
                         </ul>
                     </div>
-                </div>
-            </center>
-        </section>
-        <section class="join">
-            <br>
-            <h2 class="req-uni">¿Cómo puedo unirme?</h2>
-            <h3 class="req">Requisitos:</h3>
-            <ul class="req-p">
-                <li>Estar inscrito en la Universidad y ser alumno regular de la carrera correspondiente.</li>
-                <li>Llenar el formulario de inscripción.</li>
-                <li>Adjuntar la siguiente documentación: fotocopias del carnet de identidad, de la matricula universitaria y de la programación de materias. </li>
-                <li>Tener un promedio mayor a 80/100 puntos</li>
-                <li>Presentar una carta de recomendaci&oacute;n de alg&uacute;n docente de la carrera</li>
-            </ul>
-        </section>
-
-
-        <section class="recent-publication">
-            <br>
-            <h2 class="pub-rec">Publicación más reciente</h2>
-            
-                <a href="">
-                <img src="../assets/images/Investigacion/manos.jpg" alt="Publicación Reciente">
-                </a>
-                <p class="desc-pub-rec">¡Descubre los distintos tipos de aprendizaje! Desde el visual, auditivo y kinestésico<br> 
-                    hasta el colaborativo y el autodidacta. 💡📚 ¿Cuál es tu estilo de aprendizaje favorito?<br> Comparte en los comentarios.</p>
-        </section>
-        
-
-
-        <section class="previous-publications">
-            <h2 class="pub-ant-tit">Publicaciones Anteriores</h2>
-            <div class="gallery">
+                    <div class="imagen-trabajo">
+                        <img src="../assets/images/Pregrado/grupo.png" alt="Psicopedagogia">
+                    </div>
+                </section>
                 
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="../assets/images/Investigacion/salud.jpg" alt="Publicación Anterior 1">
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Dia de la salud mental. ¿Porque debemos preocuparnos por nosotros mismos?</p>
-                        </div>
+                <br><br>
+        <!-- Sección de Áreas de estudio -->
+        <section class="section1">
+            <div class="container2">
+                <div class="contenedor1">
+                    <div class="areasDiv">
+                        <br>
+                        <br>
+                        <h2 class="areas">Áreas de estudio</h2>
+                        <br>
+                        <ul class="ramas">
+                            <li>Psicopedagog&iacute;a de la Educaci&oacute;n <br>Formal y no Formal</li>
+                            <li>Psicopedagog&iacute;a Cl&iacute;nica</li>
+                            <li>Psicopedagog&iacute;a Social</li>
+                            <li>Psicopedagog&iacute;a Laboral</li>
+                            <br>
+                            <br>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="px-4">
+                        <img src="../assets/images/Pregrado/pastel.png" class="pastel">
                     </div>
                 </div>
-
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="../assets/images/Investigacion/down.jpg" alt="Publicación Anterior 1">
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Descripción de la publicación sobre salud.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="../assets/images/Investigacion/dia.jpg" alt="Publicación Anterior 1">
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Descripción de la publicación sobre salud.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="../assets/images/Investigacion/maestro.jpg" alt="Publicación Anterior 1">
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Descripción de la publicación sobre salud.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="../assets/images/Investigacion/tdah.jpg" alt="Publicación Anterior 1">
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Descripción de la publicación sobre salud.</p>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
         </section>
-    </main>
-    <center>
-        <section class="contact">
-            <h2 class="cont-tit">Contactos</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Lic. Javier del Castillo Vera</th>
-                            <th>Presidente</th>
-                            <th>javier.castillo132@gmail.com</th>
-                        </tr>
-                    </thead>
-                    <tbody>                
-                        <tr>
-                            <td>Mgtr. Mariana Escamilla Figueroa</td>
-                            <td>Vicepresidente</td>
-                            <td>m.escamilla.figueroa@gmail.com</td>
-                        </tr>
-                    </tbody>
-                    <thead>
-                        <tr>
-                            <th>Lic. Marco Soliz Alvarez </th>
-                            <th>Tesorero</th>
-                            <th>m.soliz.alvarez56@gmail.com</th>
-                        </tr>
-                    </thead>
-                    <tbody>                
-                        <tr>
-                            <td>Mgtr. Estevan Rocha Salazar</td>
-                            <td>Secretario</td>
-                            <td>estevanrocha234@gmail.com</td>
-                        </tr>
-                    </tbody>
-                    <thead>
-                        <tr>
-                            <th>Dra. Consuelo La Torre Peinado</th>
-                            <th>Asesora</th>
-                            <th>consuelo.ltp@gmail.com</th>
-                        </tr>
-                    </thead>
-                    <tbody>                
-                        <tr>
-                            <td>Dr. Lorenzo La Torre Peinado</td>
-                            <td>Asesor</td>
-                            <td>lorenzo.latorre@gmail.com</td>
-                        </tr>
-                    </tbody>
-                    <thead>
-                        <tr>
-                            <th>Dra. Valentina Urrutia Rodriguez</th>
-                            <th>Asesora</th>
-                            <th>valentina.ur345@gmail.com</th>
-                        </tr>
-                    </thead>
-                </table>
+        
+        <br><br>
+    
+        
+        <!-- Sección de Intercambios Estudiantiles -->
+        <!--REVISAR-->
+        <section class="py-8">
+            
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap">
+                    <div class="w-full px-4 mb-4">
+                        <br>
+                        <h1 class="inter-texto">Programa Movilidad Estudiantil</h1>
+                        <img src="https://internacional.ucb.edu.bo/wp-content/uploads/2023/09/universidades-extranjeras-SIN-FECHA-39.jpg" alt="Intercambios Estudiantiles" class="w-full rounded shadow-lg mb-4">
+                        <div class="text-center">
+                            <h2 class="descr-inter">¡El Programa de Movilidad Estudiantil UCB por el Mundo abre la convocatoria para el semestre 2-2024!</h2>
+                            <p class="text-gray-700">
+                                Información sobre los programas de intercambio, cómo los estudiantes pueden aplicar, los beneficios de participar y las universidades asociadas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-    </center>
-</body>
-</html>
-
-</template>
+        
+        
+        <br><br>
+        
+    
+        <!-- CARRUSEL section>
+            <div class="container mx-auto px-4">
+                <h2 class="perfiles">Perfiles de Graduados</h2>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div v-for="(image, index) in visibleImages" :key="index" class="carousel-item">
+                            <img :src="image.src" :alt="image.alt" class="flex-none w-1/3">
+                        </div>
+                    </div>
+                    <button @click="moveCarousel(-1)" class="boton1">
+                        <span style="font-size: 2rem;">&lt;</span>
+                    </button>
+                    <button @click="moveCarousel(1)" class="boton2">
+                        <span style="font-size: 2rem;">&gt;</span>
+                    </button>
+                </div>
+                <center>
+                    <h1>Testimonio</h1>
+                    <p>
+                        La Psicopedagogía te brinda un sinfín de oportunidades para innovar los programas educativos vigentes, los métodos de enseñanza y la manera en que el sector educativo desarrolla, a su vez, oportunidades para las personas en etapa formativa.
+                    </p>
+                </center>
+            </div>
+        </section-->
+        
+        
+        
+        <!-- Sección de Actividades -->
+        <section class="actividades">
+            <div class="Fondo">
+            <!-- Actividad 1 - Imagen a la izquierda, Texto a la derecha -->
+            <div class="actividad">
+                <div class="imagen-actividad izquierda">
+                    <img src="../assets/images/Pregrado/act1.jpeg" alt="Actividad 1" class="rounded shadow-lg">
+                </div>
+                <div class="texto-actividad derecha">
+                    <h3 class="titleH3">Actividad 1</h3>
+                    <p>
+                        En esta actividad, los niños participarán en una serie de juegos y ejercicios diseñados para explorar y
+                        expresar sus emociones. A través de actividades creativas como dibujar, actuar, o jugar roles, los
+                        niños tendrán la oportunidad de hablar sobre cómo se sienten, qué les hace sentir así, y cómo
+                        pueden manejar esas emociones de manera saludable.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Actividad 2 - Imagen a la derecha, Texto a la izquierda -->
+            <div class="actividad">
+                <div class="texto-actividad izquierda">
+                    <h3 class="titleH3">Actividad 2</h3>
+                    <p>
+                        En esta actividad de cocina, los niños tendrán la oportunidad de explorar el mundo de la cocina de una manera divertida y educativa. Cocinar no solo implica la preparación de alimentos, sino que también proporciona una valiosa oportunidad para el desarrollo de habilidades psicomotoras, cognitivas y sociales.
+    
+                        Durante la actividad, los niños trabajarán en equipo bajo la supervisión de un adulto. Se les animará a participar activamente en todas las etapas del proceso de cocina, desde la selección de ingredientes hasta la preparación y presentación final de los platos.
+                                      
+                    </p>
+                </div>
+                <div class="imagen-actividad derecha">
+                    <img src="../assets/images/Pregrado/cocina.jpeg" alt="Actividad 2" class="rounded shadow-lg">
+                </div>
+            </div>
+        
+            <!-- Actividad 3 - Imagen a la izquierda, Texto a la derecha -->
+            <div class="actividad">
+                <div class="imagen-actividad izquierda">
+                    <img src="../assets/images/Pregrado/conferencia.jpeg" alt="Actividad 3" class="rounded shadow-lg">
+                </div>
+                <div class="texto-actividad derecha">
+                    <h3 class="titleH3">Actividad 3</h3>
+                    <p>
+                        Únete a nuestra conferencia de psicopedagogía, donde exploraremos las intersecciones entre la psicología y la pedagogía para comprender mejor el proceso de aprendizaje humano. Descubre cómo los enfoques psicológicos pueden informar y mejorar las prácticas educativas, desde la identificación temprana de necesidades de aprendizaje hasta la creación de entornos de enseñanza inclusivos. Acompáñanos mientras exploramos estrategias efectivas para apoyar el desarrollo cognitivo, emocional y social de los estudiantes, así como para fomentar el éxito académico y el bienestar integral en entornos educativos diversos.
+                  
+                    </p>
+                </div>
+            </div>
+        </div>
+        </section>
+    
+        </main>
+    
+        </body>
+    </html>
+    
+    </template>
 
 <script>
-
-document.querySelectorAll('.flip-card-inner').forEach(card => {
-    card.addEventListener('click', function() {
-        card.classList.toggle('is-flipped');
-    });
-});
-
 export default {
     name: "PregradoComponente",
 };
 </script>
 
-<style src="../assets/css/investigacion.css"></style>
+<style src="../assets/css/stylespre.css"></style>

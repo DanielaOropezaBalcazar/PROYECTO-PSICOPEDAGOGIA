@@ -93,33 +93,33 @@
     <h1 class="int">Interacción Social</h1>
 
     <div class="image-container">
-      <a href="">
+      <router-link to="/programa-sembrando-semillas-de-paz">
         <img src="../assets/images/Quienes somos/semillas.png" alt="Programa 'Sembrando semillas de paz'">
-      </a>
+      </router-link>
     </div>
 
 
     <table>
       <tr>
         <td>
-          <a href="">
+          <a href="https://lpz.ucb.edu.bo/tag/obras-sociales/">
             <img src="../assets/images/Quienes somos/capilla.png" alt="Imagen" id="img-mision">
           </a>
         </td>
         <td>
-          <a href="">
+          <a href="https://lpz.ucb.edu.bo/centros-de-estudiantes/">
             <img src="../assets/images/Quienes somos/centro.png" alt="imagenCentro" id="img-mision">
           </a>
         </td>
       </tr>
       <tr>
         <td>
-          <a href="">
+          <a href="https://lpz.ucb.edu.bo/tag/ucb-games/">
             <img src="../assets/images/Quienes somos/games.png" alt="Imagen" id="img-mision">
           </a>
         </td>
         <td>
-          <a href="">
+          <a href="https://lpz.ucb.edu.bo/tag/intercarreras/">
             <img src="../assets/images/Quienes somos/intercarreras.jpg" alt="Imagen" id="img-mision">
           </a>
         </td>
@@ -131,7 +131,9 @@
     <div class="row">
 
       <div class="col-md-11.3 image-container">
-        <img src="../assets/images/Quienes somos/caridad.png" alt="Imagen" id="caridad">
+        <a href="https://www.ucb.edu.bo/accion-pastoral/programas-con-obras-de-la-iglesia/">
+          <img src="../assets/images/Quienes somos/caridad.png" alt="Imagen" id="caridad">
+        </a>
       </div>
     </div>
 

@@ -13,10 +13,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <router-link class="nav-link" to="/pesta&ntildea-home">Home</router-link>
+              <router-link class="nav-link" to="/home">Home</router-link>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="/pesta&ntildea-formacion-continua" id="navbarDropdown"
+              <a class="nav-link dropdown-toggle" href="/formacion-pregrado" id="navbarDropdown"
                 role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Formación
               </a>
@@ -27,21 +27,21 @@
               </div>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="/pesta&ntildea-pregrado" id="navbarDropdown2"
+              <a class="nav-link dropdown-toggle" href="/zona-de-aprendizaje" id="navbarDropdown2"
                 role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Investigación
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                <router-link class="dropdown-item" to="/investigacion/proyecto1">Proyecto 1</router-link>
+                <router-link class="dropdown-item" to="/inpsicopedia">Inpsicopedia</router-link>
                 <router-link class="dropdown-item" to="/investigacion/proyecto2">Proyecto 2</router-link>
                 <router-link class="dropdown-item" to="/investigacion/proyecto3">Proyecto 3</router-link>
               </div>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/pesta&ntildea-quienes-somos">¿Quienes Somos?</router-link>
+              <router-link class="nav-link" to="/quienes-somos">¿Quienes Somos?</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/pesta&ntildea-contactos">Contáctanos</router-link>
+              <router-link class="nav-link" to="/contactos">Contáctanos</router-link>
             </li>
             <li class="nav-item">
               <img src="../assets/images/Contactos/icono_morado 2.png" height="70" alt="Usuario" class="nav-link">
